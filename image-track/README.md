@@ -89,7 +89,7 @@ score = rank_pct( Σ 槽权重 × 槽 )  × (1 − 0.20)  +  rank_pct( 尺寸先
 | 完整技术方案（含全部消融与 9 个 bug 的排查） | `docs/01_技术方案报告.md` |
 | 镜像接口规范、资源声明、自查清单 | `docs/02_交付包提交说明.md` |
 | 交付物构成、修过哪些缺陷 | `docs/03_交付说明.md` |
-| 给组委会的偏差说明（可复现性辩护） | `docs/04_镜像复现偏差说明(回组委会).md` |
+| 给组委会的偏差说明（可复现性辩护） | `docs/04_镜像复现偏差说明-回组委会.md` |
 | 提交文件与 8 个分量的冻结 CSV（**含逐字节哈希台账 + 配方表**） | [`submission/README.md`](submission/README.md) |
 | 服务化代码（Dockerfile / server / models / fusion / 复检脚本） | `code/docker_submit/` |
 | 训练脚本（按分量精选） | `code/training/` |
