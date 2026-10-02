@@ -125,11 +125,20 @@ def check(fname):
 
 
 def main():
-    files = sys.argv[1:] or DEFAULT
+    files = sys.argv[1:]
+    if not files:
+        files = [f for f in DEFAULT if _resolve(f)]
+        if not files:
+            files = [LB_SUB]
+            print("（未给参数，且 DEFAULT 里那批候选不在本目录）→ 改为校验仓库内的 LB 提交件")
     print(f"id 顺序参照： {ref_file()}")
-    ok = all(check(f) for f in files)
+    # ⚠️ 必须"先全部检查再汇总"：原先是 all(check(f) for f in files)，
+    #    而 all() 会在第一个 False 处**短路** → 多文件时后面的文件根本不会被检查。
+    results = [check(f) for f in files]
+    ok = all(results)
     print()
-    print("全部通过 ✅" if ok else "存在失败项 ❌")
+    print(f"全部通过 ✅（{len(results)} 个文件）" if ok
+          else f"存在失败项 ❌（{results.count(False)}/{len(results)} 个失败）")
     return 0 if ok else 1
 
 

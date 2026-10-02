@@ -125,10 +125,21 @@ python -m venv .venv
 需要跑真实服务时：`bash code/docker_submit/verify_container.sh <镜像 tar>`（**需 Linux；没有 Docker 守护进程也能跑**，
 脚本用 chroot 代替 `docker run`，逐层摊开镜像后以非 root 用户启动服务并打三探针）。
 
-> **本仓库副本与冻结交付包的差异（如实说明）**：`code/docker_submit/verify_reproduce.py`
-> 比交付包里那一份多了三处**向后兼容**的改动 ——
-> ① CSV 目录自动定位（冻结版假定 CSV 平铺在包根，在仓库布局下会 `FileNotFoundError`）；
-> ② numpy<2 环境闸门；③ stderr 也设为 UTF-8。**其余脚本与 `app/` 下的服务代码逐字节相同。**
+> **本仓库副本与冻结交付包的差异（如实、逐条说明）**
+>
+> 改动只涉及**验证类脚本与仓库新增的说明文档**；
+> **`app/` 下的服务代码、`Dockerfile`、`requirements.txt`、全部权重与 10 个 CSV 均与冻结交付包逐字节相同**
+> （已用 sha256 与原始源逐个核对）。
+>
+> | 文件 | 差异 |
+> |---|---|
+> | `code/docker_submit/verify_reproduce.py` | ① CSV 目录自动定位（冻结版假定 CSV 平铺在包根，在仓库布局下会 `FileNotFoundError`）；② numpy<2 环境闸门（提前拦住并给解法，不打补丁）；③ `--http` 缺 `requests` 时给可读提示；④ stderr 也设为 UTF-8 |
+> | `code/fusion/check_submission.py` | ① 路径改为逐级搜索；② id 顺序参照自动回退到仓库内的 LB 提交件（冻结版依赖的 `baycup_v31f_b20_s15.csv` 不在仓库里）；③ 修掉"列名不对就抛 traceback"；④ **修掉 `all()` 短路**（原多文件时第一个失败就跳过其余）；⑤ 退出码改为 0/1 |
+> | `code/docker_submit/requirements-verify.txt` | **新增**（冻结包内没有）：只跑逐图复现所需的 4 个小依赖 |
+> | `submission/README.md` | **新增**：哈希台账 + 配方表 + 自查命令 |
+> | `image-track/README.md`、`WEIGHTS.md`、`docs/05`、`docs/06`、`code/README.md`、根 `README.md` | **新增/仓库版说明文档**，非交付物 |
+>
+> `docs/01`＝`code/docker_submit/TECHNICAL_REPORT.md`＝冻结交付包内的技术方案报告（两份互为副本，sha256 `6df8810c65ee16e7…` 与原报告一致）。
 
 ---
 
@@ -149,6 +160,6 @@ python -m venv .venv
 | 角色 | 负责 |
 |---|---|
 | 钟庆龙 | 图像赛道（本目录） |
-| 文本赛道队友 | 见 `text-track/`（待上传） |
+| 文本赛道队友 | 见 [`text-track/`](../text-track/)（已上传，AUC 0.981301） |
 
 > 复赛提交记录：`2026-09-16 00:16:53`｜提交 ID `v100_gpp20_seed4_c75_prior200.csv`｜LB **0.918887**

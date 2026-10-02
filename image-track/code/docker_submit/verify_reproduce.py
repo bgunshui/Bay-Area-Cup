@@ -9,7 +9,7 @@
        ⇒ 验证的是**融合 + 查表 + 先验**这一整条交付链路（服务端 fuse() 的真实代码路径）。
   ② `--http http://host:8080`（**需要服务在跑**）
       把 20000 张图的 base64 逐张 POST /predict，收集 score 与提交文件比。
-       ⇒ 验证的是**含 8 个神经网络在内的完整服务**。
+       ⇒ 验证的是**含 8 个神经网络在内的完整服务**（额外依赖 `requests`，且需要官方测试图目录）。
 
 判据：spearman（= AUC 是否一致）。`--from-csv` 必须 = 1.0000000000；
       `--http` 因为服务是 **BS=1 逐张** 而冻结 CSV 是 **BS=32 批量**，
@@ -212,7 +212,14 @@ def main():
         return 0 if ok else 2
 
     if a.http:
-        import requests
+        try:
+            import requests
+        except ModuleNotFoundError:
+            sys.exit(
+                "\n❌ --http 模式需要 requests（requirements-verify.txt 里没有它，"
+                "因为逐图复现用不到）：\n"
+                "     pip install requests\n"
+                "   若只是想验证提交文件可重建，用 --from-csv，不需要 requests。\n")
         print(f"向 {a.http} 逐张推理 {n} 张 …")
         root = find_dir(
             [a.images and Path(a.images),
