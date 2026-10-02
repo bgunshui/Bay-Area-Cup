@@ -1,0 +1,68 @@
+{
+  "recipe": "gpp20_seed4_c75_prior200",
+  "lb_score": 0.918887,
+  "reference_file": "v100_gpp20_seed4_c75_prior200.csv",
+  "n_reference": 20000,
+  "prior_weight": 0.2,
+  "slots": [
+    {
+      "name": "cliph",
+      "slot_weight": 0.75,
+      "components": [
+        {
+          "csv": "img_cliph_rerun.csv",
+          "in_slot_weight": 0.2,
+          "ecdf_key": "img_cliph_rerun"
+        },
+        {
+          "csv": "img_cliph_s20261101.csv",
+          "in_slot_weight": 0.2,
+          "ecdf_key": "img_cliph_s20261101"
+        },
+        {
+          "csv": "img_cliph_s20261102.csv",
+          "in_slot_weight": 0.2,
+          "ecdf_key": "img_cliph_s20261102"
+        },
+        {
+          "csv": "img_cliph_s20261103.csv",
+          "in_slot_weight": 0.2,
+          "ecdf_key": "img_cliph_s20261103"
+        },
+        {
+          "csv": "img_gpp_siglip2.csv",
+          "in_slot_weight": 0.2,
+          "ecdf_key": "img_gpp_siglip2"
+        }
+      ]
+    },
+    {
+      "name": "bigg",
+      "slot_weight": 0.14285714285714288,
+      "components": [
+        {
+          "csv": "img_bigg_rerun2.csv",
+          "in_slot_weight": 0.5,
+          "ecdf_key": "img_bigg_rerun2"
+        },
+        {
+          "csv": "img_bigg_rerun3.csv",
+          "in_slot_weight": 0.5,
+          "ecdf_key": "img_bigg_rerun3"
+        }
+      ]
+    },
+    {
+      "name": "s384",
+      "slot_weight": 0.10714285714285715,
+      "components": [
+        {
+          "csv": "img_bigg_s384_retrain.csv",
+          "in_slot_weight": 1.0,
+          "ecdf_key": "img_bigg_s384_retrain"
+        }
+      ]
+    }
+  ],
+  "table_note": "每个 ecdf_key 存的是该分量在 20000 张测试图上的**升序分数表**；score = (searchsorted(left)+searchsorted(right))/2/(n+1)"
+}

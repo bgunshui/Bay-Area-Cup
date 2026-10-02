@@ -1,0 +1,70 @@
+=== 0. 准备可写目录（模拟容器里的 appuser HOME / HF_HOME）===
+drwxr-xr-x 6 1000 1000 146 Sep 18 15:20 /root/sj-tmp/fast/rootfs/app
+drwxr-xr-x 2 1000 1000  10 Sep 18 15:19 /root/sj-tmp/fast/rootfs/home/appuser
+
+=== 1. 以 appuser(uid 1000) 启动 server.py 15:20:12 ===
+  进程: 2416 
+
+=== 2. 等 /health/startup（最多 300 秒）===
+  [1] startup=503  15:20:17
+  [4] startup=200  15:20:32
+
+=== 3. 三探针 ===
+  /health/startup    HTTP 200
+  /health/liveness   HTTP 200
+  /health/readiness  HTTP 200
+  /debug/info  {"ready":true,"err":null,"load_seconds":15.071126937866211,"n_predict":0,"components":["img_cliph_rerun","img_cliph_s20261101","img_cliph_s20261102","img_cliph_s20261103","img_gpp_siglip2","img_bigg_rerun2","img_bigg_rerun3","img_bigg_s384_retrain"],"prior_weight":0.2,"lb_score_of_reference":0.918887}
+
+=== 4. HEALTHCHECK 那条命令本身（以 appuser 跑）===
+  rc=0 ✅
+
+=== 5. POST /predict（真图，8 个模型全部前向）===
+  1024x768 纯色                -> HTTP 200  {'req_id': 'smoke-flat', 'code': 0, 'score': 0.4817509124543773}  用时 0.32s
+  1024x1024 噪声               -> HTTP 200  {'req_id': 'smoke-noise', 'code': 0, 'score': 0.46745162741862906}  用时 0.31s
+  非法 base64                  -> HTTP 400  {"req_id":"e1","code":40002,"message":"invalid base64 image data: Error","score":null}
+  缺 req_id                   -> HTTP 400  {"req_id":null,"code":40001,"message":"missing/invalid req_id","score":null}
+  空 body                     -> HTTP 400  {"req_id":null,"code":40001,"message":"missing/invalid req_id","score":null}
+
+=== 6. server 输出（最后 40 行）===
+text_projection.weight                                       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  [骨干] bigg: r=16 alpha=32 scaling=2.00
+  [ok] img_bigg_rerun2        bigg     r=16  LoRA 576 张量 head=1664
+  [ok] img_bigg_rerun3        bigg     r=16  LoRA 576 张量 head=1664
+Loading weights:   0%|          | 0/775 [00:00<?, ?it/s]Loading weights: 100%|██████████| 775/775 [00:00<00:00, 7760.42it/s]
+[transformers] [1mCLIPVisionModel LOAD REPORT[0m from: /root/sj-tmp/fast/rootfs/app/backbones/clip_bigg
+Key                                                          | Status     |  | 
+-------------------------------------------------------------+------------+--+-
+text_model.encoder.layers.{0...31}.layer_norm2.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.self_attn.out_proj.weight | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.layer_norm1.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.mlp.fc2.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.mlp.fc1.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.layer_norm2.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.layer_norm1.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.mlp.fc1.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.mlp.fc2.bias              | UNEXPECTED |  | 
+logit_scale                                                  | UNEXPECTED |  | 
+text_model.final_layer_norm.bias                             | UNEXPECTED |  | 
+text_model.final_layer_norm.weight                           | UNEXPECTED |  | 
+visual_projection.weight                                     | UNEXPECTED |  | 
+text_model.embeddings.token_embedding.weight                 | UNEXPECTED |  | 
+text_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+text_projection.weight                                       | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  [骨干] bigg: r=32 alpha=64 scaling=2.00
+  [ok] img_bigg_s384_retrain  bigg     r=32  LoRA 576 张量 head=1664
+[startup] 就绪，用时 15.1s
+
+完成 15:20:33

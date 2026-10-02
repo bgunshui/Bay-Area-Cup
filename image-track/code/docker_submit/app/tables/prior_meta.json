@@ -1,0 +1,20 @@
+{
+  "w_gbm": 0.6000000000000001,
+  "w_bucket": 0.3999999999999999,
+  "shrink": 5.0,
+  "oof_auc_bucket": 0.818892,
+  "oof_auc_gbm": 0.81948,
+  "oof_auc_mix": 0.8247019999999999,
+  "n_buckets": 43,
+  "feat": [
+    "w",
+    "h",
+    "ar",
+    "px",
+    "bytes",
+    "bpp",
+    "is_sq",
+    "short",
+    "long"
+  ]
+}

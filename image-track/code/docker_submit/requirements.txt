@@ -1,0 +1,43 @@
+# =============================================================================
+# 依赖版本 —— **以交付镜像内实际安装的版本为准**（2026-09-19 用 `pip freeze` 从镜像里读出）
+#
+# ⚠️ 为什么改写这份文件（真实缺陷，已修）：
+#   旧版写的是 `numpy==2.2.4 / scipy==1.17.1 / pandas==3.0.5 / scikit-learn==1.9.1 /
+#   pillow==11.0.0`，而镜像里实际是 `2.1.2 / 1.16.3 / 2.3.2 / 1.7.2 / 10.2.0` ——
+#   因为基座（pytorch 官方镜像）的 conda 环境**已经带了这几个包**，pip 补装时并没有覆盖它们。
+#   ⇒ 文档与实物不一致，按旧文件重建会得到**不一样的环境**。现改为实测值。
+#
+# 基座：pytorch/pytorch:2.5.1-cuda12.4-cudnn9-runtime
+#   · Ubuntu 22.04 (jammy) / conda 在 /opt/conda / python 3.11 / torch 2.5.1+cu124
+#   · `torch==2.5.1`、`torchvision==0.20.1` 会被基座已装的 `+cu124` 版本满足，pip 不会重装
+#
+# 权威清单：`pip_freeze_image.txt`（镜像内 `pip freeze` 的完整 151 行，含 conda 自带包）。
+# ⚠️ peft / transformers 的版本会影响 LoRA 的键名层级，**不要擅自升级**。
+# =============================================================================
+torch==2.5.1
+torchvision==0.20.1
+transformers==5.17.0
+tokenizers==0.23.2
+peft==0.20.0
+accelerate==1.15.0
+huggingface_hub==1.31.0
+safetensors==0.8.0
+open_clip_torch==3.3.0
+regex==2026.9.10
+# ---- 下面这几个基座已带，此处只做"锁版本"，pip 会判定已满足而跳过 ----
+numpy==2.1.2
+scipy==1.16.3
+pandas==2.3.2
+scikit-learn==1.7.2
+pillow==10.2.0
+# ---- 服务框架（交付规范要求 HTTP 服务；基座里没有，需单独装）----
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+# ---- 以下为上面这些包的传递依赖，锁住以免解析出与镜像不同的版本 ----
+timm==1.0.29
+httpx==0.28.1
+pydantic==2.13.5
+starlette==0.41.3
+typer==0.27.2
+typing-inspection==0.4.4
+cloudpickle==3.1.2

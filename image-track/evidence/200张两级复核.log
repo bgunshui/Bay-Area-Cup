@@ -1,0 +1,124 @@
+样本 200 张
+
+=== A. HTTP /predict ===
+   50/200  11.8s
+   100/200  23.7s
+   150/200  35.5s
+   200/200  47.2s
+  ✅ 写出 /root/sj-tmp/probe_service.csv（47.2s，0.24 s/张）
+
+=== B. 直接调 ComponentEnsemble（8 个分量）===
+WARNING:root:No pretrained weights loaded for model 'ViT-H-14'. Model initialized randomly.
+  [基座] CLIP-H-14 离线载入 686 张量（unexpected=0）
+  [骨干] cliph: r=32 alpha=32 scaling=1.00
+  [ok] img_cliph_rerun        cliph    r=32  LoRA 192 张量 head=1024
+  [ok] img_cliph_s20261101    cliph    r=32  LoRA 192 张量 head=1024
+  [ok] img_cliph_s20261102    cliph    r=32  LoRA 192 张量 head=1024
+  [ok] img_cliph_s20261103    cliph    r=32  LoRA 192 张量 head=1024
+Loading weights:   0%|          | 0/448 [00:00<?, ?it/s]Loading weights: 100%|██████████| 448/448 [00:00<00:00, 8062.23it/s]
+[transformers] [1mSiglipVisionModel LOAD REPORT[0m from: /root/sj-tmp/fast/rootfs/app/backbones/siglip2_384
+Key                                                          | Status     |  | 
+-------------------------------------------------------------+------------+--+-
+text_model.encoder.layers.{0...26}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.self_attn.out_proj.weight | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.layer_norm1.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.mlp.fc2.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.mlp.fc2.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.mlp.fc1.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.layer_norm2.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+text_model.head.bias                                         | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.layer_norm2.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.layer_norm1.weight        | UNEXPECTED |  | 
+text_model.final_layer_norm.bias                             | UNEXPECTED |  | 
+text_model.encoder.layers.{0...26}.mlp.fc1.weight            | UNEXPECTED |  | 
+text_model.head.weight                                       | UNEXPECTED |  | 
+logit_scale                                                  | UNEXPECTED |  | 
+text_model.embeddings.token_embedding.weight                 | UNEXPECTED |  | 
+logit_bias                                                   | UNEXPECTED |  | 
+text_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+text_model.final_layer_norm.weight                           | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  [骨干] siglip2: r=16 alpha=32 scaling=2.00
+  [ok] img_gpp_siglip2        siglip2  r=16  LoRA 330 张量 head=1152
+Loading weights:   0%|          | 0/775 [00:00<?, ?it/s]Loading weights:  96%|█████████▋| 747/775 [00:00<00:00, 7420.00it/s]Loading weights: 100%|██████████| 775/775 [00:00<00:00, 7437.27it/s]
+[transformers] [1mCLIPVisionModel LOAD REPORT[0m from: /root/sj-tmp/fast/rootfs/app/backbones/clip_bigg
+Key                                                          | Status     |  | 
+-------------------------------------------------------------+------------+--+-
+text_model.encoder.layers.{0...31}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.layer_norm1.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.self_attn.out_proj.weight | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.layer_norm1.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.mlp.fc2.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.mlp.fc2.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.mlp.fc1.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.layer_norm2.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.layer_norm2.weight        | UNEXPECTED |  | 
+text_model.final_layer_norm.bias                             | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.mlp.fc1.weight            | UNEXPECTED |  | 
+logit_scale                                                  | UNEXPECTED |  | 
+text_model.embeddings.token_embedding.weight                 | UNEXPECTED |  | 
+text_projection.weight                                       | UNEXPECTED |  | 
+visual_projection.weight                                     | UNEXPECTED |  | 
+text_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+text_model.final_layer_norm.weight                           | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  [骨干] bigg: r=16 alpha=32 scaling=2.00
+  [ok] img_bigg_rerun2        bigg     r=16  LoRA 576 张量 head=1664
+  [ok] img_bigg_rerun3        bigg     r=16  LoRA 576 张量 head=1664
+Loading weights:   0%|          | 0/775 [00:00<?, ?it/s]Loading weights: 100%|██████████| 775/775 [00:00<00:00, 17690.84it/s]
+[transformers] [1mCLIPVisionModel LOAD REPORT[0m from: /root/sj-tmp/fast/rootfs/app/backbones/clip_bigg
+Key                                                          | Status     |  | 
+-------------------------------------------------------------+------------+--+-
+text_model.encoder.layers.{0...31}.self_attn.v_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.layer_norm1.weight        | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.self_attn.v_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.self_attn.q_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.self_attn.out_proj.weight | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.layer_norm1.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.mlp.fc2.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.mlp.fc2.weight            | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.mlp.fc1.bias              | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.self_attn.k_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.self_attn.k_proj.weight   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.layer_norm2.bias          | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.self_attn.q_proj.bias     | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.self_attn.out_proj.bias   | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.layer_norm2.weight        | UNEXPECTED |  | 
+text_model.final_layer_norm.bias                             | UNEXPECTED |  | 
+text_model.encoder.layers.{0...31}.mlp.fc1.weight            | UNEXPECTED |  | 
+logit_scale                                                  | UNEXPECTED |  | 
+text_model.embeddings.token_embedding.weight                 | UNEXPECTED |  | 
+text_projection.weight                                       | UNEXPECTED |  | 
+visual_projection.weight                                     | UNEXPECTED |  | 
+text_model.embeddings.position_embedding.weight              | UNEXPECTED |  | 
+text_model.final_layer_norm.weight                           | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  [骨干] bigg: r=32 alpha=64 scaling=2.00
+  [ok] img_bigg_s384_retrain  bigg     r=32  LoRA 576 张量 head=1664
+  分量键 ['img_cliph_rerun', 'img_cliph_s20261101', 'img_cliph_s20261102', 'img_cliph_s20261103', 'img_gpp_siglip2', 'img_bigg_rerun2', 'img_bigg_rerun3', 'img_bigg_s384_retrain']
+  加载 12.4s
+   50/200  12.2s
+   100/200  24.7s
+   150/200  37.3s
+   200/200  49.1s
+  ✅ 写出 /root/sj-tmp/probe_components.csv（49.1s）
+
+完成

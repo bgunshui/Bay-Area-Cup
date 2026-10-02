@@ -1,0 +1,10 @@
+# 权重与骨干体积大（4 个 cliph 权重 160 MiB，超 GitHub 单文件 100 MiB 硬限）
+# 且不属于"读代码/看报告"所需 —— 清单与 md5 见 image-track/WEIGHTS.md
+image-track/code/docker_submit/app/weights/
+image-track/code/docker_submit/app/backbones/
+*.tar
+*.tar.gz
+__pycache__/
+*.pyc
+.vscode/
+.idea/
