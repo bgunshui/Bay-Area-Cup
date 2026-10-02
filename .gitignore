@@ -8,13 +8,16 @@ __pycache__/
 *.pyc
 .vscode/
 .idea/
+
 # ── 文本赛道 ──────────────────────────────────────────────
 # LoRA 适配器与基座权重体积大,不入库;清单与校验值见 text-track/WEIGHTS.md
 text-track/**/*.safetensors
 text-track/**/*.bin
 text-track/**/*.pt
-*.tar
-*.tar.gz
 *.tgz
 *.zip
 *.vhdx
+
+# ── 图像赛道：验证脚本的运行期残留 ────────────────────────
+# verify_reproduce.py 结尾会 np.save 一份逐图分数用于排查，不属于仓库内容
+_verify_*.npy

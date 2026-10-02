@@ -78,9 +78,10 @@
 │   │   ├── 04_镜像复现偏差说明(回组委会).md
 │   │   ├── 05_验证证据一览.md          ← ★ 每个数字的出处与复跑命令
 │   │   └── 06_答辩要点.md              ← ★ 按评审维度组织的答辩材料 + Q&A 预案
-│   ├── submission/               ← 10 个冻结 CSV（含 0.918887 提交文件）
+│   ├── submission/               ← 10 个冻结 CSV（含 0.918887 提交文件）+ README.md 哈希台账
 │   ├── code/
 │   │   ├── docker_submit/        ← 服务化代码（server/models/fusion + Dockerfile + 构建与复检脚本）
+│   │   │   └── requirements-verify.txt  ← 只跑"逐图复现"所需的 4 个小依赖（不装 torch）
 │   │   ├── training/             ← 训练脚本（按分量精选）
 │   │   ├── probe/                ← 探针脚本（出分量 CSV / 相关性分析）
 │   │   └── fusion/               ← 融合与提交文件构建脚本
@@ -106,15 +107,22 @@
     └── evidence/                 ← 递进消融表 + 各模型离线预测分数
 ```
 
-## 复现最快路径（不需要 GPU、不需要权重）
+## 复现最快路径（不需要 GPU、不需要权重、不需要 Docker）
 
 ```bash
-# 图像赛道：必须输出 spearman = 1.0000000000
-cd image-track/code/docker_submit && python verify_reproduce.py --from-csv
+# ① 图像赛道：必须输出 spearman = 1.0000000000
+cd image-track/code/docker_submit
+python -m venv .venv && .venv/bin/pip install -r requirements-verify.txt   # 约 1 分钟，4 个小依赖
+.venv/bin/python verify_reproduce.py --from-csv
 
-# 文本赛道：用冻结的中间结果重建 0.981301 那次提交的排序
-python text-track/code/fusion/final_check.py   # 输出与提交文件排序一致、最大差 1.1e-16
+# ② 文本赛道：用冻结的中间结果重建 0.981301 那次提交的排序
+cd ../../..                                  # 回到仓库根
+python text-track/code/fusion/final_check.py # 输出与提交文件排序一致、最大差 1.1e-16
 ```
+
+> ⚠️ **图像赛道需要 numpy ≥ 2**：`gbm.pkl` 是 numpy 2.x 序列化的，numpy 1.x 读不了。
+> 用错的版本跑，脚本会**提前拦住并打印解法**，不会给出"看起来对"的错数。
+> Windows 把 `.venv/bin/` 换成 `.venv\Scripts\`；中文乱码先 `chcp 65001`。
 
 ## 答辩准备入口
 

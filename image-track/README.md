@@ -90,7 +90,7 @@ score = rank_pct( Σ 槽权重 × 槽 )  × (1 − 0.20)  +  rank_pct( 尺寸先
 | 镜像接口规范、资源声明、自查清单 | `docs/02_交付包提交说明.md` |
 | 交付物构成、修过哪些缺陷 | `docs/03_交付说明.md` |
 | 给组委会的偏差说明（可复现性辩护） | `docs/04_镜像复现偏差说明(回组委会).md` |
-| 提交文件与 8 个分量的冻结 CSV | `submission/` |
+| 提交文件与 8 个分量的冻结 CSV（**含逐字节哈希台账 + 配方表**） | [`submission/README.md`](submission/README.md) |
 | 服务化代码（Dockerfile / server / models / fusion / 复检脚本） | `code/docker_submit/` |
 | 训练脚本（按分量精选） | `code/training/` |
 | 真 GPU 验证原始输出 | `evidence/` |
@@ -102,13 +102,33 @@ score = rank_pct( Σ 槽权重 × 槽 )  × (1 − 0.20)  +  rank_pct( 尺寸先
 
 ```bash
 cd code/docker_submit
-python verify_reproduce.py --from-csv      # → spearman = 1.0000000000
+
+# ① 建环境（约 1 分钟，只装 4 个小依赖，不装 torch）
+python -m venv .venv
+.venv/bin/pip install -r requirements-verify.txt      # Windows: .venv\Scripts\pip
+
+# ② 逐图重建提交文件
+.venv/bin/python verify_reproduce.py --from-csv       # Windows: .venv\Scripts\python
+#    → 必须输出 spearman = 1.0000000000
 ```
 
 这条命令只读 `submission/` 里的 10 个 CSV + 镜像内的查表，**逐图重建 0.918887 的提交文件**。
+脚本会**自动定位** CSV 目录（交付包内 / 本仓库内两种布局都能跑）。
 
-需要跑真实服务时：`bash code/docker_submit/verify_container.sh <镜像 tar>`（**没有 Docker 也能跑**，
+> **⚠️ 环境要求（实测踩过）**：`app/tables/gbm.pkl` 是用 **numpy 2.x** 序列化的，
+> **numpy 1.x 读不了**（报 `No module named 'numpy._core'`，与业务无关）。
+> 用 numpy<2 跑会看到一屏看不懂的报错 —— 脚本现在会**提前拦住并给出解法**。
+> 另外 `gbm.pkl` 由 **scikit-learn 1.6.1** 序列化、镜像里是 1.7.2，
+> 加载时会有一条 `InconsistentVersionWarning`，**已实测不影响结果**。
+> Windows 控制台若中文乱码，先执行 `chcp 65001`。
+
+需要跑真实服务时：`bash code/docker_submit/verify_container.sh <镜像 tar>`（**需 Linux；没有 Docker 守护进程也能跑**，
 脚本用 chroot 代替 `docker run`，逐层摊开镜像后以非 root 用户启动服务并打三探针）。
+
+> **本仓库副本与冻结交付包的差异（如实说明）**：`code/docker_submit/verify_reproduce.py`
+> 比交付包里那一份多了三处**向后兼容**的改动 ——
+> ① CSV 目录自动定位（冻结版假定 CSV 平铺在包根，在仓库布局下会 `FileNotFoundError`）；
+> ② numpy<2 环境闸门；③ stderr 也设为 UTF-8。**其余脚本与 `app/` 下的服务代码逐字节相同。**
 
 ---
 

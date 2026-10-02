@@ -1,0 +1,26 @@
+# ============================================================================
+# 只为「不装 torch 就能复现提交文件」这一步准备的最小依赖集。
+#
+# 用途：跑 `verify_reproduce.py --from-csv`（把 8 个分量的冻结 CSV 走一遍融合管线，
+#       与 LB 0.918887 的提交文件比值，判据 spearman == 1.0000000000）。
+#       这一步**不需要 GPU、不需要 Docker、不需要任何模型权重**。
+#
+# 用法：
+#     python -m venv .venv
+#     .venv/bin/pip install -r requirements-verify.txt          # Windows: .venv\Scripts\pip
+#     .venv/bin/python verify_reproduce.py --from-csv           # Windows: .venv\Scripts\python
+#
+# 版本说明（必须与交付镜像一致，否则结果不权威）：
+#   · numpy **必须 ≥ 2**：app/tables/gbm.pkl 是用 numpy 2.x 序列化的，
+#     numpy 1.x 读取会报 `No module named 'numpy._core'`（与业务无关的序列化问题）。
+#   · scikit-learn：gbm.pkl **由 1.6.1 序列化**，交付镜像里装的是 1.7.2；
+#     在 1.7.2 下加载会打一条 `InconsistentVersionWarning`，
+#     但**已实测结果不变**（spearman = 1.0000000000）。这里固定 1.7.2 与镜像保持一致。
+#
+# 完整镜像依赖（含 torch / transformers / open_clip 等）见同目录 `requirements.txt`。
+# ============================================================================
+
+numpy==2.1.2
+pandas==2.3.2
+scipy==1.16.3
+scikit-learn==1.7.2

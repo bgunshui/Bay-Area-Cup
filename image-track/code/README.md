@@ -74,15 +74,22 @@
 
 ## 五、最小复现路径
 
+> 每条命令都标注了**执行目录**（都以本仓库的 `image-track/code/` 为基准写）。
+
 ```bash
-# ① 提交文件逐位可复现（不需要 GPU / 权重）
-cd docker_submit && python verify_reproduce.py --from-csv
+# ① 提交文件逐图可重建（不需要 GPU / 权重 / Docker）—— 在 code/docker_submit/ 下执行
+cd docker_submit
+python -m venv .venv && .venv/bin/pip install -r requirements-verify.txt   # 约 1 分钟
+.venv/bin/python verify_reproduce.py --from-csv
+#    → 必须输出 spearman = 1.0000000000
+#    ⚠️ 需要 numpy ≥ 2（app/tables/gbm.pkl 是 numpy 2.x 序列化的）
 
-# ② 有 GPU 时：出 8 个分量的 CSV，再重跑融合
-python ../probe/probe_ckpt.py      # HF 系分量
-python ../probe/probe_cliph.py     # open_clip 系分量
-python ../fusion/build_final.py    # 合成提交文件
+# ② 有 GPU 时：出 8 个分量的 CSV，再重跑融合 —— 在 code/ 下执行
+cd ..
+python probe/probe_ckpt.py        # HF 系分量（SigLIP2 / bigG），需 TFM/SHORT/CROP 环境变量
+python probe/probe_cliph.py       # open_clip 系分量（CLIP ViT-H-14）
+python fusion/build_final.py      # 按文件顶部 SLOTS 配方合成提交文件（自带 corr 自检）
 
-# ③ 有 GPU 时：直接起服务打三探针
-bash docker_submit/verify_container.sh <镜像 tar>
+# ③ 有 GPU 时：起服务打三探针 + /predict —— 在 code/ 下执行（脚本是 bash，**需 Linux**）
+bash docker_submit/verify_container.sh <镜像 tar>     # 用 chroot 摊开镜像，无需 Docker 守护进程
 ```

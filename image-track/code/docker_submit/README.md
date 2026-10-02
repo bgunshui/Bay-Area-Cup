@@ -61,6 +61,16 @@ python verify_reproduce.py --from-csv      # 必须输出 spearman = 1.000000000
 python check_weight_keys.py                # 校验 8 个权重的键名/rank/head
 ```
 
+> `verify_reproduce.py --from-csv` 只需要 4 个小依赖（**不装 torch**）：
+> ```bash
+> python -m venv .venv && .venv/bin/pip install -r requirements-verify.txt
+> .venv/bin/python verify_reproduce.py --from-csv
+> ```
+> ⚠️ **numpy 必须 ≥ 2**：`app/tables/gbm.pkl` 是 numpy 2.x 序列化的，numpy 1.x 会报
+> `No module named 'numpy._core'`（与业务无关）。脚本会提前拦住并给出解法。
+> 该脚本还能**自动定位** CSV 目录，所以在交付包内和 GitHub 仓库内都能直接跑；
+> 找不到时会列出所有试过的路径（不会静默）。
+
 **打真实服务验证（需要 GPU）：**
 ```bash
 python verify_reproduce.py --http http://<host>:8080
