@@ -8,3 +8,13 @@ __pycache__/
 *.pyc
 .vscode/
 .idea/
+# ── 文本赛道 ──────────────────────────────────────────────
+# LoRA 适配器与基座权重体积大,不入库;清单与校验值见 text-track/WEIGHTS.md
+text-track/**/*.safetensors
+text-track/**/*.bin
+text-track/**/*.pt
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.vhdx

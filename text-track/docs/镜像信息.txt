@@ -1,0 +1,55 @@
+湾区杯 AIGC 检测挑战赛 · 文本赛道 · Docker 镜像信息
+═══════════════════════════════════════════════════════════════
+
+【镜像标识】
+  镜像文件      ai-text-detector-0.981301.tar
+  镜像大小      53,317,416,960 字节(49.66 GiB)
+  镜像 SHA256   a163a653d2aa05b7bd51ec6016fbc5aed51379f7802fbfbb9a39c231dc691f68
+  仓库标签      ai-text-detector:0.981301
+  架构/系统     linux/amd64
+  层数          2(主层 + 依赖层)
+
+【加载与启动】
+  docker load -i ai-text-detector-0.981301.tar
+  docker run --gpus all -p 8080:8080 ai-text-detector:0.981301
+
+  · 无需任何额外参数或挂载;容器入口即启动推理服务
+  · 完全离线运行(内置 HF_HUB_OFFLINE=1 / TRANSFORMERS_OFFLINE=1),
+    可直接用 docker run --network none 运行
+
+【服务接口】监听 0.0.0.0:8080
+  GET  /health/startup     加载期间 503;模型与全部 adapter 就绪后 200
+  GET  /health/liveness    200(轻量,不涉及推理)
+  GET  /health/readiness   就绪后 200(返回 200 后首个推理请求即可正常处理)
+  POST /predict            {"req_id": "...", "data": "待检测纯文本"}
+                        -> {"req_id": "...", "code": 0, "score": 0.xxxx}   score ∈ [0, 1]
+
+【资源声明】
+  GPU 显存      ≥ 48 GB(必需)
+  CPU           8 核
+  内存          32 GB(建议 64 GB)
+  磁盘          约 50 GB
+  网络          不需要(完全离线)
+
+【耗时实测(NVIDIA RTX 4090 49,140 MiB)】
+  启动(加载 41.7 GB 基座权重 + 15 个 LoRA 适配器)   **70.1 秒**(平台上限 300 秒)
+  单条推理(14B×5 折 + 7B×10 折 = 15 次前向)         **0.68 秒**(平台上限 90 秒)
+  显存占用实测                                       **41,868 MiB / 47.4 GiB**
+  文本截断长度  max_length = 512 tokens
+
+【方案摘要】复赛文本 AUC = 0.981301(文本榜第 4 名)
+  score = 0.90 × sigmoid(mean_5fold(Qwen2.5-14B  + p4      LoRA))
+        + 0.10 × sigmoid(mean_10fold(Qwen2.5-7B  + r3a/r3b LoRA))
+
+【运行时版本】
+  python 3.10.21 / torch 2.5.1+cu124 / transformers 4.46.0 / peft 0.20.0
+  tokenizers 0.20.3 / accelerate 0.33.0 / fastapi 0.115.0 / uvicorn 0.30.6
+  pydantic 2.9.2 / sentencepiece 0.2.0 / scipy 1.13.1
+  CUDA 运行时由 pip 的 nvidia-*-cu12(12 件)+ triton 3.1.0 提供,不依赖宿主机 CUDA toolkit
+  推理精度 bf16 全精度(未使用量化)
+
+【自检结论】
+  三个探针接口、/predict 融合路径、score 边界裁剪、
+  依赖完整性(torch/transformers/peft 等 23 个模块 import 通过)、
+  真实 LoRA 权重加载与 CPU 前向,均已在镜像自身的 Python 3.10 环境中实测通过。
+═══════════════════════════════════════════════════════════════
