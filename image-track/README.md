@@ -131,9 +131,15 @@ python -m venv .venv
 > **`app/` 下的服务代码、`Dockerfile`、`requirements.txt`、全部权重与 10 个 CSV 均与冻结交付包逐字节相同**
 > （已用 sha256 与原始源逐个核对）。
 >
+> 判断"必须逐字节相同"的范围有明确依据：`MANIFEST.md` 里登记了 sha256 的只有
+> **镜像 tar**（`fe2fc57e…`）与 **AS2 报告 / AS3 说明**（`6df8810c…` / `a53011ff…`）；
+> `app/` 是镜像里真正运行的代码，10 个 CSV 是复现链的冻结输入 —— 这三类必须一致，已全部核对。
+> 下面这些**辅助脚本/文档不在任何哈希台账里、也不在镜像内**（`Dockerfile` 只 `COPY requirements.txt` 与 `app/`），
+> 改动它们不影响可复现性，列出仅供审阅。
+>
 > | 文件 | 差异 |
 > |---|---|
-> | `code/docker_submit/verify_reproduce.py` | ① CSV 目录自动定位（冻结版假定 CSV 平铺在包根，在仓库布局下会 `FileNotFoundError`）；② numpy<2 环境闸门（提前拦住并给解法，不打补丁）；③ `--http` 缺 `requests` 时给可读提示；④ stderr 也设为 UTF-8 |
+> | `code/docker_submit/verify_reproduce.py` | ① CSV 目录自动定位（冻结版假定 CSV 平铺在包根，在仓库布局下会 `FileNotFoundError`）；② numpy<2 环境闸门（提前拦住并给解法，不打补丁）；③ `--http` 缺 `requests` 时给可读提示；④ stderr 也设为 UTF-8；⑤ 删掉 3 个未使用的导入（`io`/`json`/`rankdata`） |
 > | `code/fusion/check_submission.py` | ① 路径改为逐级搜索；② id 顺序参照自动回退到仓库内的 LB 提交件（冻结版依赖的 `baycup_v31f_b20_s15.csv` 不在仓库里）；③ 修掉"列名不对就抛 traceback"；④ **修掉 `all()` 短路**（原多文件时第一个失败就跳过其余）；⑤ 退出码改为 0/1 |
 > | `code/docker_submit/requirements-verify.txt` | **新增**（冻结包内没有）：只跑逐图复现所需的 4 个小依赖 |
 > | `submission/README.md` | **新增**：哈希台账 + 配方表 + 自查命令 |

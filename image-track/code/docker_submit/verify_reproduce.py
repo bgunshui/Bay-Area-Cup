@@ -21,14 +21,12 @@
 """
 import argparse
 import base64
-import io
-import json
 import sys
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
-from scipy.stats import rankdata, spearmanr
+from scipy.stats import spearmanr
 
 
 # ─────────────────────────────────────────────────────────────────────────────
