@@ -88,7 +88,7 @@ POST /predict
 ## 七、本次在服务器上新增的文件
 
 ```
-/root/sj-tmp/server_v4.py     加固版推理服务(与镜像内 app/server.py 同源)
+server_dual_v4.py            加固版推理服务(与镜像内 /app/server.py 同源,见 ../code/docker_submit/)
 /root/sj-tmp/gpu_driver.py    验证驱动脚本
 /root/sj-tmp/gpu_server.log   完整服务日志
 ```
