@@ -1,0 +1,6 @@
+{
+  "scipy_kendall_tau_b": 0.9978162717686663,
+  "counter_implied_tau_b": 0.9978162717686663,
+  "absolute_difference": 0.0,
+  "method": "Independent scipy Kendall tau-b validates strict discordances and tie counts; finite 20000-vector pair comparison, no labels."
+}

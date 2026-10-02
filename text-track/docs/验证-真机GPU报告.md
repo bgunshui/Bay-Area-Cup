@@ -1,54 +1,52 @@
-# 真机 GPU 端到端验证报告(2026-09-18)
+# 真机 GPU 小样本验证记录（历史测试 2026-09-18）
 
-服务器:`root@<HOST-B> -p <PORT>`(hostname `<HOSTNAME>`)
-GPU:**NVIDIA GeForce RTX 4090,49,140 MiB**(驱动 595.71.05 / CUDA 13.2 能力)
+> 2026-10-02 交接核对：保留原报告的指标与日志摘录，并按入库驱动限定其覆盖。完整服务日志、完整驱动输出和原始设备记录未入库；本次没有重新运行 GPU 测试。
 
-## 一、验证方式说明(为什么不是 `docker run`)
+历史服务器为 `root@<HOST-B> -p <PORT>`，hostname `<HOSTNAME>`。原报告写 GPU 为 NVIDIA GeForce RTX 4090、49,140 MiB，驱动 595.71.05；这些是原记录，待原始 `nvidia-smi` 核对设备型号和实际容量。
 
-该服务器**没有可用的 Docker 守护进程**:本机是受限容器
-(`CapEff=00000000a80425fb`,**无 `CAP_SYS_ADMIN`**),`dockerd` 无法启动;
-`chroot` 里也无法 `mount --bind /dev`、`/proc`,所以 chroot 内 `torch.cuda.is_available()` 为 False。
+## 一、实际验证路径与版本
 
-因此改用等价且更严格的验证路径:
+历史报告称服务器没有可用 Docker 守护进程，受限容器无法正常启动 dockerd 或为 chroot 绑定 GPU 设备，因此改用：
 
-- 宿主是 **Ubuntu 22.04 / Python 3.10.12 / glibc 2.35**
-- 镜像的依赖全是 **cp310 / manylinux_2_17~2_28** wheel,**ABI 与宿主 Python 3.10 完全一致**
-- 用 `PYTHONPATH=<镜像 site-packages> /usr/bin/python3.10 -S` 直接把镜像的依赖挂到宿主 Python 上
-  (`-S` 用于隔离宿主自带的老 torchvision,否则 transformers 会报 `operator torchvision::nms does not exist`)
-- 模型与适配器直接指向镜像内的 `/app/model`、`/app/adapters`
-- 用 `server_dual_v4.py`(**即最终镜像里的 `app/server.py`**)启动服务
+- Ubuntu 22.04 / Python 3.10.12 宿主。
+- `PYTHONPATH` 指向镜像抽取的 Python 3.10 site-packages，`-S` 隔离宿主依赖。
+- 模型和 adapter 路径指向抽取的镜像资产。
+- 启动加固版 v4。仓库驱动实际启动 `/root/sj-tmp/server_v4.py`，未在脚本中检查该运行文件哈希。
 
-即:**除了少一层容器隔离,依赖、代码、模型、精度、CUDA 路径全部与镜像内一致**。
+当前 `server_dual_v4.py` 源码 SHA256 为 `7d868df187907a411ac5cf1f0631ed0470befb732cebe9ad14a440e785b636ed`，与历史终审报告所写的最终镜像服务哈希一致。当前工作区旧单层镜像的服务是 v2；新最终双层镜像（53,317,416,960 B，a163…91f68）未交接本地。
 
-## 二、依赖自检(镜像 site-packages)
+这是宿主环境的真模型烟测记录，不是 `docker run`。宿主 Python 补丁版本、动态库搜索与容器隔离条件存在差别，不能称比真实容器验证“等价且更严格”。
 
-```
+## 二、原报告的依赖摘录
+
+```text
 python 3.10.12
 torch 2.5.1+cu124            cuda True
 transformers 4.46.0          peft 0.20.0        tokenizers 0.20.3
-fastapi 0.115.0              pydantic 2.9.2     uvicorn / starlette / numpy / scipy
+fastapi 0.115.0              pydantic 2.9.2
 torch.distributed.tensor 预加载 OK
 ```
 
-## 三、关键指标
+上述为报告摘录，不是本次重新采集输出。镜像自身 Python 的历史记录是 3.10.21。
 
-| 指标 | 实测 | 提交声明 | 平台上限 | 结论 |
-|---|---|---|---|---|
-| 启动(43 GB 权重 + 15 adapter) | **70.1 秒** | ~180 秒 | 300 秒 | 余量充足 |
-| 单条推理(15 次前向) | **min 0.65 / max 0.74 / avg 0.68 秒** | ~3 秒 | 90 秒 | 余量充足 |
-| 显存占用 | **41,868 MiB / 47.4 GiB** | ≥ 48 GB | — | 余量约 6.5 GiB |
-| 14B 侧加载 | 44 秒 | — | — | 8 个分片 |
-| 全部加载完成 | 68 秒 | — | — | 14B=5 fold 7B=10 fold |
+## 三、原报告记录的指标及适用范围
 
-## 四、设备放置修复已确认生效(本次最重要的验证点)
+| 指标 | 历史记录 | 可解释的范围 |
+|---|---|---|
+| 启动等待 | 70.1 秒 | 驱动每 5 秒轮询 startup 的一次观测，包含加载/预热，非精确分阶段性能基准 |
+| 单条请求 | min 0.65 / max 0.74 / avg 0.68 秒 | 五条短样本逐条各请求一次，含 HTTP 往返；不是任意长度或并发性能 |
+| 显存使用 | 41,868 MiB | 约 40.89 GiB；驱动读取整卡 `memory.used`，不是独立测量服务进程峰值 |
+| 14B 加载 / 全部就位 | 44 秒 / 68 秒 | 来自服务摘录；完整配置为 14B 5 adapter、7B 10 adapter |
 
-旧版 server.py 写成 `if dev != "cuda": model.to(dev)`,而 transformers 在未传 `device_map` 时
-会把模型留在 CPU —— 结果是**有 GPU 时反而不搬运**,14B 会在 CPU 上跑 15 次前向,
-单请求远超 90 秒上限,决赛必然失败。
+原报告同时写“总量 49,140 MiB”和日志“47.4 GiB”：前者换算约 47.99 GiB，二者不一致，暂不据此计算精确余量。两个基座文件合计约 41.70 GiB，15 个 adapter 文件合计 907,824,320 B（约 865.77 MiB）；磁盘体积与运行显存不是同一指标。
 
-真机日志(修复后):
+## 四、设备放置的源码与历史日志
 
-```
+v2 的 `if dev != "cuda": model.to(dev)` 没有在 CUDA 分支明确迁移；v4 增加 `device_map={"":0}` 与 `.to(dev)` 兜底。不要把未经测量的旧版 CPU 延迟写成“必然超过 90 秒”；完整推理是 14B 五次加 7B 十次前向。
+
+原报告保留的修复后日志摘录：
+
+```text
 [load] GPU=NVIDIA GeForce RTX 4090 mem=47.4GiB
 [load] .../Qwen2.5-14B-Instruct 经 device_map 加载到 cuda:0
 [load] lora14b_p4 基座就位 device=cuda:0 dtype=torch.bfloat16
@@ -58,37 +56,32 @@ torch.distributed.tensor 预加载 OK
 [load] ALL done 68s  14B=5 7B=10
 ```
 
-`device=cuda:0` 明确出现在两侧,且显存占用 41.8 GiB 证明权重确实在显卡上。
+这些摘录支持历史测试使用 GPU 路径的记录，但不是独立完整日志。v4 仍捕获 `.to(dev)` 失败后返回模型，没有强制断言最终设备。
 
-## 五、探针与推理接口
+## 五、五条样本的历史接口记录
 
-```
-/health/startup    -> 200 {"status":"ok"}    (加载期间正确返回 503)
-/health/liveness   -> 200 {"status":"ok"}
-/health/readiness  -> 200 {"status":"ok"}
+入库 `code/verify/gpu_driver.py` 的 `TEXTS` 有且只有以下五类样本，顺序运行；“人类”“AI”是手写样本名称，不是经标注评测集：
 
-POST /predict
-  人类-评论 0.74s -> {"code":0,"score":0.3934}
-  AI-论文   0.68s -> {"code":0,"score":0.6951}
-  短文本    0.65s -> {"code":0,"score":0.3521}
-  英文      0.68s -> {"code":0,"score":0.5204}
-  空串      0.66s -> {"code":0,"score":0.7571}   (eos 兜底,不报错)
-```
+| 样本名称 | 时间 | 记录的成功分数 |
+|---|---|---|
+| 中文评论短文 | 0.74 s | 0.3934 |
+| 论文风格短文 | 0.68 s | 0.6951 |
+| 短句 | 0.65 s | 0.3521 |
+| 英文短文 | 0.68 s | 0.5204 |
+| 空串 | 0.66 s | 0.7571 |
 
-不同风格文本给出明显不同的分数,说明 0.90×14B + 0.10×7B 融合路径在真卡上正常工作。
+原报告称三个探针均返回 200、加载期间 startup 返回 503。不同分数不能单独证明融合权重正确、检测质量良好或校准有效；对应源码可核查融合式，完整输出尚待取得。
 
-## 六、未做的验证(如实说明)
+## 六、未覆盖的项目与残留问题
 
-未做 20005 条复赛集的全量分数复现:
-- 全量耗时约 3.8 小时(0.68s × 20005)
-- 离线 rank 融合与线上 sigmoid 融合的排序相关性此前已用 20000 条实测为 **0.999997**
-  (排序差异 >0.01 的样本占比 0.065%),本报告不重复该结论
-- 若需要,可在该机直接跑:预计 4 小时内出全量 AUC
+- 没有真实 `docker load` / `docker run`；没有容器 GPU 注入与完整健康检查证据。
+- 没有 512 tokens 长输入、纯空白专项、并发吞吐、排队延迟或重复试验。
+- 没有 20000 条复赛集 HTTP 全量复现，更没有复赛公开标签可供独立 AUC 计算。不能用五短样本 0.68 秒线性保证全量耗时。
+- 2026-10-02独立核对冻结CSV与线上数组：Spearman 0.9998697005807853；严格反序218,292对、单侧并列变化279对，合计约0.10929%。这不是GPU HTTP全量测试；旧0.999997与旧204,591对不作为当前复现结果。
+- v4 已有锁与 EOS 兜底，但 NaN 防护仍先夹取后检查，adapter 缺失仍跳过，没有方案完整性的强制校验。
 
-## 七、本次在服务器上新增的文件
+## 七、可交接与待交接文件
 
-```
-server_dual_v4.py            加固版推理服务(与镜像内 /app/server.py 同源,见 ../code/docker_submit/)
-/root/sj-tmp/gpu_driver.py    验证驱动脚本
-/root/sj-tmp/gpu_server.log   完整服务日志
-```
+已入库：`code/docker_submit/server_dual_v4.py`、`code/verify/gpu_driver.py` 与本报告摘录。
+
+仅在历史报告记录了服务器路径，未入库：`/root/sj-tmp/gpu_server.log`、完整驱动 stdout、原始设备信息与实际运行脚本哈希。需要交接这些原始材料，才能将历史烟测记录提升为可独立核验的运行证据。
