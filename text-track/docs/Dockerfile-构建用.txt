@@ -1,3 +1,9 @@
+# 历史构建快照，交接说明补充于2026-10-02。以下原Dockerfile代码保持原样。
+# 该快照属于单14B、8-bit方案，复制的是历史server.py，依赖旧requirements。
+# 最终双模型v4为另一路双层归档重建，不能直接由此快照生成。
+# 正确最终镜像53,317,416,960 B / SHA256 a163…91f68当前未交接本地；同名旧镜像为v2。
+# 历史报告未完成真实docker load/run；实际部署须先核对镜像与源码哈希。
+
 FROM pytorch/pytorch:2.4.0-cuda12.1-cudnn9-runtime
 
 WORKDIR /app

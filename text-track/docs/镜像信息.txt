@@ -1,55 +1,77 @@
-湾区杯 AIGC 检测挑战赛 · 文本赛道 · Docker 镜像信息
-═══════════════════════════════════════════════════════════════
+湾区杯 AIGC 检测挑战赛 · 文本赛道 · Docker 镜像交接信息
+核对日期：2026-10-02；历史测试日期：2026-09-18
 
-【镜像标识】
-  镜像文件      ai-text-detector-0.981301.tar
-  镜像大小      53,317,416,960 字节(49.66 GiB)
-  镜像 SHA256   a163a653d2aa05b7bd51ec6016fbc5aed51379f7802fbfbb9a39c231dc691f68
+【证据与版本说明】
+  下列最终镜像标识来自历史提交/终审记录，正确二进制当前未交接本地。
+  工作区已有同名旧镜像为 47,775,201,280 字节、单层，服务是 v2，不能当成 v4。
+  完整 GPU 服务日志、完整驱动输出和实际运行代码哈希未入库。
+  本次没有重跑模型或 Docker；历史日志摘录不是本次新增实测。
+
+【历史最终镜像标识】
+  文件          ai-text-detector-0.981301.tar
+  大小          53,317,416,960 字节（49.66 GiB）
+  SHA256        a163a653d2aa05b7bd51ec6016fbc5aed51379f7802fbfbb9a39c231dc691f68
   仓库标签      ai-text-detector:0.981301
   架构/系统     linux/amd64
-  层数          2(主层 + 依赖层)
+  层数          2（主层 + 依赖覆盖层）
+  有效服务声明  server_dual_v4.py
+  v4 源码SHA256 7d868df187907a411ac5cf1f0631ed0470befb732cebe9ad14a440e785b636ed
 
-【加载与启动】
+【拿到正确镜像后的待执行步骤】
+  sha256sum ai-text-detector-0.981301.tar
   docker load -i ai-text-detector-0.981301.tar
   docker run --gpus all -p 8080:8080 ai-text-detector:0.981301
 
-  · 无需任何额外参数或挂载;容器入口即启动推理服务
-  · 完全离线运行(内置 HF_HUB_OFFLINE=1 / TRANSFORMERS_OFFLINE=1),
-    可直接用 docker run --network none 运行
+  历史报告未完成真实 docker load / docker run，本次也未补做。
+  离线环境变量和权重内置是历史最终镜像声明，需核对实际二进制。
+  仓库 Dockerfile 与 requirements.txt 仍是单14B/8-bit历史版本，不能直接构建本镜像。
 
-【服务接口】监听 0.0.0.0:8080
-  GET  /health/startup     加载期间 503;模型与全部 adapter 就绪后 200
-  GET  /health/liveness    200(轻量,不涉及推理)
-  GET  /health/readiness   就绪后 200(返回 200 后首个推理请求即可正常处理)
-  POST /predict            {"req_id": "...", "data": "待检测纯文本"}
-                        -> {"req_id": "...", "code": 0, "score": 0.xxxx}   score ∈ [0, 1]
+【v4 服务接口】监听 0.0.0.0:8080
+  GET /health/startup    加载/预热期间503；失败503并带详情；就绪后200
+  GET /health/liveness   恒200，仅表示HTTP进程可响应
+  GET /health/readiness  ready=True后200，不强制核验adapter总数
+  POST /predict         必填字符串req_id/data；成功code=0，回传req_id和检测score
+  校验错误              HTTP400/code40001，req_id=None
+  未就绪                HTTP503/code50301
+  推理异常              HTTP500/code50001
 
-【资源声明】
-  GPU 显存      ≥ 48 GB(必需)
-  CPU           8 核
-  内存          32 GB(建议 64 GB)
-  磁盘          约 50 GB
-  网络          不需要(完全离线)
+【推理实现】
+  14B p4 五个adapter + 7B r3a/r3b各五个adapter，完整配置下共15次前向。
+  score = 0.90 × sigmoid(mean_5(logit0_14B))
+        + 0.10 × sigmoid(mean_10(logit0_7B))
+  第0个logit的AI方向需结合训练标签约定；输出为检测分数，不是已校准概率。
+  文本最长512 tokens，超长截断；零长度分词补EOS；预测锁串行执行。
+  CUDA使用bf16、CPU使用fp32，未使用8-bit量化。
 
-【耗时实测(NVIDIA RTX 4090 49,140 MiB)】
-  启动(加载 41.7 GB 基座权重 + 15 个 LoRA 适配器)   **70.1 秒**(平台上限 300 秒)
-  单条推理(14B×5 折 + 7B×10 折 = 15 次前向)         **0.68 秒**(平台上限 90 秒)
-  显存占用实测                                       **41,868 MiB / 47.4 GiB**
-  文本截断长度  max_length = 512 tokens
+【资源与历史性能记录】
+  基座文件合计   约41.70 GiB（不是显存峰值）
+  adapter合计    907,824,320 B，约865.77 MiB（约908 MB）
+  历史资源建议   ≥48 GB显存、8核CPU、32 GB内存（建议64 GB）；最低需求未独立实测
+  磁盘           镜像约50 GiB；加载、抽取、重建还需额外空间
+  历史GPU记录    报告写NVIDIA RTX4090、49,140 MiB；型号/总容量待原始设备日志核对
+  启动           70.1秒，一次轮询观察，含加载/预热
+  单条请求       五条短样本顺序各测一次：min0.65/max0.74/avg0.68秒
+  显存           整卡memory.used记录41,868 MiB，即约40.89 GiB
+  总显存差异     49,140 MiB约47.99 GiB，与日志47.4 GiB不一致；不据此算精确余量
 
-【方案摘要】复赛文本 AUC = 0.981301(文本榜第 4 名)
-  score = 0.90 × sigmoid(mean_5fold(Qwen2.5-14B  + p4      LoRA))
-        + 0.10 × sigmoid(mean_10fold(Qwen2.5-7B  + r3a/r3b LoRA))
+  五样本含中文短文、英文和空串；未512-token压力测试、未并发吞吐、未全量AUC。
+  完整gpu_server.log未入库，不能把0.68秒推广至任意输入、设备或并发。
 
-【运行时版本】
-  python 3.10.21 / torch 2.5.1+cu124 / transformers 4.46.0 / peft 0.20.0
-  tokenizers 0.20.3 / accelerate 0.33.0 / fastapi 0.115.0 / uvicorn 0.30.6
-  pydantic 2.9.2 / sentencepiece 0.2.0 / scipy 1.13.1
-  CUDA 运行时由 pip 的 nvidia-*-cu12(12 件)+ triton 3.1.0 提供,不依赖宿主机 CUDA toolkit
-  推理精度 bf16 全精度(未使用量化)
+【运行时版本的历史记录】
+  镜像Python3.10.21；宿主GPU验证Python3.10.12
+  torch2.5.1+cu124 / transformers4.46.0 / peft0.20.0 / tokenizers0.20.3
+  accelerate0.33.0 / fastapi0.115.0 / uvicorn0.30.6 / pydantic2.9.2
+  以上来自历史报告，完整最终requirements/wheel目录未交接。
 
-【自检结论】
-  三个探针接口、/predict 融合路径、score 边界裁剪、
-  依赖完整性(torch/transformers/peft 等 23 个模块 import 通过)、
-  真实 LoRA 权重加载与 CPU 前向,均已在镜像自身的 Python 3.10 环境中实测通过。
-═══════════════════════════════════════════════════════════════
+【成绩与复现边界】
+  官方确认文本AUC0.981301，对应冻结离线CSV的全局排名融合。
+  镜像为逐样本logit平均后sigmoid融合；两条链路不完全相同。
+  2026-10-02独立核对CSV与线上数组：Spearman0.9998697、严格反序218292对。
+  单侧并列变化279对；总排序/并列变化218571对，约0.10929%，不是GPU全量实跑。
+  尚无本次Docker实跑或复赛全量HTTP/AUC验证，不能称镜像AUC已独立复现0.981301。
+
+【残留风险】
+  NaN保护先夹取后检查，可能将异常值变成边界分数，不能声明有效。
+  adapter缺失静默跳过，未强制检查5+5+5数量。
+  设备搬运失败仅打印，未强制断言实际设备；推理异常未记录堆栈。
+  交接需补正确最终镜像SHA256、有效源码哈希、完整运行/设备日志和实际Docker验证。

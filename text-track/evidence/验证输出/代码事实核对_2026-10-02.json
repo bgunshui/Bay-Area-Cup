@@ -1,0 +1,176 @@
+{
+  "audit_time_asia_shanghai": "2026-10-02T17:17:22+08:00",
+  "repository_url": "https://github.com/bgunshui/Bay-Area-Cup",
+  "commit": "a5a79545786e1924546ece3f8fcfe04d05492a0a",
+  "method": "Independent Python-standard-library NPY parsing, average ranks, fusion and CSV comparison; no upstream code or pickle/model executed.",
+  "array_inventory": {
+    "14b_p4_oof.npy": {
+      "dtype": "<f8",
+      "shape": [
+        1000
+      ],
+      "bytes": 8128,
+      "sha256": "3cb326361627150ec4daac3ec1d75d267bad2833af2ab466db616843e7b6e17d"
+    },
+    "14b_p4_replay_rank01.npy": {
+      "dtype": "<f8",
+      "shape": [
+        20000
+      ],
+      "bytes": 160128,
+      "sha256": "a76ac489fcc8cd0a678e3169771f5a698c642e14162ea4d00ca8cf954b561757"
+    },
+    "14b_p4_replay_raw_mean.npy": {
+      "dtype": "<f4",
+      "shape": [
+        20000
+      ],
+      "bytes": 80128,
+      "sha256": "0a532a366221cc4265c9a675c4d9280a8f7629522655624dd683e9aa01adbad8"
+    },
+    "7b_r3a_replay_raw_mean.npy": {
+      "dtype": "<f4",
+      "shape": [
+        20000
+      ],
+      "bytes": 80128,
+      "sha256": "d9d93585412b952a478a97638bc610805defdf31afb1f0c16f5cbff0d312bc0e"
+    },
+    "7b_r3b_replay_raw_mean.npy": {
+      "dtype": "<f4",
+      "shape": [
+        20000
+      ],
+      "bytes": 80128,
+      "sha256": "4d171d3180cfb7b8479b53aaba92188dd33a8cd136ac5f9316ef04ee78c97a22"
+    },
+    "fusion_offline_submitted.npy": {
+      "dtype": "<f8",
+      "shape": [
+        20000
+      ],
+      "bytes": 160128,
+      "sha256": "46f84de6291b8f62d460c13e05e352449d2c2bebc655235e2013aacb7e076c6b"
+    },
+    "fusion_online_image.npy": {
+      "dtype": "<f8",
+      "shape": [
+        20000
+      ],
+      "bytes": 160128,
+      "sha256": "c11c290cf3089c50c1e1a9ee5f9cd3bb512ee3f1607e8daae7090ac0b91b56c4"
+    },
+    "官方样例_folds.npy": {
+      "dtype": "<i8",
+      "shape": [
+        1000
+      ],
+      "bytes": 8128,
+      "sha256": "9b29ba980241bdf1aca13a9dfa4fac166d30e6c3b7754aef398a83536d092677"
+    },
+    "官方样例_labels.npy": {
+      "dtype": "<i8",
+      "shape": [
+        1000
+      ],
+      "bytes": 8128,
+      "sha256": "9f923a5ea53555a9292dcf17b3c4e2e476aa2c640dc5235c74346449e7f785ef"
+    }
+  },
+  "submission": {
+    "rows": 20000,
+    "unique_ids": 20000,
+    "sha256": "30da9967ebe8c33533ce63aa048df4648ef2cafea5fb7c7934b155346997c7e3",
+    "score_min": 4.999750012499375e-05,
+    "score_max": 0.999950002499875
+  },
+  "readme_quick_formula_vs_csv": {
+    "rows": 20000,
+    "spearman": 0.9999998013291245,
+    "all_ranks_equal": false,
+    "rows_with_rank_difference": 9341,
+    "max_absolute_score_difference": 0.009349532523373782,
+    "mean_absolute_score_difference": 3.991300434978284e-05,
+    "left_unique_scores": 19843,
+    "right_unique_scores": 19788
+  },
+  "frozen_offline_array_vs_csv": {
+    "rows": 20000,
+    "spearman": 0.9999995876983739,
+    "all_ranks_equal": false,
+    "rows_with_rank_difference": 18062,
+    "max_absolute_score_difference": 0.0019999000049997218,
+    "mean_absolute_score_difference": 0.00019306284685765724,
+    "left_unique_scores": 19979,
+    "right_unique_scores": 19788
+  },
+  "computed_online_formula_vs_frozen_online": {
+    "rows": 20000,
+    "spearman": 0.99999999999625,
+    "all_ranks_equal": false,
+    "rows_with_rank_difference": 20,
+    "max_absolute_score_difference": 1.2501321922098185e-09,
+    "mean_absolute_score_difference": 3.3249185200506794e-10,
+    "left_unique_scores": 19942,
+    "right_unique_scores": 19932
+  },
+  "frozen_online_vs_submission": {
+    "rows": 20000,
+    "spearman": 0.9998697005807853,
+    "all_ranks_equal": false,
+    "rows_with_rank_difference": 19369,
+    "max_absolute_score_difference": 0.16187745228790362,
+    "mean_absolute_score_difference": 0.031198916657603888,
+    "left_unique_scores": 19932,
+    "right_unique_scores": 19788
+  },
+  "online_vs_submission_pair_order_changes": {
+    "status": "VERIFIED_WITH_TIES",
+    "strict_discordant_pairs": 218292,
+    "reference_only_tied_pairs": 212,
+    "other_only_tied_pairs": 67,
+    "both_tied_pairs": 2,
+    "changed_order_or_tie_pairs": 218571,
+    "all_pairs": 199990000,
+    "fraction_of_all_pairs": 0.0010929096454822742,
+    "weighted_changes_for_conditional_auc_bound": 218431.5,
+    "auc_bound_if_exactly_10000_positive_and_10000_negative": 0.002184315,
+    "auc_bound_condition": "Test labels/class counts are absent. Bound assumes 10000 positives/10000 negatives and counts all affected pairs as cross-class; it is not an observed AUC change."
+  },
+  "frozen_offline_vs_online_pair_order_changes": {
+    "status": "VERIFIED_WITH_TIES",
+    "strict_discordant_pairs": 204583,
+    "reference_only_tied_pairs": 19,
+    "other_only_tied_pairs": 67,
+    "both_tied_pairs": 2,
+    "changed_order_or_tie_pairs": 204669,
+    "all_pairs": 199990000,
+    "fraction_of_all_pairs": 0.0010233961698084904,
+    "weighted_changes_for_conditional_auc_bound": 204626.0,
+    "auc_bound_if_exactly_10000_positive_and_10000_negative": 0.00204626,
+    "auc_bound_condition": "Test labels/class counts are absent. Bound assumes 10000 positives/10000 negatives and counts all affected pairs as cross-class; it is not an observed AUC change."
+  },
+  "official_example_labels": {
+    "rows": 1000,
+    "counts": {
+      "1": 500,
+      "0": 500
+    }
+  },
+  "official_example_folds": {
+    "rows": 1000,
+    "counts": {
+      "0": 200,
+      "1": 200,
+      "4": 200,
+      "2": 200,
+      "3": 200
+    }
+  },
+  "limitations": [
+    "No competition test labels: official AUC cannot be recalculated.",
+    "Prediction row-to-text alignment cannot be independently checked without competition source texts.",
+    "No model weights, new Docker archive, GPU tests or training executed.",
+    "Using frozen final output as input validates its consistency with CSV, not the preceding training/fusion pipeline."
+  ]
+}
