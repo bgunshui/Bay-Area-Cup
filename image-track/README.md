@@ -91,6 +91,8 @@ score = rank_pct( Σ 槽权重 × 槽 )  × (1 − 0.20)  +  rank_pct( 尺寸先
 | 交付物构成、修过哪些缺陷 | `docs/03_交付说明.md` |
 | 给组委会的偏差说明（可复现性辩护） | `docs/04_镜像复现偏差说明-回组委会.md` |
 | **勘误**（更正已提交材料里的一处措辞错误，**不改冻结件**） | [`docs/07_勘误.md`](docs/07_勘误.md) |
+| **分量溯源与种子明细**（8 个分量各是什么、种子控制什么、两个种子家族实测相关性） | [`docs/08_分量溯源与种子明细.md`](docs/08_分量溯源与种子明细.md) |
+| **基础概念速查**（rank / ECDF / ρ / 阈值 / 精度要求，答辩备查） | [`docs/09_基础概念速查.md`](docs/09_基础概念速查.md) |
 | 提交文件与 8 个分量的冻结 CSV（**含逐字节哈希台账 + 配方表**） | [`submission/README.md`](submission/README.md) |
 | 服务化代码（Dockerfile / server / models / fusion / 复检脚本） | `code/docker_submit/` |
 | 训练脚本（按分量精选） | `code/training/` |
