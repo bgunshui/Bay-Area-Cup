@@ -64,9 +64,9 @@
       30
     ],
     "total_seconds": 800,
-    "speech_effective_characters": 2946,
-    "speech_chinese_characters": 2658,
-    "speech_count_method": "14 spoken paragraphs before evidence hints; Chinese characters, Latin letters and digits; punctuation and backstage notes excluded",
+    "speech_effective_characters": 2974,
+    "speech_chinese_characters": 2759,
+    "speech_count_method": "14 slide bodies before evidence hints; Chinese characters, Latin letters and digits; punctuation and backstage notes excluded",
     "html_bytes": 1026821,
     "html_sha256": "874cfe80516f28c61b2573c8d83ed1fb0b7ceb86d660603394bd13d2787c0273",
     "chart_exports": [
@@ -403,5 +403,13 @@
     "browser_tests_rerun": false,
     "historical_browser_record": "defense/验收记录.json",
     "historical_records": "Browser measurements, skill-validator logs and font validation/subset measurements retain their original production scope and timestamps; repository path migration does not represent rerunning those checks."
+  },
+  "speech_revision": {
+    "date": "2026-10-09",
+    "path": "defense/逐字讲稿.md",
+    "style": "口语化现场讲述；分段换气、指图解释、候选数值取约值，最终两项AUC完整口播",
+    "planned_seconds": 800,
+    "html_changed": false,
+    "verification": "逐页标题及时长对应，技术顺序、数值、指图方位与当前演示一致；实际演讲用时以排练为准"
   }
 }
