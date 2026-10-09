@@ -1,0 +1,407 @@
+{
+  "version_date": "2026-10-09",
+  "style": "学术答辩：白底、深蓝强调、技术结构与数据图表、简洁留白",
+  "skill": {
+    "repository": "https://github.com/op7418/guizang-ppt-skill",
+    "commit": "c91369c449d34755d320a8b81d0734000d99d1ab",
+    "installed_path": ".agents/skills/guizang-ppt-skill",
+    "templates_preserved": true,
+    "path_base": "repository root"
+  },
+  "evidence": {
+    "repository": "https://github.com/bgunshui/Bay-Area-Cup",
+    "commit": "c11fa520f2f73d705e83cb3f40a6a214f8cc7f31",
+    "index_role": "主讲后的证据查询与评委问答后备资料"
+  },
+  "delivery": {
+    "slides": 14,
+    "notes": 14,
+    "ids": [
+      "cover",
+      "shared-challenges",
+      "dual-pipelines",
+      "image-training",
+      "image-ecdf",
+      "image-evidence",
+      "text-self-training",
+      "text-ensemble",
+      "text-offline-service",
+      "results-and-reliability",
+      "robustness-coverage",
+      "efficiency-deployment",
+      "innovation-application",
+      "closing"
+    ],
+    "layouts": [
+      "S03",
+      "S04",
+      "S05",
+      "S08",
+      "S10",
+      "S13",
+      "S14",
+      "S16",
+      "S17",
+      "S19",
+      "S20",
+      "S21"
+    ],
+    "registered_layouts": 12,
+    "seconds": [
+      10,
+      40,
+      45,
+      70,
+      80,
+      60,
+      80,
+      70,
+      60,
+      60,
+      60,
+      75,
+      60,
+      30
+    ],
+    "total_seconds": 800,
+    "speech_effective_characters": 2946,
+    "speech_chinese_characters": 2658,
+    "speech_count_method": "14 spoken paragraphs before evidence hints; Chinese characters, Latin letters and digits; punctuation and backstage notes excluded",
+    "html_bytes": 1026821,
+    "html_sha256": "874cfe80516f28c61b2573c8d83ed1fb0b7ceb86d660603394bd13d2787c0273",
+    "chart_exports": [
+      {
+        "path": "图表/图像候选AUC.png",
+        "bytes": 83812,
+        "sha256": "b4c43d8aafa7bb41a95eb66c0c06c771ff3408bf2ffbd6dea93b78a8fd4cfcf6"
+      },
+      {
+        "path": "图表/图像候选AUC.svg",
+        "bytes": 61900,
+        "sha256": "426cb33d621b4f5aa85ab49dc2c865a6eb84a48c94d60452fb9aa9fbf995e42f"
+      },
+      {
+        "path": "图表/图像分量相关性.png",
+        "bytes": 69756,
+        "sha256": "2df11d458abe912b0e9ebaa589002deea53f1dfef2873633f3311b9bdc8f3a24"
+      },
+      {
+        "path": "图表/图像分量相关性.svg",
+        "bytes": 66304,
+        "sha256": "c9fb36f0b64b39391d72fc833fbd2f08634b170607793223369f93c513f4459c"
+      },
+      {
+        "path": "图表/尺寸先验OOF.png",
+        "bytes": 73921,
+        "sha256": "23ce94a935dfed45928eadf0869cad4002e08c9ab9d9ce3c92abe224d701a7ed"
+      },
+      {
+        "path": "图表/尺寸先验OOF.svg",
+        "bytes": 55931,
+        "sha256": "e80c86e34ba86432e1312bbe319fdbb70d8c8413d768f815a8c3b70c5771c551"
+      },
+      {
+        "path": "图表/教师融合权重.png",
+        "bytes": 78168,
+        "sha256": "f106881c2b5987b582ae28db4c0f3dd018b82d642cc6254af09884006661891c"
+      },
+      {
+        "path": "图表/教师融合权重.svg",
+        "bytes": 62879,
+        "sha256": "45bda93e26f56026937495cd60bdd1ec5c214ba1596e355514157fe712f5f94a"
+      },
+      {
+        "path": "图表/文本候选AUC.png",
+        "bytes": 87954,
+        "sha256": "ba9569621c164386b7b84809aaaf9cdf443ce19aa62a15b4f67d8278bf192869"
+      },
+      {
+        "path": "图表/文本候选AUC.svg",
+        "bytes": 62384,
+        "sha256": "2cc2d7eb70cab4e2c290473031359022c0a61e9f2cac4ba07467c60c2a9cb110"
+      },
+      {
+        "path": "图表/软标签函数.png",
+        "bytes": 98111,
+        "sha256": "1469bcc6a98fba7c263cc596a29c75c1c71f595b40368c505d4f834646df2a9a"
+      },
+      {
+        "path": "图表/软标签函数.svg",
+        "bytes": 56473,
+        "sha256": "e8cccb32542c5502705f94490214e5d90ad7d08d5862d82f30c4dc6e27058578"
+      }
+    ]
+  },
+  "offline_resources": {
+    "google_fonts_commit": "5e8a3ba899557829a76cfdac30fa512bda91d7ca",
+    "python": "3.13.0",
+    "fonttools": "4.66.1",
+    "brotli": "1.2.0",
+    "resources": {
+      "motion-11.11.17.js": {
+        "source": "https://cdn.jsdelivr.net/npm/motion@11.11.17/dist/motion.js",
+        "bytes": 63808,
+        "sha256": "61b3a38dabf65a31778bc7fa9e71936bfa36ec2f567e50de261b958a3037e84e"
+      },
+      "lucide-0.468.0.min.js": {
+        "source": "https://cdn.jsdelivr.net/npm/lucide@0.468.0/dist/umd/lucide.min.js",
+        "bytes": 357796,
+        "sha256": "3411692820cb8d47543f69496aa25fd603a358f4498046f41c508a5a3342210e"
+      },
+      "motion-11.11.17-LICENSE.md": {
+        "source": "https://registry.npmjs.org/motion/-/motion-11.11.17.tgz#package/LICENSE.md",
+        "bytes": 1130,
+        "sha256": "835262a9cbe18af107043fab492b1922dd5ecc8db76f22f95149bc0143ac9847"
+      },
+      "lucide-0.468.0-LICENSE": {
+        "source": "https://registry.npmjs.org/lucide/-/lucide-0.468.0.tgz#package/LICENSE",
+        "bytes": 880,
+        "sha256": "1e7290b35280a048667bbf0ebabac1c7fd52a75300e8b2946ac165715997f2bc"
+      },
+      "Inter-variable.ttf": {
+        "source": "https://raw.githubusercontent.com/google/fonts/5e8a3ba899557829a76cfdac30fa512bda91d7ca/ofl/inter/Inter%5Bopsz,wght%5D.ttf",
+        "bytes": 876576,
+        "sha256": "29160a80ff49ddcab2c97711247e08b1fab27a484a329ce8b813d820dc559031"
+      },
+      "Inter-OFL.txt": {
+        "source": "https://raw.githubusercontent.com/google/fonts/5e8a3ba899557829a76cfdac30fa512bda91d7ca/ofl/inter/OFL.txt",
+        "bytes": 4377,
+        "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57"
+      },
+      "NotoSansSC-variable-full.ttf": {
+        "source": "https://cdn.jsdelivr.net/gh/google/fonts@5e8a3ba899557829a76cfdac30fa512bda91d7ca/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf",
+        "bytes": 17772300,
+        "sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da"
+      },
+      "NotoSansSC-OFL.txt": {
+        "source": "https://raw.githubusercontent.com/google/fonts/5e8a3ba899557829a76cfdac30fa512bda91d7ca/ofl/notosanssc/OFL.txt",
+        "bytes": 4388,
+        "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+      }
+    },
+    "font_validation": {
+      "Inter-variable.ttf": {
+        "glyphs": 2933,
+        "unicode_count": 2849,
+        "axes": [
+          {
+            "tag": "opsz",
+            "min": 14.0,
+            "max": 32.0
+          },
+          {
+            "tag": "wght",
+            "min": 100.0,
+            "max": 900.0
+          }
+        ],
+        "test_chars_present": {
+          "0x41": true,
+          "0x30": true,
+          "0x56fe": false,
+          "0x50cf": false,
+          "0x6587": false,
+          "0x672c": false,
+          "0x7b54": false,
+          "0x8fa9": false
+        }
+      },
+      "NotoSansSC-variable-full.ttf": {
+        "glyphs": 31036,
+        "unicode_count": 30890,
+        "axes": [
+          {
+            "tag": "wght",
+            "min": 100.0,
+            "max": 900.0
+          }
+        ],
+        "test_chars_present": {
+          "0x41": true,
+          "0x30": true,
+          "0x56fe": true,
+          "0x50cf": true,
+          "0x6587": true,
+          "0x672c": true,
+          "0x7b54": true,
+          "0x8fa9": true
+        }
+      }
+    },
+    "umd_validation": {
+      "Motion.animate": "function",
+      "Motion.inView": "function",
+      "lucide.createIcons": "function",
+      "lucide.icons_count": 1743
+    },
+    "js_review": "No dynamic import, external require, or dynamic script creation. Lucide import strings are diagnostic text, its URL is the SVG XML namespace.",
+    "packaging": "Git tracks unpacked defense source, current exports and offline runtime/font subsets; .build caches and all ZIP archives are excluded. No archive generation or upload is part of maintenance.",
+    "resource_record_scope": "Historical source download/provenance metadata used for the 2026-10-09 production; full-font records describe the inputs to subsetting, not the files currently tracked in the repository. Repository assets contain the offline runtime and current character subsets."
+  },
+  "font_coverage": {
+    "draft_sha256": "997916063b9e1a25abdc4eddd1e4e799a202ec194b49abda73b70d5d592bed19",
+    "coverage_success": true,
+    "required_characters": 621,
+    "missing": [],
+    "fonts": [
+      {
+        "family": "Noto Sans SC",
+        "source": "NotoSansSC-variable-full.ttf",
+        "output": "NotoSansSC-subset.woff2",
+        "bytes": 227544,
+        "sha256": "51694683c24414b47ac110c70160b6d576594fca5500a65644bd15af5a923beb",
+        "unicode_count": 909,
+        "axes": [
+          {
+            "tag": "wght",
+            "min": 200.0,
+            "default": 200.0,
+            "max": 900.0
+          }
+        ]
+      },
+      {
+        "family": "Inter",
+        "source": "Inter-variable.ttf",
+        "output": "Inter-subset.woff2",
+        "bytes": 46668,
+        "sha256": "08b257934658eace6ce81f04081a0cccbe1744901c8331e47b8f01152821137a",
+        "unicode_count": 118,
+        "axes": [
+          {
+            "tag": "opsz",
+            "min": 14.0,
+            "default": 14.0,
+            "max": 32.0
+          },
+          {
+            "tag": "wght",
+            "min": 200.0,
+            "default": 400.0,
+            "max": 900.0
+          }
+        ]
+      }
+    ]
+  },
+  "font_subset_report": {
+    "draft_sha256": "997916063b9e1a25abdc4eddd1e4e799a202ec194b49abda73b70d5d592bed19",
+    "coverage_success": true,
+    "required_characters": 621,
+    "missing": [],
+    "fonts": [
+      {
+        "family": "Noto Sans SC",
+        "source": "NotoSansSC-variable-full.ttf",
+        "output": "NotoSansSC-subset.woff2",
+        "bytes": 227544,
+        "sha256": "51694683c24414b47ac110c70160b6d576594fca5500a65644bd15af5a923beb",
+        "unicode_count": 909,
+        "axes": [
+          {
+            "tag": "wght",
+            "min": 200.0,
+            "default": 200.0,
+            "max": 900.0
+          }
+        ]
+      },
+      {
+        "family": "Inter",
+        "source": "Inter-variable.ttf",
+        "output": "Inter-subset.woff2",
+        "bytes": 46668,
+        "sha256": "08b257934658eace6ce81f04081a0cccbe1744901c8331e47b8f01152821137a",
+        "unicode_count": 118,
+        "axes": [
+          {
+            "tag": "opsz",
+            "min": 14.0,
+            "default": 14.0,
+            "max": 32.0
+          },
+          {
+            "tag": "wght",
+            "min": 200.0,
+            "default": 400.0,
+            "max": 900.0
+          }
+        ]
+      }
+    ]
+  },
+  "font_subset_report_scope": "Font subsets and coverage were regenerated from the current draft; SHA256 binds both reports to the same draft",
+  "skill_validators": {
+    "swiss-validation.txt": {
+      "path": "验收日志/swiss-validation.txt",
+      "output": "Swiss deck validation passed: 14 slide(s).\nWarnings:\n- Slide 1 (S03): M1 bottom whitespace 180px; active content height 62%. Restore spacing/content instead of over-correcting overflow.\n",
+      "passed": true,
+      "errors": 0,
+      "warnings": [
+        "Slide 1 (S03): M1 bottom whitespace 180px; active content height 62%. Restore spacing/content instead of over-correcting overflow."
+      ],
+      "warning_count": 1,
+      "slides": 14,
+      "sha256": "fbb11cc85b849aae39074723a691b175a0530f074faaa1f2f60bcb5945305c97"
+    },
+    "presenter-validation.txt": {
+      "path": "验收日志/presenter-validation.txt",
+      "output": "Presenter validation: 14 slides, 14 notes, 13.3 planned minutes, 0 errors, 0 warnings.\n",
+      "passed": true,
+      "errors": 0,
+      "warnings": [],
+      "warning_count": 0,
+      "slides": 14,
+      "notes": 14,
+      "planned_minutes": 13.3,
+      "sha256": "464287e4106933581f181c14fe185aaae8ee562ea5e168dcc5e8c7d1ea1ce50b"
+    },
+    "runtime-validation.txt": {
+      "path": "验收日志/runtime-validation.txt",
+      "output": "PASS  presenter CSS is byte-identical across 2 templates.\nPASS  presenter JavaScript is byte-identical across 2 templates.\n",
+      "passed": true,
+      "errors": 0,
+      "warnings": [],
+      "warning_count": 0,
+      "checks": [
+        "PASS  presenter CSS is byte-identical across 2 templates.",
+        "PASS  presenter JavaScript is byte-identical across 2 templates."
+      ],
+      "sha256": "32e5889fdd0a67bc44538dc5e53c009fafe45d8fc8bea911a2addae13865789e"
+    }
+  },
+  "browser_verification": {
+    "inputSha256": "874cfe80516f28c61b2573c8d83ed1fb0b7ceb86d660603394bd13d2787c0273",
+    "testedAt": "2026-10-09T05:36:16.898Z",
+    "checks": 28,
+    "passed": true,
+    "matches_current_html": true
+  },
+  "source_preservation": "入库增加答辩材料与项目skill，不改写原技术报告、模型或冻结实验文件；后续材料版本由Git提交历史保存，本地制作缓存与旧备份不入库。",
+  "html_runtime_changes": [
+    "固定并内联Motion、Lucide和200–900可变字重字体",
+    "以1920×1080原始页面缩放演讲者预览",
+    "保留演讲者、计时、备注、观众同步与重连",
+    "学术图表由项目证据和确定性公式绘制；PNG/SVG导出边界见图表说明"
+  ],
+  "verification_scope": "浏览器演示材料测试；没有重新训练、GPU模型推理、Docker或官方AUC复测",
+  "git_exclusions": [
+    "defense/.build/",
+    "*.zip",
+    "__pycache__/"
+  ],
+  "git_maintenance": {
+    "working_directory": "repository root",
+    "build": "python defense/scripts/build.py --final",
+    "verify_materials": "python defense/scripts/verify_materials.py",
+    "update_checksums": "python defense/scripts/update_checksums.py",
+    "version_control": "Commit and push reviewed changes with Git; do not generate or upload archives."
+  },
+  "repository_migration": {
+    "date": "2026-10-09",
+    "scope": "Repository-relative paths and Git maintenance documentation only; index.html bytes, scientific results and historical browser measurements are preserved.",
+    "browser_tests_rerun": false,
+    "historical_browser_record": "defense/验收记录.json",
+    "historical_records": "Browser measurements, skill-validator logs and font validation/subset measurements retain their original production scope and timestamps; repository path migration does not represent rerunning those checks."
+  }
+}

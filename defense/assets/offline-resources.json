@@ -1,0 +1,105 @@
+{
+  "google_fonts_commit": "5e8a3ba899557829a76cfdac30fa512bda91d7ca",
+  "python": "3.13.0",
+  "fonttools": "4.66.1",
+  "brotli": "1.2.0",
+  "resources": {
+    "motion-11.11.17.js": {
+      "source": "https://cdn.jsdelivr.net/npm/motion@11.11.17/dist/motion.js",
+      "bytes": 63808,
+      "sha256": "61b3a38dabf65a31778bc7fa9e71936bfa36ec2f567e50de261b958a3037e84e"
+    },
+    "lucide-0.468.0.min.js": {
+      "source": "https://cdn.jsdelivr.net/npm/lucide@0.468.0/dist/umd/lucide.min.js",
+      "bytes": 357796,
+      "sha256": "3411692820cb8d47543f69496aa25fd603a358f4498046f41c508a5a3342210e"
+    },
+    "motion-11.11.17-LICENSE.md": {
+      "source": "https://registry.npmjs.org/motion/-/motion-11.11.17.tgz#package/LICENSE.md",
+      "bytes": 1130,
+      "sha256": "835262a9cbe18af107043fab492b1922dd5ecc8db76f22f95149bc0143ac9847"
+    },
+    "lucide-0.468.0-LICENSE": {
+      "source": "https://registry.npmjs.org/lucide/-/lucide-0.468.0.tgz#package/LICENSE",
+      "bytes": 880,
+      "sha256": "1e7290b35280a048667bbf0ebabac1c7fd52a75300e8b2946ac165715997f2bc"
+    },
+    "Inter-variable.ttf": {
+      "source": "https://raw.githubusercontent.com/google/fonts/5e8a3ba899557829a76cfdac30fa512bda91d7ca/ofl/inter/Inter%5Bopsz,wght%5D.ttf",
+      "bytes": 876576,
+      "sha256": "29160a80ff49ddcab2c97711247e08b1fab27a484a329ce8b813d820dc559031"
+    },
+    "Inter-OFL.txt": {
+      "source": "https://raw.githubusercontent.com/google/fonts/5e8a3ba899557829a76cfdac30fa512bda91d7ca/ofl/inter/OFL.txt",
+      "bytes": 4377,
+      "sha256": "5b9321a4298cfeb6b34354164a1c3afc3db114569984c502b9b35d988fd58c57"
+    },
+    "NotoSansSC-variable-full.ttf": {
+      "source": "https://cdn.jsdelivr.net/gh/google/fonts@5e8a3ba899557829a76cfdac30fa512bda91d7ca/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf",
+      "bytes": 17772300,
+      "sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da"
+    },
+    "NotoSansSC-OFL.txt": {
+      "source": "https://raw.githubusercontent.com/google/fonts/5e8a3ba899557829a76cfdac30fa512bda91d7ca/ofl/notosanssc/OFL.txt",
+      "bytes": 4388,
+      "sha256": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9"
+    }
+  },
+  "font_validation": {
+    "Inter-variable.ttf": {
+      "glyphs": 2933,
+      "unicode_count": 2849,
+      "axes": [
+        {
+          "tag": "opsz",
+          "min": 14.0,
+          "max": 32.0
+        },
+        {
+          "tag": "wght",
+          "min": 100.0,
+          "max": 900.0
+        }
+      ],
+      "test_chars_present": {
+        "0x41": true,
+        "0x30": true,
+        "0x56fe": false,
+        "0x50cf": false,
+        "0x6587": false,
+        "0x672c": false,
+        "0x7b54": false,
+        "0x8fa9": false
+      }
+    },
+    "NotoSansSC-variable-full.ttf": {
+      "glyphs": 31036,
+      "unicode_count": 30890,
+      "axes": [
+        {
+          "tag": "wght",
+          "min": 100.0,
+          "max": 900.0
+        }
+      ],
+      "test_chars_present": {
+        "0x41": true,
+        "0x30": true,
+        "0x56fe": true,
+        "0x50cf": true,
+        "0x6587": true,
+        "0x672c": true,
+        "0x7b54": true,
+        "0x8fa9": true
+      }
+    }
+  },
+  "umd_validation": {
+    "Motion.animate": "function",
+    "Motion.inView": "function",
+    "lucide.createIcons": "function",
+    "lucide.icons_count": 1743
+  },
+  "js_review": "No dynamic import, external require, or dynamic script creation. Lucide import strings are diagnostic text, its URL is the SVG XML namespace.",
+  "packaging": "Exclude .build entirely from final ZIP; embed only character subsets in HTML."
+}

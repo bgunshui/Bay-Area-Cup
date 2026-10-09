@@ -1,0 +1,361 @@
+{
+  "passed": true,
+  "inputSha256": "874cfe80516f28c61b2573c8d83ed1fb0b7ceb86d660603394bd13d2787c0273",
+  "testedAt": "2026-10-09T05:36:16.898Z",
+  "browser": "154.0.4258.62",
+  "transport": "file://, browser context offline",
+  "viewports": [
+    [
+      1920,
+      1080
+    ],
+    [
+      1366,
+      768
+    ]
+  ],
+  "checks": [
+    {
+      "name": "offline file open and fonts",
+      "ok": true
+    },
+    {
+      "name": "14 pages / 800 seconds",
+      "ok": true
+    },
+    {
+      "name": "automatic advance defaults off",
+      "ok": true
+    },
+    {
+      "name": "Motion initial animation available",
+      "ok": true
+    },
+    {
+      "name": "both viewport sizes have no text outside screen",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "navigation safety margin",
+      "ok": true,
+      "detail": [
+        {
+          "id": "cover",
+          "height": 1080,
+          "bottom": 773.5
+        },
+        {
+          "id": "shared-challenges",
+          "height": 1080,
+          "bottom": 899.703125
+        },
+        {
+          "id": "dual-pipelines",
+          "height": 1080,
+          "bottom": 909.84375
+        },
+        {
+          "id": "image-training",
+          "height": 1080,
+          "bottom": 982.8125
+        },
+        {
+          "id": "image-ecdf",
+          "height": 1080,
+          "bottom": 982.8125
+        },
+        {
+          "id": "image-evidence",
+          "height": 1080,
+          "bottom": 905.9375
+        },
+        {
+          "id": "text-self-training",
+          "height": 1080,
+          "bottom": 977.6875
+        },
+        {
+          "id": "text-ensemble",
+          "height": 1080,
+          "bottom": 977.6875
+        },
+        {
+          "id": "text-offline-service",
+          "height": 1080,
+          "bottom": 977.6875
+        },
+        {
+          "id": "results-and-reliability",
+          "height": 1080,
+          "bottom": 982.8125
+        },
+        {
+          "id": "robustness-coverage",
+          "height": 1080,
+          "bottom": 982.8125
+        },
+        {
+          "id": "efficiency-deployment",
+          "height": 1080,
+          "bottom": 726.28125
+        },
+        {
+          "id": "innovation-application",
+          "height": 1080,
+          "bottom": 963.75
+        },
+        {
+          "id": "closing",
+          "height": 1080,
+          "bottom": 993.609375
+        },
+        {
+          "id": "cover",
+          "height": 768,
+          "bottom": 551.390625
+        },
+        {
+          "id": "shared-challenges",
+          "height": 768,
+          "bottom": 644.578125
+        },
+        {
+          "id": "dual-pipelines",
+          "height": 768,
+          "bottom": 673.578125
+        },
+        {
+          "id": "image-training",
+          "height": 768,
+          "bottom": 698.890625
+        },
+        {
+          "id": "image-ecdf",
+          "height": 768,
+          "bottom": 698.890625
+        },
+        {
+          "id": "image-evidence",
+          "height": 768,
+          "bottom": 682.375
+        },
+        {
+          "id": "text-self-training",
+          "height": 768,
+          "bottom": 694.859375
+        },
+        {
+          "id": "text-ensemble",
+          "height": 768,
+          "bottom": 694.859375
+        },
+        {
+          "id": "text-offline-service",
+          "height": 768,
+          "bottom": 694.859375
+        },
+        {
+          "id": "results-and-reliability",
+          "height": 768,
+          "bottom": 698.890625
+        },
+        {
+          "id": "robustness-coverage",
+          "height": 768,
+          "bottom": 698.890625
+        },
+        {
+          "id": "efficiency-deployment",
+          "height": 768,
+          "bottom": 534.765625
+        },
+        {
+          "id": "innovation-application",
+          "height": 768,
+          "bottom": 680.953125
+        },
+        {
+          "id": "closing",
+          "height": 768,
+          "bottom": 706.5625
+        }
+      ]
+    },
+    {
+      "name": "keyboard next",
+      "ok": true
+    },
+    {
+      "name": "keyboard previous",
+      "ok": true
+    },
+    {
+      "name": "deck overview",
+      "ok": true
+    },
+    {
+      "name": "overview selection",
+      "ok": true
+    },
+    {
+      "name": "presenter / audience connect",
+      "ok": true
+    },
+    {
+      "name": "notes mapped to selected page",
+      "ok": true,
+      "detail": {
+        "title": "文本：目标域自训练",
+        "note": "【讲述要点】\n• 教师候选池43个，按家族权重乘成员权重，仅6个带权：robust 0.35；7B官方s2/s3各0.25；4B hidden mean 0.075；qwen pair和4B hidden last各0.0375。public的11个候选有效权重全为0。\n• 1,000条有标签样例分五折；每折800条训练、200条验证，另加入全量20,000条无标签目标文本。这属于转导自训练，目标集合效果不能直接外推到未见目标域。\n• r为并列平均秩除以N＋1；软标签y=σ[4(r−0.5)]，理论端点0.119203和0.880797。置信权重w=min(1,4|y−0.5|)，中心0、两端1；饱和阈值0.22534693和0.77465307。这是确定性公式图，权重不是标签正确概率。\n• 无并列且按连续均匀r近似时，饱和区占45.0694%，平均权重0.73837593；20,000条的权重总和约14767.52，比800×2约9.23倍。它不是统计有效样本量ESS，也不是实测训练收益，因此这些推导只作问答补充。\n• 验证AUC选择checkpoint，OOF AUC选择融合。闭环表示可迭代方法；未宣称全部最终adapter完整经历相同三轮。旧公共检测器泛化最强说法已被目标集反馈否定，后续主教师public权重为0；不能据候选池数量宣传泛化。\n\n【转场】\n下一页说明最终两种基座与15个适配器如何组合。",
+        "state": {
+          "mode": "presenter",
+          "idx": 6,
+          "session": "nh486wr7uje",
+          "syncState": "synced",
+          "timerRunning": false,
+          "rehearsalActive": false,
+          "presenterOverviewOn": false,
+          "autoEnabled": false,
+          "autoGlobalSeconds": 0,
+          "autoRemainingMs": 0,
+          "screenMode": "normal",
+          "annotationTool": "none",
+          "circles": [],
+          "audienceCircles": [],
+          "layoutMode": "balanced"
+        }
+      }
+    },
+    {
+      "name": "audience follows next",
+      "ok": true
+    },
+    {
+      "name": "notes retain edits",
+      "ok": true
+    },
+    {
+      "name": "timer starts and pauses",
+      "ok": true
+    },
+    {
+      "name": "timer resets",
+      "ok": true
+    },
+    {
+      "name": "presenter overview",
+      "ok": true
+    },
+    {
+      "name": "presenter overview selection",
+      "ok": true
+    },
+    {
+      "name": "fullscreen API",
+      "ok": true
+    },
+    {
+      "name": "audience black screen",
+      "ok": true
+    },
+    {
+      "name": "audience freeze",
+      "ok": true
+    },
+    {
+      "name": "audience resumes",
+      "ok": true
+    },
+    {
+      "name": "closed audience reconnects on current page",
+      "ok": true
+    },
+    {
+      "name": "presenter previews keep 16:9",
+      "ok": true,
+      "detail": [
+        1.7777779544991856,
+        1.777777587890625
+      ]
+    },
+    {
+      "name": "presenter exits",
+      "ok": true
+    },
+    {
+      "name": "low power mode preserved",
+      "ok": true
+    },
+    {
+      "name": "no external resource requests",
+      "ok": true,
+      "detail": []
+    },
+    {
+      "name": "no runtime errors",
+      "ok": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "network": [],
+  "html_sha256": "874cfe80516f28c61b2573c8d83ed1fb0b7ceb86d660603394bd13d2787c0273",
+  "planned_seconds": 800,
+  "registered_layouts": 12,
+  "layouts": [
+    "S03",
+    "S04",
+    "S05",
+    "S08",
+    "S10",
+    "S13",
+    "S14",
+    "S16",
+    "S17",
+    "S19",
+    "S20",
+    "S21"
+  ],
+  "speech_effective_characters": 2946,
+  "speech_chinese_characters": 2658,
+  "skill_validators": {
+    "swiss-validation.txt": {
+      "path": "验收日志/swiss-validation.txt",
+      "output": "Swiss deck validation passed: 14 slide(s).\nWarnings:\n- Slide 1 (S03): M1 bottom whitespace 180px; active content height 62%. Restore spacing/content instead of over-correcting overflow.\n",
+      "passed": true,
+      "errors": 0,
+      "warnings": [
+        "Slide 1 (S03): M1 bottom whitespace 180px; active content height 62%. Restore spacing/content instead of over-correcting overflow."
+      ],
+      "warning_count": 1,
+      "slides": 14,
+      "sha256": "fbb11cc85b849aae39074723a691b175a0530f074faaa1f2f60bcb5945305c97"
+    },
+    "presenter-validation.txt": {
+      "path": "验收日志/presenter-validation.txt",
+      "output": "Presenter validation: 14 slides, 14 notes, 13.3 planned minutes, 0 errors, 0 warnings.\n",
+      "passed": true,
+      "errors": 0,
+      "warnings": [],
+      "warning_count": 0,
+      "slides": 14,
+      "notes": 14,
+      "planned_minutes": 13.3,
+      "sha256": "464287e4106933581f181c14fe185aaae8ee562ea5e168dcc5e8c7d1ea1ce50b"
+    },
+    "runtime-validation.txt": {
+      "path": "验收日志/runtime-validation.txt",
+      "output": "PASS  presenter CSS is byte-identical across 2 templates.\nPASS  presenter JavaScript is byte-identical across 2 templates.\n",
+      "passed": true,
+      "errors": 0,
+      "warnings": [],
+      "warning_count": 0,
+      "checks": [
+        "PASS  presenter CSS is byte-identical across 2 templates.",
+        "PASS  presenter JavaScript is byte-identical across 2 templates."
+      ],
+      "sha256": "32e5889fdd0a67bc44538dc5e53c009fafe45d8fc8bea911a2addae13865789e"
+    }
+  }
+}

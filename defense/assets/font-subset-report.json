@@ -1,0 +1,46 @@
+{
+  "draft_sha256": "997916063b9e1a25abdc4eddd1e4e799a202ec194b49abda73b70d5d592bed19",
+  "coverage_success": true,
+  "required_characters": 621,
+  "missing": [],
+  "fonts": [
+    {
+      "family": "Noto Sans SC",
+      "source": "NotoSansSC-variable-full.ttf",
+      "output": "NotoSansSC-subset.woff2",
+      "bytes": 227544,
+      "sha256": "51694683c24414b47ac110c70160b6d576594fca5500a65644bd15af5a923beb",
+      "unicode_count": 909,
+      "axes": [
+        {
+          "tag": "wght",
+          "min": 200.0,
+          "default": 200.0,
+          "max": 900.0
+        }
+      ]
+    },
+    {
+      "family": "Inter",
+      "source": "Inter-variable.ttf",
+      "output": "Inter-subset.woff2",
+      "bytes": 46668,
+      "sha256": "08b257934658eace6ce81f04081a0cccbe1744901c8331e47b8f01152821137a",
+      "unicode_count": 118,
+      "axes": [
+        {
+          "tag": "opsz",
+          "min": 14.0,
+          "default": 14.0,
+          "max": 32.0
+        },
+        {
+          "tag": "wght",
+          "min": 200.0,
+          "default": 400.0,
+          "max": 900.0
+        }
+      ]
+    }
+  ]
+}

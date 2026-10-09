@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-09T05:27:45.360913+00:00",
+  "source_commit_sha": "c11fa520f2f73d705e83cb3f40a6a214f8cc7f31",
+  "source_access": "git show fixed_commit:path; no checkout/fetch or repository writes",
+  "runtime": {
+    "python": "3.13.0",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "dependencies": "Python standard library and Git only"
+  },
+  "id_alignment": {
+    "reference_component": "img_cliph_rerun",
+    "reference_csv_path": "image-track/submission/img_cliph_rerun.csv",
+    "row_count_per_component": 20000,
+    "unique_id_count_per_component": 20000,
+    "all_eight_components_same_ids_in_same_order": true,
+    "id_sequence_hash_encoding": "UTF-8 IDs joined by LF, without trailing LF",
+    "id_sequence_sha256": "5245c83471fd8dffe5b0f8e24bde4c17e52ad41ff309345f215666f6ee59dbfe",
+    "first_five_ids": [
+      "00000.jpg",
+      "00001.jpg",
+      "00002.jpg",
+      "00003.jpg",
+      "00004.jpg"
+    ],
+    "last_five_ids": [
+      "19995.jpg",
+      "19996.jpg",
+      "19997.jpg",
+      "19998.jpg",
+      "19999.jpg"
+    ]
+  },
+  "method": {
+    "score_parsing": "Decimal of each original CSV score string; no rescaling or filtering",
+    "tie_handling": "average one-based rank; sort ascending by score",
+    "rank_algorithm": "group at zero-based sorted positions i..j-1 gets twice-rank i+j+1",
+    "correlation": "Pearson correlation of the two average-rank vectors (Spearman rho)",
+    "numerical_algorithm": "Subtract N+1 from twice-ranks; sum covariance and squared deviations as exact Python integers; final division/sqrt uses binary64",
+    "family_mean": "Unweighted arithmetic mean of six distinct CLIP-H pairwise correlations; math.fsum",
+    "sample_scope": "All 20000 target IDs for each frozen component output",
+    "slide_display_precision": "Four decimal places"
+  },
+  "inputs": [
+    {
+      "component": "img_cliph_rerun",
+      "repository_relative_path": "image-track/submission/img_cliph_rerun.csv",
+      "commit_sha": "c11fa520f2f73d705e83cb3f40a6a214f8cc7f31",
+      "git_object_spec": "c11fa520f2f73d705e83cb3f40a6a214f8cc7f31:image-track/submission/img_cliph_rerun.csv",
+      "git_blob_oid_sha1": "5121c93e5edca5ab3e3bea05abd2d39211645395",
+      "git_blob_oid_recomputed_from_raw_bytes": "5121c93e5edca5ab3e3bea05abd2d39211645395",
+      "raw_file_sha256": "fb19951a351baa8ab0b27be31a2338c1ec7736a586ca51016106228dbe993690",
+      "raw_file_bytes": 411040,
+      "last_path_change_commit_sha": "067d54877eb4091c8691fa516c3274299c5af8a0",
+      "row_count": 20000,
+      "unique_id_count": 20000,
+      "ids_equal_reference_in_same_order": true,
+      "id_sequence_sha256": "5245c83471fd8dffe5b0f8e24bde4c17e52ad41ff309345f215666f6ee59dbfe",
+      "unique_score_count": 1880,
+      "tied_score_group_count": 1436
+    },
+    {
+      "component": "img_cliph_s20261101",
+      "repository_relative_path": "image-track/submission/img_cliph_s20261101.csv",
+      "commit_sha": "c11fa520f2f73d705e83cb3f40a6a214f8cc7f31",
+      "git_object_spec": "c11fa520f2f73d705e83cb3f40a6a214f8cc7f31:image-track/submission/img_cliph_s20261101.csv",
+      "git_blob_oid_sha1": "4b2fe12e2bada122b57d99572263b0e26bd0a6ed",
+      "git_blob_oid_recomputed_from_raw_bytes": "4b2fe12e2bada122b57d99572263b0e26bd0a6ed",
+      "raw_file_sha256": "6286b91841e80fdf02d011fb562e3e8a7ed7293bd869830d9ef29fefd9383d82",
+      "raw_file_bytes": 411095,
+      "last_path_change_commit_sha": "067d54877eb4091c8691fa516c3274299c5af8a0",
+      "row_count": 20000,
+      "unique_id_count": 20000,
+      "ids_equal_reference_in_same_order": true,
+      "id_sequence_sha256": "5245c83471fd8dffe5b0f8e24bde4c17e52ad41ff309345f215666f6ee59dbfe",
+      "unique_score_count": 1871,
+      "tied_score_group_count": 1448
+    },
+    {
+      "component": "img_cliph_s20261102",
+      "repository_relative_path": "image-track/submission/img_cliph_s20261102.csv",
+      "commit_sha": "c11fa520f2f73d705e83cb3f40a6a214f8cc7f31",
+      "git_object_spec": "c11fa520f2f73d705e83cb3f40a6a214f8cc7f31:image-track/submission/img_cliph_s20261102.csv",
+      "git_blob_oid_sha1": "af92473d2273b6a9ef3d94cb1c038db33ac1ea9b",
+      "git_blob_oid_recomputed_from_raw_bytes": "af92473d2273b6a9ef3d94cb1c038db33ac1ea9b",
+      "raw_file_sha256": "5970a623c15d8f491ac2649f19c89f8166953a30391090dab812352473d0a49a",
+      "raw_file_bytes": 411028,
+      "last_path_change_commit_sha": "067d54877eb4091c8691fa516c3274299c5af8a0",
+      "row_count": 20000,
+      "unique_id_count": 20000,
+      "ids_equal_reference_in_same_order": true,
+      "id_sequence_sha256": "5245c83471fd8dffe5b0f8e24bde4c17e52ad41ff309345f215666f6ee59dbfe",
+      "unique_score_count": 1902,
+      "tied_score_group_count": 1461
+    },
+    {
+      "component": "img_cliph_s20261103",
+      "repository_relative_path": "image-track/submission/img_cliph_s20261103.csv",
+      "commit_sha": "c11fa520f2f73d705e83cb3f40a6a214f8cc7f31",
+      "git_object_spec": "c11fa520f2f73d705e83cb3f40a6a214f8cc7f31:image-track/submission/img_cliph_s20261103.csv",
+      "git_blob_oid_sha1": "f614dbbcd1bad7adde03527db7fa56d569722cc6",
+      "git_blob_oid_recomputed_from_raw_bytes": "f614dbbcd1bad7adde03527db7fa56d569722cc6",
+      "raw_file_sha256": "5d9431c2c06fe067343fa286777cce8913c4fba4b31e0c33cd0f66012f1a308f",
+      "raw_file_bytes": 411119,
+      "last_path_change_commit_sha": "067d54877eb4091c8691fa516c3274299c5af8a0",
+      "row_count": 20000,
+      "unique_id_count": 20000,
+      "ids_equal_reference_in_same_order": true,
+      "id_sequence_sha256": "5245c83471fd8dffe5b0f8e24bde4c17e52ad41ff309345f215666f6ee59dbfe",
+      "unique_score_count": 1824,
+      "tied_score_group_count": 1414
+    },
+    {
+      "component": "img_gpp_siglip2",
+      "repository_relative_path": "image-track/submission/img_gpp_siglip2.csv",
+      "commit_sha": "c11fa520f2f73d705e83cb3f40a6a214f8cc7f31",
+      "git_object_spec": "c11fa520f2f73d705e83cb3f40a6a214f8cc7f31:image-track/submission/img_gpp_siglip2.csv",
+      "git_blob_oid_sha1": "ea105f7e726141ce0da361b1cfd11f639b1bfe35",
+      "git_blob_oid_recomputed_from_raw_bytes": "ea105f7e726141ce0da361b1cfd11f639b1bfe35",
+      "raw_file_sha256": "b64a0b344ec602d84202b5977d213b9d92ce187d553a330f9dcf17a440224894",
+      "raw_file_bytes": 422029,
+      "last_path_change_commit_sha": "067d54877eb4091c8691fa516c3274299c5af8a0",
+      "row_count": 20000,
+      "unique_id_count": 20000,
+      "ids_equal_reference_in_same_order": true,
+      "id_sequence_sha256": "5245c83471fd8dffe5b0f8e24bde4c17e52ad41ff309345f215666f6ee59dbfe",
+      "unique_score_count": 1547,
+      "tied_score_group_count": 1212
+    },
+    {
+      "component": "img_bigg_s384_retrain",
+      "repository_relative_path": "image-track/submission/img_bigg_s384_retrain.csv",
+      "commit_sha": "c11fa520f2f73d705e83cb3f40a6a214f8cc7f31",
+      "git_object_spec": "c11fa520f2f73d705e83cb3f40a6a214f8cc7f31:image-track/submission/img_bigg_s384_retrain.csv",
+      "git_blob_oid_sha1": "dba7b7ba7a622f3d3f8a889e231543b2f514ef2f",
+      "git_blob_oid_recomputed_from_raw_bytes": "dba7b7ba7a622f3d3f8a889e231543b2f514ef2f",
+      "raw_file_sha256": "1f4ea9d5afe893892ef5bd8d95a35b88137da002e59d0497e6df100e25a2d14a",
+      "raw_file_bytes": 435419,
+      "last_path_change_commit_sha": "067d54877eb4091c8691fa516c3274299c5af8a0",
+      "row_count": 20000,
+      "unique_id_count": 20000,
+      "ids_equal_reference_in_same_order": true,
+      "id_sequence_sha256": "5245c83471fd8dffe5b0f8e24bde4c17e52ad41ff309345f215666f6ee59dbfe",
+      "unique_score_count": 1773,
+      "tied_score_group_count": 1397
+    },
+    {
+      "component": "img_bigg_rerun2",
+      "repository_relative_path": "image-track/submission/img_bigg_rerun2.csv",
+      "commit_sha": "c11fa520f2f73d705e83cb3f40a6a214f8cc7f31",
+      "git_object_spec": "c11fa520f2f73d705e83cb3f40a6a214f8cc7f31:image-track/submission/img_bigg_rerun2.csv",
+      "git_blob_oid_sha1": "2e51c5008ab92393b5b87f5d4b075623f0e0c324",
+      "git_blob_oid_recomputed_from_raw_bytes": "2e51c5008ab92393b5b87f5d4b075623f0e0c324",
+      "raw_file_sha256": "600cd91971a329878b61527571235f0cd680d7d338fc62dd17ef17fcc00eb81f",
+      "raw_file_bytes": 380587,
+      "last_path_change_commit_sha": "067d54877eb4091c8691fa516c3274299c5af8a0",
+      "row_count": 20000,
+      "unique_id_count": 20000,
+      "ids_equal_reference_in_same_order": true,
+      "id_sequence_sha256": "5245c83471fd8dffe5b0f8e24bde4c17e52ad41ff309345f215666f6ee59dbfe",
+      "unique_score_count": 1576,
+      "tied_score_group_count": 1203
+    },
+    {
+      "component": "img_bigg_rerun3",
+      "repository_relative_path": "image-track/submission/img_bigg_rerun3.csv",
+      "commit_sha": "c11fa520f2f73d705e83cb3f40a6a214f8cc7f31",
+      "git_object_spec": "c11fa520f2f73d705e83cb3f40a6a214f8cc7f31:image-track/submission/img_bigg_rerun3.csv",
+      "git_blob_oid_sha1": "62ff1749fb5e8aa1860225b30ea82cb0bc2eac0e",
+      "git_blob_oid_recomputed_from_raw_bytes": "62ff1749fb5e8aa1860225b30ea82cb0bc2eac0e",
+      "raw_file_sha256": "ecf2b57048b312b412ac87125d278ae8bb4aa7cfabf0163f2cc438fcf0000920",
+      "raw_file_bytes": 421999,
+      "last_path_change_commit_sha": "067d54877eb4091c8691fa516c3274299c5af8a0",
+      "row_count": 20000,
+      "unique_id_count": 20000,
+      "ids_equal_reference_in_same_order": true,
+      "id_sequence_sha256": "5245c83471fd8dffe5b0f8e24bde4c17e52ad41ff309345f215666f6ee59dbfe",
+      "unique_score_count": 1604,
+      "tied_score_group_count": 1210
+    }
+  ],
+  "results": {
+    "cliph_four_component_six_pair_mean": {
+      "spearman_rho": 0.9600891535596247,
+      "display_value": "0.9601",
+      "pair_count": 6,
+      "pairwise_results": [
+        {
+          "left": "img_cliph_rerun",
+          "right": "img_cliph_s20261101",
+          "spearman_rho": 0.9604177746629056
+        },
+        {
+          "left": "img_cliph_rerun",
+          "right": "img_cliph_s20261102",
+          "spearman_rho": 0.9603241226245133
+        },
+        {
+          "left": "img_cliph_rerun",
+          "right": "img_cliph_s20261103",
+          "spearman_rho": 0.955237631765438
+        },
+        {
+          "left": "img_cliph_s20261101",
+          "right": "img_cliph_s20261102",
+          "spearman_rho": 0.9654300589099863
+        },
+        {
+          "left": "img_cliph_s20261101",
+          "right": "img_cliph_s20261103",
+          "spearman_rho": 0.957912775347511
+        },
+        {
+          "left": "img_cliph_s20261102",
+          "right": "img_cliph_s20261103",
+          "spearman_rho": 0.9612125580473941
+        }
+      ]
+    },
+    "cliph_main_vs_siglip2": {
+      "left": "img_cliph_rerun",
+      "right": "img_gpp_siglip2",
+      "spearman_rho": 0.7913757727208824,
+      "display_value": "0.7914"
+    },
+    "cliph_main_vs_bigg384": {
+      "left": "img_cliph_rerun",
+      "right": "img_bigg_s384_retrain",
+      "spearman_rho": 0.7091440666347133,
+      "display_value": "0.7091"
+    },
+    "bigg224_two_seed_pair": {
+      "left": "img_bigg_rerun2",
+      "right": "img_bigg_rerun3",
+      "spearman_rho": 0.8356879344005202,
+      "display_value": "0.8357",
+      "shown_on_slide_6": false
+    }
+  },
+  "limitations": [
+    "These are component-versus-component correlations, not service-versus-submission reproduction correlations.",
+    "No class labels enter this computation: correlation is not AUC or an attack/generalization measurement.",
+    "Low correlation indicates output-ranking diversity and does not by itself establish a fusion gain."
+  ],
+  "recompute_script": "defense/图表/重算分量相关性.py",
+  "repository_root": ".",
+  "repository_migration_note": "2026-10-09: converted local absolute paths to repository-relative paths for Git maintenance; original creation time and computed values are preserved, no recomputation was performed during this migration."
+}

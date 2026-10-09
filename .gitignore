@@ -21,3 +21,7 @@ text-track/**/*.pt
 # ── 图像赛道：验证脚本的运行期残留 ────────────────────────
 # verify_reproduce.py 结尾会 np.save 一份逐图分数用于排查，不属于仓库内容
 _verify_*.npy
+
+# 答辩演示的本地生成缓存；解压材料和维护源码由Git管理
+defense/.build/
+defense/node_modules/
