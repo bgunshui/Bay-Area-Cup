@@ -65,7 +65,7 @@ rank01(0.90 * rank01(p4_replay)
 | `p64_verify_consistency.py` | 已有结果一致性比较 |
 | `p70_scoreboard.py`、`p82_scoreboard2.py`、`p91_scoreboard3.py`、`p94_scoreboard4.py`、`p98_our_score.py` | 成绩/候选整理；其记录须与原始平台反馈对应，不能因脚本名就视为官方原始证据 |
 
-入库 `p4_report.json` 保存43个分支统计；`p77` 描述的p2AD由4个ft、3个llm及2个伪标签学生输入构成。“48分支候选体系”是团队说明，不能等同于每个教师都同时融合48个模型。
+入库 `p4_report.json` 保存 **43 个候选分支**统计;按 `family_weights_main` × `family_member_weights` 计算,**实际带权只有 6 个**:`robust` 0.35 + `lora7b_official_s2`/`_s3` 各 0.25 + `q4b_hidden_mean` 0.075 + `qwen_pair`/`q4b_hidden_last` 各 0.0375(合计 1.0000);`public` 家族 11 个外部检测器权重全为 0。`p77` 描述的 p2AD 是另一套组合(4 个 ft + 3 个 llm + 2 个伪标签学生)。因此不能说「48 个分支都参与」,也不能把候选池数量当作有效教师规模。
 
 ### 2.3 伪标签谱系
 
