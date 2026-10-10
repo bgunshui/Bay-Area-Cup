@@ -43,7 +43,7 @@ def main():
     spoken=re.findall(r'^## \d{2}[^\n]*\n[\s\S]*?计划：\d+秒[^\n]*\n\n([\s\S]*?)(?=\n\n> 证据提示)',speech,re.M)
     chars=len(re.findall(r'[\u4e00-\u9fffA-Za-z0-9]',''.join(spoken)))
     assert len(spoken)==14 and 2600<=chars<=3000
-    assert [int(n) for n in re.findall(r'^### Q(\d+)(?:\.|｜)',read('评委问答.md'),re.M)]==list(range(1,21))
+    assert [int(n) for n in re.findall(r'^### Q(\d+)(?:\.|｜)',read('评委问答.md'),re.M)]==list(range(1,51))
     audience=''.join(deck.text)
     assert not any(w in audience for w in ['复核','交付','仓库成绩记录','交接确认','证据等级','验收'])
 
@@ -73,7 +73,7 @@ def main():
     if matches:
         assert browser['passed'] and all(c['ok'] for c in browser['checks'])
         assert not browser['errors'] and not browser['network']
-    print(json.dumps(dict(slides=14,seconds=800,layouts=len(layouts),speech_characters=chars,questions=20,
+    print(json.dumps(dict(slides=14,seconds=800,layouts=len(layouts),speech_characters=chars,questions=len(re.findall(r'^### Q(?:\d+)(?:\.|｜)',read('评委问答.md'),re.M)),
         checksummed_files=len(files),offline_assets=True,current_html_matches_recorded_browser_test=matches),ensure_ascii=False))
     if not matches:
         print('NOTICE: HTML changed; the historical browser test is not validation of this revision. Recheck layout and interactions before presenting.')
