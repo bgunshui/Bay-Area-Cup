@@ -182,7 +182,7 @@ def _fusion():
         <div class="im-slots">
           <div class="im-slot"><h3>主槽 · 3/4</h3><div class="im-slot-spec">4个CLIP-H＋1个SigLIP2</div><div class="im-math">m<sub>H</sub> = (H<sub>1</sub>＋H<sub>2</sub>＋H<sub>3</sub>＋H<sub>4</sub>＋S) / 5</div></div>
           <div class="im-slot"><h3>bigG224槽 · 1/7</h3><div class="im-slot-spec">bigG@224 × 2</div><div class="im-math">m<sub>B</sub> = (B<sub>1</sub>＋B<sub>2</sub>) / 2</div></div>
-          <div class="im-slot"><h3>s384槽 · 3/28</h3><div class="im-slot-spec">1个bigG@384</div><div class="im-math">m<sub>384</sub> = B<sub>384</sub></div></div>
+          <div class="im-slot"><h3>bigG@384槽 · 3/28</h3><div class="im-slot-spec">1个bigG@384</div><div class="im-math">m<sub>384</sub> = B<sub>384</sub></div></div>
         </div>
         <svg class="im-merge" viewBox="0 0 1000 70" preserveAspectRatio="none" aria-hidden="true"><path d="M225 2V26H500M600 2V26H500M870 2V26H500V61M490 49L500 62L510 49" fill="none" stroke="#174d6b" stroke-width="2.2"/></svg>
         <div class="im-base"><span class="im-math">base = (3/4)m<sub>H</sub> ＋ (1/7)m<sub>B</sub> ＋ (3/28)m<sub>384</sub></span></div>
