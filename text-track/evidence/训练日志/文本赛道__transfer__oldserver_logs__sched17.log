@@ -1,0 +1,27 @@
+GPU1 free 24197MiB 02:21:51
+=== lora7b_official_s3 attempt 1 02:21:51
+GPU0 free 24197MiB 02:26:51
+=== lora7b_official_s2 attempt 1 02:26:51
+=== lora7b_official_s3 attempt 1 rc=1 02:58:03
+GPU1 free 24197MiB 02:58:33
+=== lora7b_official_s3 attempt 2 02:58:33
+=== lora7b_official_s2 attempt 1 rc=1 03:03:14
+GPU0 free 24197MiB 03:03:44
+=== lora7b_official_s2 attempt 2 03:03:44
+=== lora7b_official_s3 attempt 2 rc=1 03:34:52
+GPU1 free 24197MiB 03:35:22
+=== lora7b_official_s3 attempt 3 03:35:22
+=== lora7b_official_s2 attempt 2 rc=1 03:40:01
+GPU0 free 24197MiB 03:40:31
+=== lora7b_official_s2 attempt 3 03:40:31
+=== lora7b_official_s3 attempt 3 rc=1 04:11:39
+GPU1 free 24197MiB 04:12:09
+=== lora7b_official_s3 attempt 4 04:12:09
+=== lora7b_official_s2 attempt 3 rc=1 04:16:47
+GPU0 free 24197MiB 04:17:17
+=== lora7b_official_s2 attempt 4 04:17:17
+=== lora7b_official_s3 attempt 4 rc=0 04:48:17
+lora7b_official_s3 DONE attempt 5
+=== lora7b_official_s2 attempt 4 rc=0 04:53:41
+lora7b_official_s2 DONE attempt 5
+SCHED17_DONE 04:54:11

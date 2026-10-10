@@ -1,0 +1,13 @@
+lora15 ready 19:12:26
+=== qwen7b start 19:12:26
+=== qwen7b end rc=1 19:28:14
+!! qwen7b no done-file rc=1
+=== macbert start 19:28:14
+=== macbert end rc=0 19:44:53
+gen ready 19:44:54
+=== macbert_adv start 19:44:54
+=== macbert_adv end rc=1 19:47:10
+!! macbert_adv no done-file rc=1
+=== final_p4 start 19:47:10
+=== final_p4 end rc=0 20:04:58
+SCHED4_DONE 20:04:58

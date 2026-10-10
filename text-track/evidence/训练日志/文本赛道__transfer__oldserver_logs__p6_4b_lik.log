@@ -1,0 +1,378 @@
+[HAMI-core Msg(2703059:140341831103488:libvgpu.c:870)]: Initializing.....
+rows 1000 20000
+`torch_dtype` is deprecated! Use `dtype` instead!
+[HAMI-core ERROR (pid:2703059 thread=140341831103488 utils.c:157)]: host pid is error!
+[HAMI-core Msg(2703059:140341831103488:libvgpu.c:909)]: Initialized
+[HAMI-core Warn(2703059:140341831103488:libvgpu.c:911)]: SET_TASK_PID FAILED - using container PID for accounting
+[HAMI-core Warn(2703059:140341831103488:multiprocess_utilization_watcher.c:132)]: Driver error at 132: 101
+
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/data/湾区杯/文本赛道/code/p6_4b_lik.py", line 152, in <module>
+    main()
+  File "/data/湾区杯/文本赛道/code/p6_4b_lik.py", line 80, in main
+    model = AutoModelForCausalLM.from_pretrained(
+  File "/usr/local/lib/python3.10/dist-packages/transformers/models/auto/auto_factory.py", line 604, in from_pretrained
+    return model_class.from_pretrained(
+  File "/usr/local/lib/python3.10/dist-packages/transformers/modeling_utils.py", line 288, in _wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/transformers/modeling_utils.py", line 5176, in from_pretrained
+    ) = cls._load_pretrained_model(
+  File "/usr/local/lib/python3.10/dist-packages/transformers/modeling_utils.py", line 5639, in _load_pretrained_model
+    _error_msgs, disk_offload_index, cpu_offload_index = load_shard_file(args)
+  File "/usr/local/lib/python3.10/dist-packages/transformers/modeling_utils.py", line 933, in load_shard_file
+    state_dict = load_state_dict(
+  File "/usr/local/lib/python3.10/dist-packages/transformers/modeling_utils.py", line 508, in load_state_dict
+    with safe_open(checkpoint_file, framework="pt") as f:
+FileNotFoundError: No such file or directory: "/data/湾区杯/文本赛道/models/Qwen3-4B-Base/model-00001-of-00003.safetensors"
+[HAMI-core Msg(2703059:140341831103488:multiprocess_memory_limit.c:703)]: Cleanup on exit for PID 2703059
+[HAMI-core Msg(2703059:140341831103488:multiprocess_memory_limit.c:739)]: Exit cleanup complete for PID 2703059
+[HAMI-core Msg(2723256:140148689847296:libvgpu.c:870)]: Initializing.....
+rows 1000 20000
+`torch_dtype` is deprecated! Use `dtype` instead!
+[HAMI-core ERROR (pid:2723256 thread=140148689847296 utils.c:157)]: host pid is error!
+[HAMI-core Msg(2723256:140148689847296:libvgpu.c:909)]: Initialized
+[HAMI-core Warn(2723256:140148689847296:libvgpu.c:911)]: SET_TASK_PID FAILED - using container PID for accounting
+[HAMI-core Warn(2723256:140148689847296:multiprocess_utilization_watcher.c:132)]: Driver error at 132: 101
+
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]
+Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:00,  3.10it/s]
+Loading checkpoint shards:  67%|██████▋   | 2/3 [00:00<00:00,  3.05it/s]
+Loading checkpoint shards: 100%|██████████| 3/3 [00:00<00:00,  4.53it/s]
+loaded 4B base
+  lik 4/1908 1s
+  lik 124/1908 6s
+  lik 244/1908 12s
+  lik 364/1908 17s
+  lik 484/1908 23s
+  lik 604/1908 29s
+  lik 724/1908 34s
+  lik 844/1908 40s
+  lik 964/1908 46s
+  lik 1084/1908 52s
+  lik 1204/1908 57s
+  lik 1324/1908 63s
+  lik 1444/1908 69s
+  lik 1564/1908 75s
+  lik 1684/1908 81s
+  lik 1804/1908 86s
+saved /data/湾区杯/文本赛道/runs/q4b_lik_train.npz
+  lik 4/37553 0s
+  lik 124/37553 6s
+  lik 244/37553 12s
+  lik 364/37553 18s
+  lik 484/37553 24s
+  lik 604/37553 30s
+  lik 724/37553 36s
+  lik 844/37553 41s
+  lik 964/37553 47s
+  lik 1084/37553 53s
+  lik 1204/37553 58s
+  lik 1324/37553 64s
+  lik 1444/37553 69s
+  lik 1564/37553 75s
+  lik 1684/37553 80s
+  lik 1804/37553 86s
+  lik 1924/37553 92s
+  lik 2044/37553 97s
+  lik 2164/37553 103s
+  lik 2284/37553 109s
+  lik 2404/37553 115s
+  lik 2524/37553 120s
+  lik 2644/37553 126s
+  lik 2764/37553 131s
+  lik 2884/37553 137s
+  lik 3004/37553 142s
+  lik 3124/37553 147s
+  lik 3244/37553 152s
+  lik 3364/37553 158s
+  lik 3484/37553 163s
+  lik 3604/37553 169s
+  lik 3724/37553 174s
+  lik 3844/37553 180s
+  lik 3964/37553 185s
+  lik 4084/37553 191s
+  lik 4204/37553 197s
+  lik 4324/37553 202s
+  lik 4444/37553 208s
+  lik 4564/37553 214s
+  lik 4684/37553 219s
+  lik 4804/37553 225s
+  lik 4924/37553 230s
+  lik 5044/37553 236s
+  lik 5164/37553 242s
+  lik 5284/37553 248s
+  lik 5404/37553 254s
+  lik 5524/37553 260s
+  lik 5644/37553 266s
+  lik 5764/37553 271s
+  lik 5884/37553 277s
+  lik 6004/37553 282s
+  lik 6124/37553 288s
+  lik 6244/37553 294s
+  lik 6364/37553 299s
+  lik 6484/37553 305s
+  lik 6604/37553 311s
+  lik 6724/37553 316s
+  lik 6844/37553 322s
+  lik 6964/37553 328s
+  lik 7084/37553 334s
+  lik 7204/37553 339s
+  lik 7324/37553 345s
+  lik 7444/37553 351s
+  lik 7564/37553 357s
+  lik 7684/37553 362s
+  lik 7804/37553 368s
+  lik 7924/37553 374s
+  lik 8044/37553 379s
+  lik 8164/37553 385s
+  lik 8284/37553 390s
+  lik 8404/37553 396s
+  lik 8524/37553 402s
+  lik 8644/37553 407s
+  lik 8764/37553 413s
+  lik 8884/37553 419s
+  lik 9004/37553 424s
+  lik 9124/37553 429s
+  lik 9244/37553 433s
+  lik 9364/37553 438s
+  lik 9484/37553 443s
+  lik 9604/37553 449s
+  lik 9724/37553 456s
+  lik 9844/37553 463s
+  lik 9964/37553 470s
+  lik 10084/37553 477s
+  lik 10204/37553 483s
+  lik 10324/37553 490s
+  lik 10444/37553 497s
+  lik 10564/37553 504s
+  lik 10684/37553 511s
+  lik 10804/37553 518s
+  lik 10924/37553 525s
+  lik 11044/37553 531s
+  lik 11164/37553 538s
+  lik 11284/37553 545s
+  lik 11404/37553 552s
+  lik 11524/37553 559s
+  lik 11644/37553 566s
+  lik 11764/37553 573s
+  lik 11884/37553 579s
+  lik 12004/37553 586s
+  lik 12124/37553 593s
+  lik 12244/37553 600s
+  lik 12364/37553 607s
+  lik 12484/37553 614s
+  lik 12604/37553 620s
+  lik 12724/37553 627s
+  lik 12844/37553 634s
+  lik 12964/37553 641s
+  lik 13084/37553 648s
+  lik 13204/37553 655s
+  lik 13324/37553 662s
+  lik 13444/37553 669s
+  lik 13564/37553 675s
+  lik 13684/37553 682s
+  lik 13804/37553 689s
+  lik 13924/37553 696s
+  lik 14044/37553 703s
+  lik 14164/37553 709s
+  lik 14284/37553 716s
+  lik 14404/37553 723s
+  lik 14524/37553 730s
+  lik 14644/37553 737s
+  lik 14764/37553 744s
+  lik 14884/37553 750s
+  lik 15004/37553 757s
+  lik 15124/37553 764s
+  lik 15244/37553 771s
+  lik 15364/37553 778s
+  lik 15484/37553 785s
+  lik 15604/37553 792s
+  lik 15724/37553 798s
+  lik 15844/37553 805s
+  lik 15964/37553 812s
+  lik 16084/37553 819s
+  lik 16204/37553 826s
+  lik 16324/37553 833s
+  lik 16444/37553 840s
+  lik 16564/37553 846s
+  lik 16684/37553 853s
+  lik 16804/37553 860s
+  lik 16924/37553 867s
+  lik 17044/37553 874s
+  lik 17164/37553 881s
+  lik 17284/37553 887s
+  lik 17404/37553 894s
+  lik 17524/37553 901s
+  lik 17644/37553 908s
+  lik 17764/37553 915s
+  lik 17884/37553 921s
+  lik 18004/37553 928s
+  lik 18124/37553 935s
+  lik 18244/37553 942s
+  lik 18364/37553 949s
+  lik 18484/37553 956s
+  lik 18604/37553 963s
+  lik 18724/37553 969s
+  lik 18844/37553 976s
+  lik 18964/37553 983s
+  lik 19084/37553 990s
+  lik 19204/37553 997s
+  lik 19324/37553 1004s
+  lik 19444/37553 1010s
+  lik 19564/37553 1017s
+  lik 19684/37553 1024s
+  lik 19804/37553 1031s
+  lik 19924/37553 1038s
+  lik 20044/37553 1045s
+  lik 20164/37553 1052s
+  lik 20284/37553 1058s
+  lik 20404/37553 1065s
+  lik 20524/37553 1072s
+  lik 20644/37553 1079s
+  lik 20764/37553 1086s
+  lik 20884/37553 1093s
+  lik 21004/37553 1100s
+  lik 21124/37553 1106s
+  lik 21244/37553 1113s
+  lik 21364/37553 1120s
+  lik 21484/37553 1127s
+  lik 21604/37553 1134s
+  lik 21724/37553 1141s
+  lik 21844/37553 1147s
+  lik 21964/37553 1154s
+  lik 22084/37553 1161s
+  lik 22204/37553 1168s
+  lik 22324/37553 1175s
+  lik 22444/37553 1181s
+  lik 22564/37553 1188s
+  lik 22684/37553 1195s
+  lik 22804/37553 1202s
+  lik 22924/37553 1209s
+  lik 23044/37553 1216s
+  lik 23164/37553 1222s
+  lik 23284/37553 1229s
+  lik 23404/37553 1236s
+  lik 23524/37553 1243s
+  lik 23644/37553 1250s
+  lik 23764/37553 1257s
+  lik 23884/37553 1263s
+  lik 24004/37553 1270s
+  lik 24124/37553 1277s
+  lik 24244/37553 1284s
+  lik 24364/37553 1291s
+  lik 24484/37553 1298s
+  lik 24604/37553 1304s
+  lik 24724/37553 1308s
+  lik 24844/37553 1312s
+  lik 24964/37553 1317s
+  lik 25084/37553 1323s
+  lik 25204/37553 1328s
+  lik 25324/37553 1334s
+  lik 25444/37553 1339s
+  lik 25564/37553 1345s
+  lik 25684/37553 1350s
+  lik 25804/37553 1356s
+  lik 25924/37553 1361s
+  lik 26044/37553 1367s
+  lik 26164/37553 1372s
+  lik 26284/37553 1378s
+  lik 26404/37553 1383s
+  lik 26524/37553 1389s
+  lik 26644/37553 1394s
+  lik 26764/37553 1400s
+  lik 26884/37553 1406s
+  lik 27004/37553 1412s
+  lik 27124/37553 1417s
+  lik 27244/37553 1423s
+  lik 27364/37553 1429s
+  lik 27484/37553 1435s
+  lik 27604/37553 1440s
+  lik 27724/37553 1446s
+  lik 27844/37553 1452s
+  lik 27964/37553 1457s
+  lik 28084/37553 1463s
+  lik 28204/37553 1469s
+  lik 28324/37553 1475s
+  lik 28444/37553 1481s
+  lik 28564/37553 1486s
+  lik 28684/37553 1492s
+  lik 28804/37553 1497s
+  lik 28924/37553 1503s
+  lik 29044/37553 1508s
+  lik 29164/37553 1514s
+  lik 29284/37553 1519s
+  lik 29404/37553 1525s
+  lik 29524/37553 1531s
+  lik 29644/37553 1536s
+  lik 29764/37553 1542s
+  lik 29884/37553 1548s
+  lik 30004/37553 1554s
+  lik 30124/37553 1560s
+  lik 30244/37553 1566s
+  lik 30364/37553 1571s
+  lik 30484/37553 1577s
+  lik 30604/37553 1582s
+  lik 30724/37553 1587s
+  lik 30844/37553 1591s
+  lik 30964/37553 1597s
+  lik 31084/37553 1602s
+  lik 31204/37553 1608s
+  lik 31324/37553 1613s
+  lik 31444/37553 1619s
+  lik 31564/37553 1625s
+  lik 31684/37553 1631s
+  lik 31804/37553 1636s
+  lik 31924/37553 1642s
+  lik 32044/37553 1647s
+  lik 32164/37553 1653s
+  lik 32284/37553 1659s
+  lik 32404/37553 1665s
+  lik 32524/37553 1670s
+  lik 32644/37553 1676s
+  lik 32764/37553 1682s
+  lik 32884/37553 1688s
+  lik 33004/37553 1694s
+  lik 33124/37553 1699s
+  lik 33244/37553 1705s
+  lik 33364/37553 1711s
+  lik 33484/37553 1717s
+  lik 33604/37553 1723s
+  lik 33724/37553 1729s
+  lik 33844/37553 1735s
+  lik 33964/37553 1740s
+  lik 34084/37553 1746s
+  lik 34204/37553 1752s
+  lik 34324/37553 1757s
+  lik 34444/37553 1763s
+  lik 34564/37553 1769s
+  lik 34684/37553 1774s
+  lik 34804/37553 1780s
+  lik 34924/37553 1785s
+  lik 35044/37553 1791s
+  lik 35164/37553 1797s
+  lik 35284/37553 1803s
+  lik 35404/37553 1808s
+  lik 35524/37553 1814s
+  lik 35644/37553 1820s
+  lik 35764/37553 1826s
+  lik 35884/37553 1831s
+  lik 36004/37553 1837s
+  lik 36124/37553 1843s
+  lik 36244/37553 1848s
+  lik 36364/37553 1854s
+  lik 36484/37553 1859s
+  lik 36604/37553 1864s
+  lik 36724/37553 1869s
+  lik 36844/37553 1873s
+  lik 36964/37553 1877s
+  lik 37084/37553 1882s
+  lik 37204/37553 1889s
+  lik 37324/37553 1896s
+  lik 37444/37553 1903s
+saved /data/湾区杯/文本赛道/runs/q4b_lik_test.npz
+q4b_lik OOF AUC 0.9392
+P6 DONE
+[HAMI-core Msg(2723256:140148689847296:multiprocess_memory_limit.c:703)]: Cleanup on exit for PID 2723256
+[HAMI-core Msg(2723256:140148689847296:multiprocess_memory_limit.c:739)]: Exit cleanup complete for PID 2723256

@@ -1,0 +1,11 @@
+09-10 05:40:15 TASK START gpu=1 7b _p3s1
+09-10 05:40:15 run lora7b_distill_p3s1 fold=1
+09-10 07:13:24 run lora7b_distill_p3s1 fold=2
+09-10 08:48:49 TASK START gpu=1 7b _p3s1 batch=8
+09-10 08:48:49 run lora7b_distill_p3s1 fold=3 batch=8
+09-10 10:55:38 run lora7b_distill_p3s1 fold=4 batch=8
+09-10 12:32:14 aggregate lora7b_distill_p3s1
+09-10 12:32:19 DONE lora7b_distill_p3s1
+09-10 12:32:19 TASK START gpu=1 7b _p3s2 batch=8
+09-10 12:32:19 run lora7b_distill_p3s2 fold=1 batch=8
+09-10 14:08:46 run lora7b_distill_p3s2 fold=2 batch=8

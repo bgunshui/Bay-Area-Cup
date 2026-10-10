@@ -1,0 +1,18 @@
+SKIP qwen_base
+=== qwen_instr start 15:05:53
+=== qwen_instr end rc=0 15:31:15
+=== qwen_pair start 15:31:15
+=== qwen_pair end rc=2 15:31:24
+=== qwen7b start 15:31:24
+/data/湾区杯/文本赛道/code/sched1.sh: line 11: logs/p2_qwen7b.log: No such file or directory
+=== qwen7b end rc=1 15:31:24
+=== macbert start 15:31:24
+/data/湾区杯/文本赛道/code/sched1.sh: line 11: logs/p3c_macbert.log: No such file or directory
+=== macbert end rc=1 15:31:24
+=== lora15 start 15:31:24
+/data/湾区杯/文本赛道/code/sched1.sh: line 11: logs/p3a_15.log: No such file or directory
+=== lora15 end rc=1 15:31:24
+=== gen start 15:31:24
+/data/湾区杯/文本赛道/code/sched1.sh: line 11: logs/p3b_gen.log: No such file or directory
+=== gen end rc=1 15:31:24
+SCHED_PART1_DONE 15:31:24

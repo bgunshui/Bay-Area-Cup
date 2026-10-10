@@ -1,0 +1,48 @@
+[HAMI-core Msg(844030:140540780794880:libvgpu.c:870)]: Initializing.....
+{
+  "model": "qwen_pair_v2",
+  "seed": 20260823,
+  "base_model": "/data/湾区杯/文本赛道/models/Qwen3-1.7B-Base",
+  "instruct_model": "/data/湾区杯/文本赛道/models/Qwen3-1.7B",
+  "batch_size": 8,
+  "dimensions": 120,
+  "oof": {
+    "auc": 0.97736,
+    "tpr_at_fpr_005": 0.902
+  },
+  "oof_folds": [
+    {
+      "fold": 0,
+      "rows": 200,
+      "auc": 0.983358395989975,
+      "tpr_at_fpr_005": 0.9368421052631579
+    },
+    {
+      "fold": 1,
+      "rows": 200,
+      "auc": 0.9744770293263938,
+      "tpr_at_fpr_005": 0.8543689320388349
+    },
+    {
+      "fold": 2,
+      "rows": 200,
+      "auc": 0.9855999999999999,
+      "tpr_at_fpr_005": 0.95
+    },
+    {
+      "fold": 3,
+      "rows": 200,
+      "auc": 0.9741767590831748,
+      "tpr_at_fpr_005": 0.8969072164948454
+    },
+    {
+      "fold": 4,
+      "rows": 200,
+      "auc": 0.9683208020050125,
+      "tpr_at_fpr_005": 0.8761904761904762
+    }
+  ],
+  "submission": "/data/湾区杯/文本赛道/repro/artifacts/text/qwen_pair_v2/submission.csv"
+}
+[HAMI-core Msg(844030:140540780794880:multiprocess_memory_limit.c:703)]: Cleanup on exit for PID 844030
+[HAMI-core Msg(844030:140540780794880:multiprocess_memory_limit.c:739)]: Exit cleanup complete for PID 844030

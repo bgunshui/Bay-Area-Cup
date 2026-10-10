@@ -1,0 +1,9 @@
+loaded qwen17b_base (1000, 30)
+loaded qwen17b_instr (1000, 30)
+loaded q4b_base (1000, 30)
+loaded q7b_instr (1000, 30)
+loaded q15b_base (1000, 30)
+loaded q3b_base (1000, 30)
+fingerprint dim (1000, 180)
+nll_fp OOF AUC 0.9777 models ['qwen17b_base', 'qwen17b_instr', 'q4b_base', 'q7b_instr', 'q15b_base', 'q3b_base']
+P13 DONE

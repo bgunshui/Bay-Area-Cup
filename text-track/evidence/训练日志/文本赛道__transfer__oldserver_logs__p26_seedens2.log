@@ -1,0 +1,8 @@
+loaded lora7b_official_r2 oof 0.998348
+loaded lora7b_official_s2 oof 0.999628
+loaded lora7b_official_s3 oof 0.999384
+seedens2 OOF AUC 0.999436
+wrote probe_seedens2_1 unique 19458
+wrote probe_seedens2_2 unique 19733
+wrote probe_seedens2_3 unique 19436
+P26 DONE

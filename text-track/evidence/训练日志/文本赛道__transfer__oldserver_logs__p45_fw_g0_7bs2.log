@@ -1,0 +1,4 @@
+09-10 10:32:40 TASK START gpu=0 7b _p3s2 batch=4
+09-10 10:32:40 run lora7b_distill_p3s2 fold=0 batch=4
+09-10 12:06:22 run lora7b_distill_p3s2 fold=1 batch=4
+09-10 13:40:07 run lora7b_distill_p3s2 fold=2 batch=4

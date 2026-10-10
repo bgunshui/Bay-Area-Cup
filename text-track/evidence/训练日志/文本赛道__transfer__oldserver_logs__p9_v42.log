@@ -1,0 +1,12 @@
+public members ['anx_w254', 'pseudo15']
+llm members ['qwen_pair', 'q7b_all', 'q7b_hidden_last', 'q7b_hidden_mean']
+ft members ['lora_Qwen2.5-1.5B-Instruct_official', 'lora_Qwen2.5-1.5B-Instruct_official_adv']
+robust members ['robust']
+wrote probe_p1 unique 18843
+wrote probe_p2 unique 19712
+wrote probe_p3 unique 19790
+wrote probe_p4 unique 19814
+wrote probe_p5 unique 19487
+wrote probe_p6 unique 19943
+wrote probe_geo.csv unique 20000
+P9 DONE

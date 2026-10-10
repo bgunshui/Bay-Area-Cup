@@ -1,0 +1,21 @@
+09-10 05:40:15 TASK START gpu=0 1.5b _p3s1
+09-10 05:40:15 run lora1.5b_distill_p3s1 fold=1
+09-10 06:07:26 run lora1.5b_distill_p3s1 fold=2
+09-10 06:34:42 run lora1.5b_distill_p3s1 fold=3
+09-10 07:01:54 run lora1.5b_distill_p3s1 fold=4
+09-10 07:29:09 all folds -> aggregate lora1.5b_distill_p3s1
+09-10 07:29:14 DONE lora1.5b_distill_p3s1
+09-10 07:29:14 TASK START gpu=0 1.5b _p3s2
+09-10 07:29:14 run lora1.5b_distill_p3s2 fold=0
+09-10 07:56:27 run lora1.5b_distill_p3s2 fold=1
+09-10 08:23:37 run lora1.5b_distill_p3s2 fold=2
+09-10 08:39:47 TASK START gpu=0 1.5b _p3s1 batch=16
+09-10 08:39:47 aggregate lora1.5b_distill_p3s1
+09-10 08:39:53 DONE lora1.5b_distill_p3s1
+09-10 08:39:53 TASK START gpu=0 1.5b _p3s2 batch=16
+09-10 08:39:53 run lora1.5b_distill_p3s2 fold=2 batch=16
+09-10 09:08:02 run lora1.5b_distill_p3s2 fold=3 batch=16
+09-10 09:36:12 run lora1.5b_distill_p3s2 fold=4 batch=16
+09-10 10:04:21 aggregate lora1.5b_distill_p3s2
+09-10 10:04:26 DONE lora1.5b_distill_p3s2
+09-10 10:04:26 GPU0 LANE DONE

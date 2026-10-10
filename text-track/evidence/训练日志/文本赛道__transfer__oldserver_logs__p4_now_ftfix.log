@@ -1,0 +1,58 @@
+branch aigczh_full 0.966866
+branch anx_w128 0.97478
+branch anx_w254 0.98615
+branch mokawa_full 0.969482
+branch paperpass_full 0.863574
+branch yuc_full 0.973758
+branch yuc_w256 0.975536
+branch yuc_w384 0.983394
+branch yuc_w510 0.983194
+branch zhv2_full 0.72356
+branch zhv3short_full 0.970124
+branch qwen_pair 0.97736
+branch robust 0.996882
+branch lora1.5b_distill 0.999858
+skip saturated v1 14B teacher: lora14b_official
+branch lora7b_advmix 0.726916
+branch lora7b_advmix_v2 0.998002
+branch lora7b_distill 0.999358
+branch lora7b_official 0.997042
+branch lora7b_official_r2 0.998348
+branch lora7b_official_s2 0.999628
+branch lora7b_official_s3 0.999384
+branch lora7b_pseudo2 0.997932
+branch lora7b_seedens 0.99922
+branch lora7b_seedens2 0.999436
+branch lora_Qwen2.5-1.5B-Instruct_official 0.998846
+branch lora_Qwen2.5-1.5B-Instruct_official_adv 0.994964
+branch macbert_c 0.988892
+branch macbert_c_adv 0.994216
+branch nll_fp 0.9777
+branch pseudo15 0.997418
+branch q3h_base_first 0.78054
+branch q3h_base_last 0.9808
+branch q3h_base_mean 0.995072
+branch q3h_instruct_first 0.77692
+branch q3h_instruct_last 0.96926
+branch q3h_instruct_mean 0.99438
+branch q4b_hidden_first 0.773296
+branch q4b_hidden_last 0.994612
+branch q4b_hidden_mean 0.997864
+branch q4b_lik 0.9392
+branch q7b_all 0.993552
+branch q7b_hidden_first 0.759612
+branch q7b_hidden_last 0.979172
+branch q7b_hidden_mean 0.99466
+branch q7b_lik 0.92978
+families {'public': ['aigczh_full', 'anx_w128', 'anx_w254', 'mokawa_full', 'paperpass_full', 'yuc_full', 'yuc_w256', 'yuc_w384', 'yuc_w510', 'zhv2_full', 'zhv3short_full'], 'llm': ['qwen_pair', 'nll_fp', 'q3h_base_first', 'q3h_base_last', 'q3h_base_mean', 'q3h_instruct_first', 'q3h_instruct_last', 'q3h_instruct_mean', 'q4b_hidden_first', 'q4b_hidden_last', 'q4b_hidden_mean', 'q4b_lik', 'q7b_all', 'q7b_hidden_first', 'q7b_hidden_last', 'q7b_hidden_mean', 'q7b_lik'], 'ft': ['lora1.5b_distill', 'lora7b_advmix', 'lora7b_advmix_v2', 'lora7b_distill', 'lora7b_official', 'lora7b_official_r2', 'lora7b_official_s2', 'lora7b_official_s3', 'lora7b_pseudo2', 'lora7b_seedens', 'lora7b_seedens2', 'lora_Qwen2.5-1.5B-Instruct_official', 'lora_Qwen2.5-1.5B-Instruct_official_adv', 'macbert_c', 'macbert_c_adv', 'pseudo15'], 'robust': ['robust']}
+family public auc 0.993384 {'aigczh_full': 0.0, 'anx_w128': 0.0, 'anx_w254': 0.5, 'mokawa_full': 0.0, 'paperpass_full': 0.0, 'yuc_full': 0.0, 'yuc_w256': 0.0, 'yuc_w384': 0.25, 'yuc_w510': 0.0, 'zhv2_full': 0.0, 'zhv3short_full': 0.25}
+family llm auc 0.998458 {'qwen_pair': 0.25, 'nll_fp': 0.0, 'q3h_base_first': 0.0, 'q3h_base_last': 0.0, 'q3h_base_mean': 0.0, 'q3h_instruct_first': 0.0, 'q3h_instruct_last': 0.0, 'q3h_instruct_mean': 0.0, 'q4b_hidden_first': 0.0, 'q4b_hidden_last': 0.25, 'q4b_hidden_mean': 0.5, 'q4b_lik': 0.0, 'q7b_all': 0.0, 'q7b_hidden_first': 0.0, 'q7b_hidden_last': 0.0, 'q7b_hidden_mean': 0.0, 'q7b_lik': 0.0}
+family ft auc 0.999426 {'lora1.5b_distill': 0.25, 'lora7b_advmix': 0.0, 'lora7b_advmix_v2': 0.0, 'lora7b_distill': 0.25, 'lora7b_official': 0.25, 'lora7b_official_r2': 0.0, 'lora7b_official_s2': 0.25, 'lora7b_official_s3': 0.0, 'lora7b_pseudo2': 0.0, 'lora7b_seedens': 0.0, 'lora7b_seedens2': 0.0, 'lora_Qwen2.5-1.5B-Instruct_official': 0.0, 'lora_Qwen2.5-1.5B-Instruct_official_adv': 0.0, 'macbert_c': 0.0, 'macbert_c_adv': 0.0, 'pseudo15': 0.0}
+family robust auc 0.996882 {'robust': 1.0}
+family weights {'public': 0.05, 'llm': 0.2, 'ft': 0.5, 'robust': 0.25}
+submit_main oof 0.999276 unique 19921 -> /data/湾区杯/文本赛道/submissions/submit_main.csv
+submit_nopub_1 oof 0.999276 unique 19896 -> /data/湾区杯/文本赛道/submissions/submit_nopub_1.csv
+submit_nopub_2 oof 0.999276 unique 19545 -> /data/湾区杯/文本赛道/submissions/submit_nopub_2.csv
+submit_nopub_3 oof 0.999276 unique 19836 -> /data/湾区杯/文本赛道/submissions/submit_nopub_3.csv
+submit_robust_prior oof 0.999276 unique 19917 -> /data/湾区杯/文本赛道/submissions/submit_robust_prior.csv
+P4 DONE

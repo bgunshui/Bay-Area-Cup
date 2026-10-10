@@ -1,0 +1,20 @@
+GPU0 free 24197MiB 02:44:32
+=== lora7b_advmix attempt 1 02:44:32
+=== lora7b_advmix attempt 1 rc=1 03:41:37
+GPU0 free 24197MiB 03:42:07
+=== lora7b_advmix attempt 2 03:42:07
+=== lora7b_advmix attempt 2 rc=1 04:38:06
+GPU0 free 24197MiB 04:38:36
+=== lora7b_advmix attempt 3 04:38:36
+=== lora7b_advmix attempt 3 rc=1 05:35:20
+GPU0 free 24197MiB 07:02:54
+=== lora7b_advmix attempt 4 07:02:54
+=== lora7b_advmix attempt 4 rc=1 08:00:44
+GPU0 free 24197MiB 08:01:14
+=== lora7b_advmix attempt 5 08:01:14
+=== lora7b_advmix attempt 5 rc=0 08:57:50
+GPU0 free 24197MiB 08:58:20
+lora7b_advmix DONE attempt 6
+p4 rc=0
+p17 rc=0
+SCHED11_DONE 09:01:10

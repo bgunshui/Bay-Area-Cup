@@ -1,0 +1,14 @@
+14B self-train, model /root/sj-tmp/Qwen2.5-14B-Instruct labels pseudo_best_v2
+pseudo soft mean 0.5000000000001337 conf mean 0.7383628479708445
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 8/8 [00:00<00:00, 237.53it/s]
+Some weights of Qwen2ForSequenceClassification were not initialized from the model checkpoint at /root/sj-tmp/Qwen2.5-14B-Instruct and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+  fold 0 ep 0 loss 0.4986 val_auc 1.00000 t 8783s
+  fold 0 ep 1 loss 0.3846 val_auc 1.00000 t 17411s
+fold 0 final auc 1.0 raw unique 1026 raw frac==max 0.01 elapsed 20116.0
+adapter saved /root/sj-tmp/wanqu/runs/lora14b_p4_fold0_adapter
+FOLD DONE (missing folds [1, 2, 3, 4]) — rerun to continue

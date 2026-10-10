@@ -1,0 +1,335 @@
+/root/miniconda3/bin/python: can't open file '/root/sj-tmp/wanqu/code/p43_14b_p2.py': [Errno 2] No such file or directory
+/root/miniconda3/bin/python: can't open file '/root/sj-tmp/wanqu/code/p43_14b_p2.py': [Errno 2] No such file or directory
+/root/miniconda3/bin/python: can't open file '/root/sj-tmp/wanqu/code/p43_14b_p2.py': [Errno 2] No such file or directory
+/root/miniconda3/bin/python: can't open file '/root/sj-tmp/wanqu/code/p43_14b_p2.py': [Errno 2] No such file or directory
+/root/miniconda3/bin/python: can't open file '/root/sj-tmp/wanqu/code/p43_14b_p2.py': [Errno 2] No such file or directory
+/root/miniconda3/bin/python: can't open file '/root/sj-tmp/wanqu/code/p43_14b_p2.py': [Errno 2] No such file or directory
+/root/miniconda3/bin/python: can't open file '/root/sj-tmp/wanqu/code/p43_14b_p2.py': [Errno 2] No such file or directory
+/root/miniconda3/bin/python: can't open file '/root/sj-tmp/wanqu/code/p43_14b_p2.py': [Errno 2] No such file or directory
+/root/miniconda3/bin/python: can't open file '/root/sj-tmp/wanqu/code/p43_14b_p2.py': [Errno 2] No such file or directory
+/root/miniconda3/bin/python: can't open file '/root/sj-tmp/wanqu/code/p43_14b_p2.py': [Errno 2] No such file or directory
+/root/miniconda3/bin/python: can't open file '/root/sj-tmp/wanqu/code/p43_14b_p2.py': [Errno 2] No such file or directory
+/root/miniconda3/bin/python: can't open file '/root/sj-tmp/wanqu/code/p43_14b_p2.py': [Errno 2] No such file or directory
+/root/miniconda3/bin/python: can't open file '/root/sj-tmp/wanqu/code/p43_14b_p2.py': [Errno 2] No such file or directory
+/root/miniconda3/bin/python: can't open file '/root/sj-tmp/wanqu/code/p43_14b_p2.py': [Errno 2] No such file or directory
+/root/miniconda3/bin/python: can't open file '/root/sj-tmp/wanqu/code/p43_14b_p2.py': [Errno 2] No such file or directory
+/root/miniconda3/bin/python: can't open file '/root/sj-tmp/wanqu/code/p43_14b_p2.py': [Errno 2] No such file or directory
+/root/miniconda3/bin/python: can't open file '/root/sj-tmp/wanqu/code/p43_14b_p2.py': [Errno 2] No such file or directory
+/root/miniconda3/bin/python: can't open file '/root/sj-tmp/wanqu/code/p43_14b_p2.py': [Errno 2] No such file or directory
+/root/miniconda3/bin/python: can't open file '/root/sj-tmp/wanqu/code/p43_14b_p2.py': [Errno 2] No such file or directory
+/root/miniconda3/bin/python: can't open file '/root/sj-tmp/wanqu/code/p43_14b_p2.py': [Errno 2] No such file or directory
+/root/miniconda3/bin/python: can't open file '/root/sj-tmp/wanqu/code/p43_14b_p2.py': [Errno 2] No such file or directory
+/root/miniconda3/bin/python: can't open file '/root/sj-tmp/wanqu/code/p43_14b_p2.py': [Errno 2] No such file or directory
+/root/miniconda3/bin/python: can't open file '/root/sj-tmp/wanqu/code/p43_14b_p2.py': [Errno 2] No such file or directory
+/root/miniconda3/bin/python: can't open file '/root/sj-tmp/wanqu/code/p43_14b_p2.py': [Errno 2] No such file or directory
+14B self-train, model /root/sj-tmp/Qwen2.5-14B-Instruct labels pseudo_best_v2
+pseudo soft mean 0.5000000000001337 conf mean 0.7383628479708445
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+14B self-train, model /root/sj-tmp/Qwen2.5-14B-Instruct labels pseudo_best_v2
+pseudo soft mean 0.5000000000001337 conf mean 0.7383628479708445
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 8/8 [00:00<00:00, 242.42it/s]
+Some weights of Qwen2ForSequenceClassification were not initialized from the model checkpoint at /root/sj-tmp/Qwen2.5-14B-Instruct and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 8/8 [00:00<00:00, 229.18it/s]
+Some weights of Qwen2ForSequenceClassification were not initialized from the model checkpoint at /root/sj-tmp/Qwen2.5-14B-Instruct and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/root/sj-tmp/wanqu/code/p43_14b_p2.py", line 239, in <module>
+    main()
+  File "/root/sj-tmp/wanqu/code/p43_14b_p2.py", line 146, in main
+    model.to(DEV)
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1340, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  [Previous line repeated 5 more times]
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 927, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1326, in convert
+    return t.to(
+           ^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 50.00 MiB. GPU 0 has a total capacity of 47.37 GiB of which 29.56 MiB is free. Process 3470794 has 28.94 GiB memory in use. Process 3470823 has 18.39 GiB memory in use. Of the allocated memory 18.01 GiB is allocated by PyTorch, and 960.00 KiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/root/sj-tmp/wanqu/code/p43_14b_p2.py", line 239, in <module>
+    main()
+  File "/root/sj-tmp/wanqu/code/p43_14b_p2.py", line 165, in main
+    loss.backward()
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/_tensor.py", line 581, in backward
+    torch.autograd.backward(
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/autograd/__init__.py", line 347, in backward
+    _engine_run_backward(
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/autograd/graph.py", line 825, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/autograd/function.py", line 307, in apply
+    return user_fn(self, *args)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/utils/checkpoint.py", line 321, in backward
+    torch.autograd.backward(outputs_with_grad, args_with_grad)
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/autograd/__init__.py", line 347, in backward
+    _engine_run_backward(
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/autograd/graph.py", line 825, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 54.00 MiB. GPU 0 has a total capacity of 47.37 GiB of which 21.56 MiB is free. Process 3470794 has 28.95 GiB memory in use. Process 3470823 has 18.39 GiB memory in use. Of the allocated memory 28.20 GiB is allocated by PyTorch, and 294.49 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+14B self-train, model /root/sj-tmp/Qwen2.5-14B-Instruct labels pseudo_best_v2
+pseudo soft mean 0.5000000000001337 conf mean 0.7383628479708445
+14B self-train, model /root/sj-tmp/Qwen2.5-14B-Instruct labels pseudo_best_v2
+pseudo soft mean 0.5000000000001337 conf mean 0.7383628479708445
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 8/8 [00:00<00:00, 244.93it/s]
+Some weights of Qwen2ForSequenceClassification were not initialized from the model checkpoint at /root/sj-tmp/Qwen2.5-14B-Instruct and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 8/8 [00:00<00:00, 229.39it/s]
+Some weights of Qwen2ForSequenceClassification were not initialized from the model checkpoint at /root/sj-tmp/Qwen2.5-14B-Instruct and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/root/sj-tmp/wanqu/code/p43_14b_p2.py", line 239, in <module>
+    main()
+  File "/root/sj-tmp/wanqu/code/p43_14b_p2.py", line 146, in main
+    model.to(DEV)
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1340, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  [Previous line repeated 5 more times]
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 927, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1326, in convert
+    return t.to(
+           ^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 50.00 MiB. GPU 0 has a total capacity of 47.37 GiB of which 33.56 MiB is free. Process 3473565 has 23.64 GiB memory in use. Process 3473559 has 23.69 GiB memory in use. Of the allocated memory 23.26 GiB is allocated by PyTorch, and 1.22 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/root/sj-tmp/wanqu/code/p43_14b_p2.py", line 239, in <module>
+    main()
+  File "/root/sj-tmp/wanqu/code/p43_14b_p2.py", line 146, in main
+    model.to(DEV)
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1340, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  [Previous line repeated 4 more times]
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 927, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1326, in convert
+    return t.to(
+           ^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 136.00 MiB. GPU 0 has a total capacity of 47.37 GiB of which 33.56 MiB is free. Process 3473565 has 23.64 GiB memory in use. Process 3473559 has 23.69 GiB memory in use. Of the allocated memory 23.31 GiB is allocated by PyTorch, and 606.00 KiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+14B self-train, model /root/sj-tmp/Qwen2.5-14B-Instruct labels pseudo_best_v2
+14B self-train, model /root/sj-tmp/Qwen2.5-14B-Instruct labels pseudo_best_v2
+pseudo soft mean 0.5000000000001337 conf mean 0.7383628479708445
+pseudo soft mean 0.5000000000001337 conf mean 0.7383628479708445
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 8/8 [00:00<00:00, 239.88it/s]
+Some weights of Qwen2ForSequenceClassification were not initialized from the model checkpoint at /root/sj-tmp/Qwen2.5-14B-Instruct and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 8/8 [00:00<00:00, 239.28it/s]
+Some weights of Qwen2ForSequenceClassification were not initialized from the model checkpoint at /root/sj-tmp/Qwen2.5-14B-Instruct and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Traceback (most recent call last):
+  File "/root/sj-tmp/wanqu/code/p43_14b_p2.py", line 239, in <module>
+    main()
+  File "/root/sj-tmp/wanqu/code/p43_14b_p2.py", line 146, in main
+    model.to(DEV)
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1340, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  [Previous line repeated 4 more times]
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 927, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1326, in convert
+    return t.to(
+           ^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 136.00 MiB. GPU 0 has a total capacity of 47.37 GiB of which 45.56 MiB is free. Process 3475792 has 27.12 GiB memory in use. Process 3475798 has 20.20 GiB memory in use. Of the allocated memory 19.82 GiB is allocated by PyTorch, and 844.00 KiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/root/sj-tmp/wanqu/code/p43_14b_p2.py", line 239, in <module>
+    main()
+  File "/root/sj-tmp/wanqu/code/p43_14b_p2.py", line 167, in main
+    opt.step(); sched.step(); opt.zero_grad(set_to_none=True)
+    ^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/optim/lr_scheduler.py", line 137, in wrapper
+    return func.__get__(opt, opt.__class__)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/optim/optimizer.py", line 487, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/optim/optimizer.py", line 91, in _use_grad
+    ret = func(self, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/optim/adamw.py", line 220, in step
+    adamw(
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/optim/optimizer.py", line 154, in maybe_fallback
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/optim/adamw.py", line 782, in adamw
+    func(
+  File "/root/miniconda3/lib/python3.12/site-packages/torch/optim/adamw.py", line 606, in _multi_tensor_adamw
+    exp_avg_sq_sqrt = torch._foreach_sqrt(device_exp_avg_sqs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 MiB. GPU 0 has a total capacity of 47.37 GiB of which 1.56 MiB is free. Process 3475792 has 27.16 GiB memory in use. Process 3475798 has 20.20 GiB memory in use. Of the allocated memory 26.66 GiB is allocated by PyTorch, and 38.73 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+14B self-train, model /root/sj-tmp/Qwen2.5-14B-Instruct labels pseudo_best_v2
+14B self-train, model /root/sj-tmp/Qwen2.5-14B-Instruct labels pseudo_best_v2
+pseudo soft mean 0.5000000000001337 conf mean 0.7383628479708445
+pseudo soft mean 0.5000000000001337 conf mean 0.7383628479708445
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 8/8 [00:00<00:00, 242.65it/s]
+Some weights of Qwen2ForSequenceClassification were not initialized from the model checkpoint at /root/sj-tmp/Qwen2.5-14B-Instruct and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 8/8 [00:00<00:00, 241.18it/s]
+Some weights of Qwen2ForSequenceClassification were not initialized from the model checkpoint at /root/sj-tmp/Qwen2.5-14B-Instruct and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+14B self-train, model /root/sj-tmp/Qwen2.5-14B-Instruct labels pseudo_best_v2
+pseudo soft mean 0.5000000000001337 conf mean 0.7383628479708445
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 8/8 [00:00<00:00, 233.92it/s]
+Some weights of Qwen2ForSequenceClassification were not initialized from the model checkpoint at /root/sj-tmp/Qwen2.5-14B-Instruct and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+  fold 0 ep 0 loss 0.4346 val_auc 1.00000 t 8569s
+  fold 0 ep 1 loss 0.3843 val_auc 1.00000 t 17129s
+fold 0 final auc 1.0 raw unique 864 raw frac==max 0.01 elapsed 19821.0
+adapter saved /root/sj-tmp/wanqu/runs/lora14b_p3_fold0_adapter
+FOLD DONE (missing folds [1, 2, 3, 4]) — rerun to continue
+14B self-train, model /root/sj-tmp/Qwen2.5-14B-Instruct labels pseudo_best_v2
+pseudo soft mean 0.5000000000001337 conf mean 0.7383628479708445
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 8/8 [00:00<00:00, 238.28it/s]
+Some weights of Qwen2ForSequenceClassification were not initialized from the model checkpoint at /root/sj-tmp/Qwen2.5-14B-Instruct and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+14B self-train, model /root/sj-tmp/Qwen2.5-14B-Instruct labels pseudo_best_v2
+pseudo soft mean 0.5000000000001337 conf mean 0.7383628479708445
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 8/8 [00:00<00:00, 243.74it/s]
+Some weights of Qwen2ForSequenceClassification were not initialized from the model checkpoint at /root/sj-tmp/Qwen2.5-14B-Instruct and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+  fold 1 ep 0 loss 0.4471 val_auc 1.00000 t 9095s
+  fold 1 ep 1 loss 0.3841 val_auc 1.00000 t 18171s
+fold 1 final auc 1.0 raw unique 951 raw frac==max 0.01 elapsed 20858.0
+adapter saved /root/sj-tmp/wanqu/runs/lora14b_p3_fold1_adapter
+FOLD DONE (missing folds [2, 3, 4]) — rerun to continue
+14B self-train, model /root/sj-tmp/Qwen2.5-14B-Instruct labels pseudo_best_v2
+pseudo soft mean 0.5000000000001337 conf mean 0.7383628479708445
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 8/8 [00:00<00:00, 241.78it/s]
+Some weights of Qwen2ForSequenceClassification were not initialized from the model checkpoint at /root/sj-tmp/Qwen2.5-14B-Instruct and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+  fold 2 ep 0 loss 0.4455 val_auc 0.99990 t 9093s
+  fold 2 ep 1 loss 0.3840 val_auc 1.00000 t 18170s
+fold 2 final auc 1.0 raw unique 1009 raw frac==max 0.01 elapsed 20874.0
+adapter saved /root/sj-tmp/wanqu/runs/lora14b_p3_fold2_adapter
+FOLD DONE (missing folds [3, 4]) — rerun to continue
+14B self-train, model /root/sj-tmp/Qwen2.5-14B-Instruct labels pseudo_best_v2
+pseudo soft mean 0.5000000000001337 conf mean 0.7383628479708445
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]
+Loading checkpoint shards:  38%|███▊      | 3/8 [00:00<00:00, 23.66it/s]
+Loading checkpoint shards:  75%|███████▌  | 6/8 [00:00<00:00, 23.09it/s]
+Loading checkpoint shards: 100%|██████████| 8/8 [00:00<00:00, 28.42it/s]
+Some weights of Qwen2ForSequenceClassification were not initialized from the model checkpoint at /root/sj-tmp/Qwen2.5-14B-Instruct and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+  fold 3 ep 0 loss 0.4343 val_auc 1.00000 t 8594s
+  fold 3 ep 1 loss 0.3841 val_auc 1.00000 t 17145s
+fold 3 final auc 1.0 raw unique 1104 raw frac==max 0.01 elapsed 19833.0
+adapter saved /root/sj-tmp/wanqu/runs/lora14b_p3_fold3_adapter
+FOLD DONE (missing folds [4]) — rerun to continue
+14B self-train, model /root/sj-tmp/Qwen2.5-14B-Instruct labels pseudo_best_v2
+pseudo soft mean 0.5000000000001337 conf mean 0.7383628479708445
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 8/8 [00:00<00:00, 239.97it/s]
+Some weights of Qwen2ForSequenceClassification were not initialized from the model checkpoint at /root/sj-tmp/Qwen2.5-14B-Instruct and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+14B self-train, model /root/sj-tmp/Qwen2.5-14B-Instruct labels pseudo_best_v2
+pseudo soft mean 0.5000000000001337 conf mean 0.7383628479708445
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading checkpoint shards:   0%|          | 0/8 [00:00<?, ?it/s]
+Loading checkpoint shards: 100%|██████████| 8/8 [00:00<00:00, 241.94it/s]
+Some weights of Qwen2ForSequenceClassification were not initialized from the model checkpoint at /root/sj-tmp/Qwen2.5-14B-Instruct and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+  fold 4 ep 0 loss 0.4352 val_auc 0.99769 t 8636s
+  fold 4 ep 1 loss 0.3839 val_auc 0.99779 t 17260s
+fold 4 final auc 0.99779 raw unique 1025 raw frac==max 0.01 elapsed 19981.0
+adapter saved /root/sj-tmp/wanqu/runs/lora14b_p3_fold4_adapter
+lora14b_p3 OOF AUC 0.999572
+lora14b_p3 OOF frac==max 0.1 unique 468
+P43 DONE
+14B self-train, model /root/sj-tmp/Qwen2.5-14B-Instruct labels pseudo_best_v2
+pseudo soft mean 0.5000000000001337 conf mean 0.7383628479708445
+reuse fold 0
+reuse fold 1
+reuse fold 2
+reuse fold 3
+reuse fold 4
+lora14b_p3 OOF AUC 0.999572
+lora14b_p3 OOF frac==max 0.1 unique 468
+P43 DONE

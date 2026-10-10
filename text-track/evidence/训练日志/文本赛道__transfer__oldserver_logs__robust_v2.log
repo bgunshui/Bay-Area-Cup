@@ -1,0 +1,110 @@
+[HAMI-core Msg(537192:140222871757824:libvgpu.c:870)]: Initializing.....
+{
+  "model": "text_robust_v2",
+  "seed": 20260823,
+  "rows_official": 1000,
+  "rows_external": 25259,
+  "rows_final": 20000,
+  "external": {
+    "rows": 25259,
+    "removed_duplicates_or_conflicts": 241,
+    "labels": {
+      "0": 11807,
+      "1": 13452
+    },
+    "sources": {
+      "hc3": 23762,
+      "qwen_synthetic": 1497
+    },
+    "hc3_loaded": {
+      "0": 12000,
+      "1": 12000
+    },
+    "synthetic_loaded": 1500,
+    "multimodel_loaded": {}
+  },
+  "branches": {
+    "raw_official": {
+      "auc": 0.995376,
+      "tpr_at_fpr_005": 0.99
+    },
+    "raw_augmented": {
+      "auc": 0.9873160000000001,
+      "tpr_at_fpr_005": 0.934
+    },
+    "normalized_official": {
+      "auc": 0.994444,
+      "tpr_at_fpr_005": 0.98
+    },
+    "normalized_augmented": {
+      "auc": 0.9858719999999999,
+      "tpr_at_fpr_005": 0.944
+    },
+    "style": {
+      "auc": 0.9623520000000001,
+      "tpr_at_fpr_005": 0.822
+    }
+  },
+  "weights": {
+    "raw_official": 0.4,
+    "raw_augmented": 0.2,
+    "normalized_official": 0.25,
+    "normalized_augmented": 0.0,
+    "style": 0.15
+  },
+  "oof": {
+    "auc": 0.9968819999999999,
+    "tpr_at_fpr_005": 0.99
+  },
+  "oof_folds": [
+    {
+      "fold": 0,
+      "rows": 200,
+      "auc": 0.9977944862155388,
+      "tpr_at_fpr_005": 0.9894736842105263
+    },
+    {
+      "fold": 1,
+      "rows": 200,
+      "auc": 0.9957962165949354,
+      "tpr_at_fpr_005": 0.9902912621359223
+    },
+    {
+      "fold": 2,
+      "rows": 200,
+      "auc": 0.9979,
+      "tpr_at_fpr_005": 0.99
+    },
+    {
+      "fold": 3,
+      "rows": 200,
+      "auc": 0.9990991892703434,
+      "tpr_at_fpr_005": 1.0
+    },
+    {
+      "fold": 4,
+      "rows": 200,
+      "auc": 0.9929824561403509,
+      "tpr_at_fpr_005": 0.9809523809523809
+    }
+  ],
+  "features": {
+    "raw": 450000,
+    "normalized": 450000
+  },
+  "retrieval": {
+    "exact": 11,
+    "similarity_ge_097": 32,
+    "inherited_ai": 28,
+    "inherited_human": 4
+  },
+  "score": {
+    "min": 2.5e-05,
+    "max": 0.999975,
+    "mean": 0.5000304667857507,
+    "unique": 19969
+  },
+  "submission": "/data/湾区杯/文本赛道/repro/artifacts/text/robust_v2/submission.csv"
+}
+[HAMI-core Msg(537192:140222871757824:multiprocess_memory_limit.c:703)]: Cleanup on exit for PID 537192
+[HAMI-core Msg(537192:140222871757824:multiprocess_memory_limit.c:739)]: Exit cleanup complete for PID 537192

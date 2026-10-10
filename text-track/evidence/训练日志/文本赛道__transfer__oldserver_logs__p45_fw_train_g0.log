@@ -1,0 +1,395 @@
+[HAMI-core Msg(2104380:139918611526656:libvgpu.c:870)]: Initializing.....
+student 1.5b model /data/湾区杯/文本赛道/models/Qwen2.5-1.5B-Instruct labels pseudo_best_v2
+rows 1000 20000 soft mean 0.5000000000001337
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Some weights of Qwen2ForSequenceClassification were not initialized from the model checkpoint at /data/湾区杯/文本赛道/models/Qwen2.5-1.5B-Instruct and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[HAMI-core Msg(2104380:139918611526656:libvgpu.c:909)]: Initialized
+[HAMI-core Msg(2105169:140471861441536:libvgpu.c:870)]: Initializing.....
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[HAMI-core Msg(2105169:140471861441536:libvgpu.c:909)]: Initialized
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+/usr/local/lib/python3.10/dist-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+  fold 1 ep 0 loss 0.6168 val_auc 1.00000 t 1240s
+fold 1 final auc 1.0 raw unique 1853 raw frac==max 0.01 elapsed 1615.0
+adapter saved /data/湾区杯/文本赛道/runs/lora1.5b_distill_p3s1_fold1_adapter size MB 17.5
+FOLD DONE (missing [2, 3, 4]) — rerun to continue
+[HAMI-core Msg(2104380:139918611526656:multiprocess_memory_limit.c:703)]: Cleanup on exit for PID 2104380
+[HAMI-core Msg(2104380:139918611526656:multiprocess_memory_limit.c:739)]: Exit cleanup complete for PID 2104380
+[HAMI-core Msg(2105169:140471861441536:multiprocess_memory_limit.c:703)]: Cleanup on exit for PID 2105169
+[HAMI-core Msg(2105169:140471861441536:multiprocess_memory_limit.c:739)]: Exit cleanup complete for PID 2105169
+[HAMI-core Msg(2132561:139744270734336:libvgpu.c:870)]: Initializing.....
+student 1.5b model /data/湾区杯/文本赛道/models/Qwen2.5-1.5B-Instruct labels pseudo_best_v2
+rows 1000 20000 soft mean 0.5000000000001337
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Some weights of Qwen2ForSequenceClassification were not initialized from the model checkpoint at /data/湾区杯/文本赛道/models/Qwen2.5-1.5B-Instruct and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[HAMI-core Msg(2132561:139744270734336:libvgpu.c:909)]: Initialized
+[HAMI-core Msg(2133198:140660933489664:libvgpu.c:870)]: Initializing.....
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[HAMI-core Msg(2133198:140660933489664:libvgpu.c:909)]: Initialized
+/usr/local/lib/python3.10/dist-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+  fold 2 ep 0 loss 0.6168 val_auc 1.00000 t 1244s
+fold 2 final auc 1.0 raw unique 1795 raw frac==max 0.01 elapsed 1619.0
+adapter saved /data/湾区杯/文本赛道/runs/lora1.5b_distill_p3s1_fold2_adapter size MB 17.5
+FOLD DONE (missing [3, 4]) — rerun to continue
+[HAMI-core Msg(2132561:139744270734336:multiprocess_memory_limit.c:703)]: Cleanup on exit for PID 2132561
+[HAMI-core Msg(2132561:139744270734336:multiprocess_memory_limit.c:739)]: Exit cleanup complete for PID 2132561
+[HAMI-core Msg(2133198:140660933489664:multiprocess_memory_limit.c:703)]: Cleanup on exit for PID 2133198
+[HAMI-core Msg(2133198:140660933489664:multiprocess_memory_limit.c:739)]: Exit cleanup complete for PID 2133198
+[HAMI-core Msg(2159517:140011053220864:libvgpu.c:870)]: Initializing.....
+student 1.5b model /data/湾区杯/文本赛道/models/Qwen2.5-1.5B-Instruct labels pseudo_best_v2
+rows 1000 20000 soft mean 0.5000000000001337
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Some weights of Qwen2ForSequenceClassification were not initialized from the model checkpoint at /data/湾区杯/文本赛道/models/Qwen2.5-1.5B-Instruct and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[HAMI-core Msg(2159517:140011053220864:libvgpu.c:909)]: Initialized
+[HAMI-core Msg(2160158:139826210915328:libvgpu.c:870)]: Initializing.....
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[HAMI-core Msg(2160158:139826210915328:libvgpu.c:909)]: Initialized
+/usr/local/lib/python3.10/dist-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+  fold 3 ep 0 loss 0.6157 val_auc 1.00000 t 1240s
+fold 3 final auc 1.0 raw unique 1798 raw frac==max 0.01 elapsed 1616.0
+adapter saved /data/湾区杯/文本赛道/runs/lora1.5b_distill_p3s1_fold3_adapter size MB 17.5
+FOLD DONE (missing [4]) — rerun to continue
+[HAMI-core Msg(2159517:140011053220864:multiprocess_memory_limit.c:703)]: Cleanup on exit for PID 2159517
+[HAMI-core Msg(2159517:140011053220864:multiprocess_memory_limit.c:739)]: Exit cleanup complete for PID 2159517
+[HAMI-core Msg(2160158:139826210915328:multiprocess_memory_limit.c:703)]: Cleanup on exit for PID 2160158
+[HAMI-core Msg(2160158:139826210915328:multiprocess_memory_limit.c:739)]: Exit cleanup complete for PID 2160158
+[HAMI-core Msg(2186511:140615252694016:libvgpu.c:870)]: Initializing.....
+student 1.5b model /data/湾区杯/文本赛道/models/Qwen2.5-1.5B-Instruct labels pseudo_best_v2
+rows 1000 20000 soft mean 0.5000000000001337
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Some weights of Qwen2ForSequenceClassification were not initialized from the model checkpoint at /data/湾区杯/文本赛道/models/Qwen2.5-1.5B-Instruct and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[HAMI-core Msg(2186511:140615252694016:libvgpu.c:909)]: Initialized
+[HAMI-core Msg(2187288:140680740807680:libvgpu.c:870)]: Initializing.....
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[HAMI-core Msg(2187288:140680740807680:libvgpu.c:909)]: Initialized
+/usr/local/lib/python3.10/dist-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+  fold 4 ep 0 loss 0.6153 val_auc 0.99880 t 1243s
+fold 4 final auc 0.9988 raw unique 1872 raw frac==max 0.01 elapsed 1619.0
+adapter saved /data/湾区杯/文本赛道/runs/lora1.5b_distill_p3s1_fold4_adapter size MB 17.5
+lora1.5b_distill_p3s1 OOF AUC 0.999824
+lora1.5b_distill_p3s1 OOF frac==max 0.1 unique 435
+P32 OLD RETRAIN DONE
+[HAMI-core Msg(2186511:140615252694016:multiprocess_memory_limit.c:703)]: Cleanup on exit for PID 2186511
+[HAMI-core Msg(2186511:140615252694016:multiprocess_memory_limit.c:739)]: Exit cleanup complete for PID 2186511
+[HAMI-core Msg(2187288:140680740807680:multiprocess_memory_limit.c:703)]: Cleanup on exit for PID 2187288
+[HAMI-core Msg(2187288:140680740807680:multiprocess_memory_limit.c:739)]: Exit cleanup complete for PID 2187288
+[HAMI-core Msg(2214395:140486534095872:libvgpu.c:870)]: Initializing.....
+student 1.5b model /data/湾区杯/文本赛道/models/Qwen2.5-1.5B-Instruct labels pseudo_best_v2
+rows 1000 20000 soft mean 0.5000000000001337
+reuse fold 0
+reuse fold 1
+reuse fold 2
+reuse fold 3
+reuse fold 4
+lora1.5b_distill_p3s1 OOF AUC 0.999824
+lora1.5b_distill_p3s1 OOF frac==max 0.1 unique 435
+P32 OLD RETRAIN DONE
+[HAMI-core Msg(2214395:140486534095872:multiprocess_memory_limit.c:703)]: Cleanup on exit for PID 2214395
+[HAMI-core Msg(2214395:140486534095872:multiprocess_memory_limit.c:739)]: Exit cleanup complete for PID 2214395
+[HAMI-core Msg(2214599:140142339658752:libvgpu.c:870)]: Initializing.....
+student 1.5b model /data/湾区杯/文本赛道/models/Qwen2.5-1.5B-Instruct labels pseudo_best_v2
+rows 1000 20000 soft mean 0.5000000000001337
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Some weights of Qwen2ForSequenceClassification were not initialized from the model checkpoint at /data/湾区杯/文本赛道/models/Qwen2.5-1.5B-Instruct and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[HAMI-core Msg(2214599:140142339658752:libvgpu.c:909)]: Initialized
+[HAMI-core Msg(2215354:140473172767744:libvgpu.c:870)]: Initializing.....
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[HAMI-core Msg(2215354:140473172767744:libvgpu.c:909)]: Initialized
+/usr/local/lib/python3.10/dist-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+  fold 0 ep 0 loss 0.6178 val_auc 0.99980 t 1240s
+fold 0 final auc 0.9998 raw unique 1811 raw frac==max 0.01 elapsed 1616.0
+adapter saved /data/湾区杯/文本赛道/runs/lora1.5b_distill_p3s2_fold0_adapter size MB 17.5
+FOLD DONE (missing [1, 2, 3, 4]) — rerun to continue
+[HAMI-core Msg(2214599:140142339658752:multiprocess_memory_limit.c:703)]: Cleanup on exit for PID 2214599
+[HAMI-core Msg(2214599:140142339658752:multiprocess_memory_limit.c:739)]: Exit cleanup complete for PID 2214599
+[HAMI-core Msg(2241509:139669053441024:libvgpu.c:870)]: Initializing.....
+student 1.5b model /data/湾区杯/文本赛道/models/Qwen2.5-1.5B-Instruct labels pseudo_best_v2
+rows 1000 20000 soft mean 0.5000000000001337
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Some weights of Qwen2ForSequenceClassification were not initialized from the model checkpoint at /data/湾区杯/文本赛道/models/Qwen2.5-1.5B-Instruct and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[HAMI-core Msg(2241509:139669053441024:libvgpu.c:909)]: Initialized
+[HAMI-core Msg(2242265:139869808903168:libvgpu.c:870)]: Initializing.....
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[HAMI-core Msg(2242265:139869808903168:libvgpu.c:909)]: Initialized
+/usr/local/lib/python3.10/dist-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+  fold 1 ep 0 loss 0.6186 val_auc 1.00000 t 1239s
+fold 1 final auc 1.0 raw unique 1824 raw frac==max 0.01 elapsed 1614.0
+adapter saved /data/湾区杯/文本赛道/runs/lora1.5b_distill_p3s2_fold1_adapter size MB 17.5
+FOLD DONE (missing [2, 3, 4]) — rerun to continue
+[HAMI-core Msg(2241509:139669053441024:multiprocess_memory_limit.c:703)]: Cleanup on exit for PID 2241509
+[HAMI-core Msg(2241509:139669053441024:multiprocess_memory_limit.c:739)]: Exit cleanup complete for PID 2241509
+[HAMI-core Msg(2242265:139869808903168:multiprocess_memory_limit.c:703)]: Cleanup on exit for PID 2242265
+[HAMI-core Msg(2242265:139869808903168:multiprocess_memory_limit.c:739)]: Exit cleanup complete for PID 2242265
+[HAMI-core Msg(2268482:140373567468544:libvgpu.c:870)]: Initializing.....
+student 1.5b model /data/湾区杯/文本赛道/models/Qwen2.5-1.5B-Instruct labels pseudo_best_v2
+rows 1000 20000 soft mean 0.5000000000001337
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Some weights of Qwen2ForSequenceClassification were not initialized from the model checkpoint at /data/湾区杯/文本赛道/models/Qwen2.5-1.5B-Instruct and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[HAMI-core Msg(2268482:140373567468544:libvgpu.c:909)]: Initialized
+[HAMI-core Msg(2269309:140129265714176:libvgpu.c:870)]: Initializing.....
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[HAMI-core Msg(2269309:140129265714176:libvgpu.c:909)]: Initialized
+/usr/local/lib/python3.10/dist-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+[HAMI-core Msg(2269309:140129265714176:multiprocess_memory_limit.c:703)]: Cleanup on exit for PID 2269309
+[HAMI-core Msg(2269309:140129265714176:multiprocess_memory_limit.c:739)]: Exit cleanup complete for PID 2269309
+[HAMI-core Msg(2285051:140024393626624:libvgpu.c:870)]: Initializing.....
+student 1.5b model /data/湾区杯/文本赛道/models/Qwen2.5-1.5B-Instruct labels pseudo_best_v2
+rows 1000 20000 soft mean 0.5000000000001337
+reuse fold 0
+reuse fold 1
+reuse fold 2
+reuse fold 3
+reuse fold 4
+lora1.5b_distill_p3s1 OOF AUC 0.999824
+lora1.5b_distill_p3s1 OOF frac==max 0.1 unique 435
+P32 OLD RETRAIN DONE
+[HAMI-core Msg(2285051:140024393626624:multiprocess_memory_limit.c:703)]: Cleanup on exit for PID 2285051
+[HAMI-core Msg(2285051:140024393626624:multiprocess_memory_limit.c:739)]: Exit cleanup complete for PID 2285051
+[HAMI-core Msg(2285240:140211400766464:libvgpu.c:870)]: Initializing.....
+student 1.5b model /data/湾区杯/文本赛道/models/Qwen2.5-1.5B-Instruct labels pseudo_best_v2
+rows 1000 20000 soft mean 0.5000000000001337
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Some weights of Qwen2ForSequenceClassification were not initialized from the model checkpoint at /data/湾区杯/文本赛道/models/Qwen2.5-1.5B-Instruct and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[HAMI-core Msg(2285240:140211400766464:libvgpu.c:909)]: Initialized
+[HAMI-core Msg(2285889:140168511570944:libvgpu.c:870)]: Initializing.....
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[HAMI-core Msg(2285889:140168511570944:libvgpu.c:909)]: Initialized
+/usr/local/lib/python3.10/dist-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+  fold 2 ep 0 loss 0.6326 val_auc 0.99980 t 1298s
+fold 2 final auc 0.9998 raw unique 1826 raw frac==max 0.01 elapsed 1673.0
+adapter saved /data/湾区杯/文本赛道/runs/lora1.5b_distill_p3s2_fold2_adapter size MB 17.5
+FOLD DONE (missing [3, 4]) — rerun to continue
+[HAMI-core Msg(2285240:140211400766464:multiprocess_memory_limit.c:703)]: Cleanup on exit for PID 2285240
+[HAMI-core Msg(2285240:140211400766464:multiprocess_memory_limit.c:739)]: Exit cleanup complete for PID 2285240
+[HAMI-core Msg(2285889:140168511570944:multiprocess_memory_limit.c:703)]: Cleanup on exit for PID 2285889
+[HAMI-core Msg(2285889:140168511570944:multiprocess_memory_limit.c:739)]: Exit cleanup complete for PID 2285889
+[HAMI-core Msg(2314715:140130305233920:libvgpu.c:870)]: Initializing.....
+student 1.5b model /data/湾区杯/文本赛道/models/Qwen2.5-1.5B-Instruct labels pseudo_best_v2
+rows 1000 20000 soft mean 0.5000000000001337
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Some weights of Qwen2ForSequenceClassification were not initialized from the model checkpoint at /data/湾区杯/文本赛道/models/Qwen2.5-1.5B-Instruct and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[HAMI-core Msg(2314715:140130305233920:libvgpu.c:909)]: Initialized
+[HAMI-core Msg(2315394:140268181160960:libvgpu.c:870)]: Initializing.....
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[HAMI-core Msg(2315394:140268181160960:libvgpu.c:909)]: Initialized
+/usr/local/lib/python3.10/dist-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+  fold 3 ep 0 loss 0.6312 val_auc 1.00000 t 1298s
+fold 3 final auc 1.0 raw unique 1821 raw frac==max 0.01 elapsed 1673.0
+adapter saved /data/湾区杯/文本赛道/runs/lora1.5b_distill_p3s2_fold3_adapter size MB 17.5
+FOLD DONE (missing [4]) — rerun to continue
+[HAMI-core Msg(2314715:140130305233920:multiprocess_memory_limit.c:703)]: Cleanup on exit for PID 2314715
+[HAMI-core Msg(2314715:140130305233920:multiprocess_memory_limit.c:739)]: Exit cleanup complete for PID 2314715
+[HAMI-core Msg(2315394:140268181160960:multiprocess_memory_limit.c:703)]: Cleanup on exit for PID 2315394
+[HAMI-core Msg(2315394:140268181160960:multiprocess_memory_limit.c:739)]: Exit cleanup complete for PID 2315394
+[HAMI-core Msg(2343060:140602809156608:libvgpu.c:870)]: Initializing.....
+student 1.5b model /data/湾区杯/文本赛道/models/Qwen2.5-1.5B-Instruct labels pseudo_best_v2
+rows 1000 20000 soft mean 0.5000000000001337
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+`torch_dtype` is deprecated! Use `dtype` instead!
+Some weights of Qwen2ForSequenceClassification were not initialized from the model checkpoint at /data/湾区杯/文本赛道/models/Qwen2.5-1.5B-Instruct and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[HAMI-core Msg(2343060:140602809156608:libvgpu.c:909)]: Initialized
+[HAMI-core Msg(2343686:140342960260096:libvgpu.c:870)]: Initializing.....
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[HAMI-core Msg(2343686:140342960260096:libvgpu.c:909)]: Initialized
+/usr/local/lib/python3.10/dist-packages/torch/utils/checkpoint.py:295: FutureWarning: `torch.cpu.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cpu', args...)` instead.
+  with torch.enable_grad(), device_autocast_ctx, torch.cpu.amp.autocast(**ctx.cpu_autocast_kwargs):  # type: ignore[attr-defined]
+  fold 4 ep 0 loss 0.6336 val_auc 0.99754 t 1297s
+fold 4 final auc 0.99754 raw unique 1805 raw frac==max 0.01 elapsed 1673.0
+adapter saved /data/湾区杯/文本赛道/runs/lora1.5b_distill_p3s2_fold4_adapter size MB 17.5
+lora1.5b_distill_p3s2 OOF AUC 0.9992
+lora1.5b_distill_p3s2 OOF frac==max 0.1 unique 450
+P32 OLD RETRAIN DONE
+[HAMI-core Msg(2343060:140602809156608:multiprocess_memory_limit.c:703)]: Cleanup on exit for PID 2343060
+[HAMI-core Msg(2343060:140602809156608:multiprocess_memory_limit.c:739)]: Exit cleanup complete for PID 2343060
+[HAMI-core Msg(2343686:140342960260096:multiprocess_memory_limit.c:703)]: Cleanup on exit for PID 2343686
+[HAMI-core Msg(2343686:140342960260096:multiprocess_memory_limit.c:739)]: Exit cleanup complete for PID 2343686
+[HAMI-core Msg(2370930:140171235877888:libvgpu.c:870)]: Initializing.....
+student 1.5b model /data/湾区杯/文本赛道/models/Qwen2.5-1.5B-Instruct labels pseudo_best_v2
+rows 1000 20000 soft mean 0.5000000000001337
+reuse fold 0
+reuse fold 1
+reuse fold 2
+reuse fold 3
+reuse fold 4
+lora1.5b_distill_p3s2 OOF AUC 0.9992
+lora1.5b_distill_p3s2 OOF frac==max 0.1 unique 450
+P32 OLD RETRAIN DONE
+[HAMI-core Msg(2370930:140171235877888:multiprocess_memory_limit.c:703)]: Cleanup on exit for PID 2370930
+[HAMI-core Msg(2370930:140171235877888:multiprocess_memory_limit.c:739)]: Exit cleanup complete for PID 2370930
