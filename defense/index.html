@@ -1757,7 +1757,7 @@ body.ppt-presenter-mode .r-page-index{display:none}
     <div class="r-deploy">
       <div class="r-deploy-col"><h3>图像推理</h3><div class="r-time r-num">0.236<span>秒／张</span></div><p class="r-deploy-condition">GPU容器 · 200张顺序HTTP · 47.2秒</p>
         <div class="r-resident">3类骨干 · 4个共享模型实例</div><div class="r-forward-grid" aria-label="每张图片依次执行8个分量"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><p class="r-deploy-desc">8个分量串行前向 → ECDF融合</p>
-        <div class="r-deploy-bottom"><p>骨干与LoRA：fp16 · 分类头：fp32<br>模型加载约15.1秒</p></div>
+        <div class="r-deploy-bottom"><p>骨干与LoRA：fp16 · 分类头：fp32<br>模型加载约15.1秒<br>批量提交：单图8分量约0.07秒</p></div>
       </div>
       <div class="r-deploy-col"><h3>文本推理</h3><div class="r-time r-num">0.68<span>秒／条</span></div><p class="r-deploy-condition">宿主GPU · 5条短输入（含空串）<br>HTTP均值</p>
         <div class="r-resident">14B与7B基座常驻</div><div class="r-forward-grid" aria-label="每条文本5个14B加10个7B适配器串行前向"><span></span><span></span><span></span><span></span><span></span><span class="aux"></span><span class="aux"></span><span class="aux"></span><span class="aux"></span><span class="aux"></span><span class="aux"></span><span class="aux"></span><span class="aux"></span><span class="aux"></span><span class="aux"></span></div><p class="r-deploy-desc">15个adapter轮换 → 9:1融合</p>
