@@ -38,15 +38,15 @@ CSS = r"""
 .im-page .im-calc-layout{flex:1;min-height:0;display:grid;grid-template-columns:70fr 3fr 27fr;gap:1vw}
 .im-page .im-calc-main{display:flex;flex-direction:column;min-height:0;gap:.9vh}
 .im-page .im-calc-intro{display:flex;align-items:center;justify-content:space-between;border-bottom:2px solid #174d6b;padding-bottom:1.25vh;font-size:clamp(24px,1.5625vw,30px)}
-.im-page .im-slots{display:grid;grid-template-columns:2.1fr 1.45fr 1.2fr;gap:1.1vw;min-height:0}
+.im-page .im-slots{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:1.1vw;min-height:0}
 .im-page .im-slot{background:#fff;border-top:4px solid #174d6b;border-bottom:1px solid #c7d5df;padding:1vh .9vw;display:flex;flex-direction:column;gap:.8vh;min-width:0}
-.im-page .im-slot h3{margin:0;font-size:clamp(24px,1.5625vw,30px);font-weight:500;line-height:1.25}
+.im-page .im-slot h3{margin:0;font-size:clamp(17px,1.1979vw,23px);font-weight:500;line-height:1.25}
 .im-page .im-member-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.5vw}
 .im-page .im-member{background:#eef2f6;padding:.6vh 0;text-align:center;font-size:clamp(22px,1.354167vw,26px);line-height:1.2;white-space:nowrap}
 .im-page .im-member-grid .im-supervised{grid-column:1/-1;color:#174d6b;background:#e1ebf1}
 .im-page .im-member-pair{display:grid;grid-template-columns:1fr 1fr;gap:.5vw}
 .im-page .im-slot .im-math{font-size:clamp(22px,1.458333vw,28px);text-align:center;margin-top:auto;line-height:1.5}
-.im-page .im-slot-spec{color:#465f72;font-size:clamp(22px,1.354167vw,26px);text-align:center;line-height:1.4}
+.im-page .im-slot-spec{color:#465f72;font-size:clamp(16px,1.1458vw,22px);text-align:center;line-height:1.4}
 .im-page .im-merge{height:3.1vh;min-height:22px;flex:none;width:100%}
 .im-page .im-base-to-z{min-height:16px;flex:1;width:100%;position:relative}
 .im-page .im-base{background:#e8eff4;border:1px solid #aabfce;text-align:center;padding:1vh .7vw;font-size:clamp(26px,1.875vw,36px);line-height:1.5}
