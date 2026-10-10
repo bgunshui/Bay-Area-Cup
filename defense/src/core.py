@@ -176,7 +176,7 @@ def apply(pages, notes):
       </div>
       <div class="r-deploy-col"><h3>文本推理</h3><div class="r-time r-num">0.68<span>秒／条</span></div><p class="r-deploy-condition">宿主GPU · 5条短输入（含空串）<br>HTTP均值</p>
         <div class="r-resident">14B与7B基座常驻</div><div class="r-forward-grid" aria-label="每条文本5个14B加10个7B适配器串行前向">{txt_blocks}</div><p class="r-deploy-desc">15个adapter轮换 → 9:1融合</p>
-        <div class="r-deploy-bottom"><p>CUDA路径：bf16 · 上限512 tokens<br>模型启动约70.1秒</p></div>
+        <div class="r-deploy-bottom"><p>CUDA路径：bf16 · 上限512 tokens<br>模型启动约70.1秒<br>批量提交：单条平均约0.09到0.14秒</p></div>
       </div>
     </div>''',12,recipe='tech-spec')
 
