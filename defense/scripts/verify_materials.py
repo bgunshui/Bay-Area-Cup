@@ -40,7 +40,9 @@ def main():
     speech=read('逐字讲稿.md')
     assert [int(s) for s in re.findall(r'计划：(\d+)秒',speech)]==seconds
     assert re.findall(r'^## \d{2}｜([^\n]+)',speech,re.M)==[s['data-title'] for s in deck.slides]
-    spoken=re.findall(r'^## \d{2}[^\n]*\n[\s\S]*?计划：\d+秒[^\n]*\n\n([\s\S]*?)(?=\n\n> 证据提示)',speech,re.M)
+    # 逐字讲稿已改为“正文 + 文末《注解汇总》”结构(每页不再带 > 证据提示 分隔),
+    # 故分页提取改用“下一个 ## 标题”作分隔,仍只统计口播正文、不含注解。
+    spoken=re.findall(r'^## \d{2}[^\n]*\n计划：\d+秒[^\n]*\n([\s\S]*?)(?=\n\n## |\Z)',speech,re.M)
     chars=len(re.findall(r'[\u4e00-\u9fffA-Za-z0-9]',''.join(spoken)))
     assert len(spoken)==14 and 2600<=chars<=3000
     _qids=[int(n) for n in re.findall(r'^### Q(\d+)(?:\.|｜)',read('评委问答.md'),re.M)]
