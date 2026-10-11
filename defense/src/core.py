@@ -112,7 +112,7 @@ def apply(pages, notes):
     <div class="r-problem-grid">
       <div class="r-data-panel">
         <h3>每条赛道的数据条件</h3>
-        <div class="r-data-numbers"><div><strong class="r-num">1,000</strong><span>官方标注样例</span></div><div><strong class="r-num">20,000</strong><span>无标签目标样本</span></div></div>
+        <div class="r-data-numbers"><div><strong class="r-num">1,000</strong><span>初赛标注样例</span></div><div><strong class="r-num">20,000</strong><span>无标签目标样本</span></div></div>
         <div class="r-data-bar" aria-label="标注样例与无标签目标样本数量之比为1比20"><span></span><span></span></div>
         <p class="r-muted">利用预训练特征与目标域软监督</p>
         <div class="r-task-equation"><div class="r-eq"><i>f</i><sub>θ</sub>(<i>x</i>) → <i>s</i>(<i>x</i>) ∈ [0, 1]</div><p>单张图片或单段文本 → 连续检测分数</p></div>
@@ -199,7 +199,7 @@ def apply(pages, notes):
 
     talks = {
       0: ['图像与文本两条独立检测链。','异构表征与目标域自训练。','南枝大学参赛队。'],
-      1: ['每条赛道1,000标注样例与20,000无标签目标样本。','少标签下借助预训练模型，LoRA适配检测任务。','目标域学习与单样本推理共同设计。'],
+      1: ['每条赛道 1,000 条初赛标注样例与 20,000 条复赛无标签目标样本。','少标签下借助预训练模型，LoRA适配检测任务。','目标域学习与单样本推理共同设计。'],
       2: ['图像3类骨干、8个LoRA分量，百分位融合。','文本14B与7B、三组五折适配器、9:1融合。','两种模态独立训练、独立输出。'],
       9: ['复赛离线图像AUC0.918887，文本AUC0.981301。','AUC衡量正负样本排序能力，不是准确率。','图像通过互补视觉分量，文本通过自训练与主辅融合。'],
       10:['图像采用JPEG与翻转增强，文本有改写训练探索。','分量选择同时考虑强度和互补性，增加模型不保证提高。','目标域、尺寸分布、长度截断限制泛化范围。','跨生成器及强度分组尚没有完整独立评测。'],
