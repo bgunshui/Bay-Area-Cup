@@ -15,12 +15,18 @@ sys.path.insert(0, str(OUT/'src'))
 import core
 import image
 import text
+import framework_visual
+import image_visual
+import text_visual
 TIMES = [10,40,45,70,80,60,80,70,60,60,60,75,60,30]
 NOTES = json.loads((OUT / 'src/page-plan.json').read_text(encoding='utf-8'))['notes']
 PAGES = [f'<section class="slide light" data-slide-id="{n["id"]}"></section>' for n in NOTES]
 PAGES, NOTES = core.apply(PAGES, NOTES)
 PAGES, NOTES = image.apply(PAGES, NOTES)
 PAGES, NOTES = text.apply(PAGES, NOTES)
+PAGES, NOTES = framework_visual.apply(PAGES, NOTES)
+PAGES, NOTES = image_visual.apply(PAGES, NOTES)
+PAGES, NOTES = text_visual.apply(PAGES, NOTES)
 assert len(PAGES) == len(NOTES) == len(TIMES) == 14
 
 for i, (page, note) in enumerate(zip(PAGES, NOTES)):
@@ -64,13 +70,13 @@ UNIFY = r'''
 .r-deploy-condition{min-height:3.1em}
 .ppt-frame{position:absolute;left:50%;top:50%;max-width:none;max-height:none;transform-origin:center center}
 '''
-template = template.replace('</style>', core.CSS+'\n'+image.CSS+'\n'+text.CSS+'\n'+UNIFY+'\n</style>',1)
+template = template.replace('</style>', core.CSS+'\n'+image.CSS+'\n'+text.CSS+'\n'+UNIFY+'\n'+framework_visual.CSS+'\n'+image_visual.CSS+'\n'+text_visual.CSS+'\n</style>',1)
 template = template.replace('</head>', '<!-- OFFLINE_FONTS -->\n</head>',1)
 BUILD.mkdir(exist_ok=True)
 (BUILD/'draft.html').write_text(template,encoding='utf-8',newline='\r\n')
 (BUILD/'page-plan.json').write_text(json.dumps(dict(seconds=TIMES,notes=NOTES,
     skill_commit='c91369c449d34755d320a8b81d0734000d99d1ab',
-    evidence_commit='c11fa520f2f73d705e83cb3f40a6a214f8cc7f31',revision='2026-10-09'),ensure_ascii=False,indent=2),encoding='utf-8')
+    evidence_commit='c11fa520f2f73d705e83cb3f40a6a214f8cc7f31',revision='2026-10-11'),ensure_ascii=False,indent=2),encoding='utf-8')
 
 def finalize():
     doc=template

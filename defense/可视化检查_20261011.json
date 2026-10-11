@@ -1,0 +1,307 @@
+{
+  "inputSha256": "5dd1fe6d45f5a4b3cdd392f0523dcf570334f6312f8d8f11a7854b6c95f413e8",
+  "testedAt": "2026-10-11T06:30:54.027233+00:00",
+  "passed": true,
+  "scope": "HTML可视化与下列交互复测；非全量重跑2026-10-09原始runtime测试",
+  "transport": "Codex in-app browser, http://127.0.0.1:8769/index.html",
+  "layout": {
+    "1920": [
+      {
+        "bottom": 773.5,
+        "h": 1080,
+        "id": "cover",
+        "out": [],
+        "overflow": [],
+        "w": 1920
+      },
+      {
+        "bottom": 899.6875,
+        "h": 1080,
+        "id": "shared-challenges",
+        "out": [],
+        "overflow": [],
+        "w": 1920
+      },
+      {
+        "bottom": 982.8021049499512,
+        "h": 1080,
+        "id": "dual-pipelines",
+        "out": [],
+        "overflow": [],
+        "w": 1920
+      },
+      {
+        "bottom": 982.8021240234376,
+        "h": 1080,
+        "id": "image-training",
+        "out": [],
+        "overflow": [],
+        "w": 1920
+      },
+      {
+        "bottom": 982.8020858764648,
+        "h": 1080,
+        "id": "image-ecdf",
+        "out": [],
+        "overflow": [],
+        "w": 1920
+      },
+      {
+        "bottom": 905.9791679382324,
+        "h": 1080,
+        "id": "image-evidence",
+        "out": [],
+        "overflow": [],
+        "w": 1920
+      },
+      {
+        "bottom": 976.3229598999023,
+        "h": 1080,
+        "id": "text-self-training",
+        "out": [],
+        "overflow": [],
+        "w": 1920
+      },
+      {
+        "bottom": 976.3229598999023,
+        "h": 1080,
+        "id": "text-ensemble",
+        "out": [],
+        "overflow": [],
+        "w": 1920
+      },
+      {
+        "bottom": 976.3229598999023,
+        "h": 1080,
+        "id": "text-offline-service",
+        "out": [],
+        "overflow": [],
+        "w": 1920
+      },
+      {
+        "bottom": 982.8020858764648,
+        "h": 1080,
+        "id": "results-and-reliability",
+        "out": [],
+        "overflow": [],
+        "w": 1920
+      },
+      {
+        "bottom": 982.8020935058594,
+        "h": 1080,
+        "id": "robustness-coverage",
+        "out": [],
+        "overflow": [],
+        "w": 1920
+      },
+      {
+        "bottom": 726.3125,
+        "h": 1080,
+        "id": "efficiency-deployment",
+        "out": [],
+        "overflow": [],
+        "w": 1920
+      },
+      {
+        "bottom": 964.0833740234376,
+        "h": 1080,
+        "id": "innovation-application",
+        "out": [],
+        "overflow": [],
+        "w": 1920
+      },
+      {
+        "bottom": 993.6041870117188,
+        "h": 1080,
+        "id": "closing",
+        "out": [],
+        "overflow": [],
+        "w": 1920
+      }
+    ],
+    "1366": [
+      {
+        "bottom": 560.1666870117188,
+        "h": 768,
+        "id": "cover",
+        "out": [],
+        "overflow": [],
+        "w": 1366
+      },
+      {
+        "bottom": 644.5729370117188,
+        "h": 768,
+        "id": "shared-challenges",
+        "out": [],
+        "overflow": [],
+        "w": 1366
+      },
+      {
+        "bottom": 698.8854370117188,
+        "h": 768,
+        "id": "dual-pipelines",
+        "out": [],
+        "overflow": [],
+        "w": 1366
+      },
+      {
+        "bottom": 698.8854370117188,
+        "h": 768,
+        "id": "image-training",
+        "out": [],
+        "overflow": [],
+        "w": 1366
+      },
+      {
+        "bottom": 698.8854598999023,
+        "h": 768,
+        "id": "image-ecdf",
+        "out": [],
+        "overflow": [],
+        "w": 1366
+      },
+      {
+        "bottom": 682.0729179382324,
+        "h": 768,
+        "id": "image-evidence",
+        "out": [],
+        "overflow": [],
+        "w": 1366
+      },
+      {
+        "bottom": 694.28125,
+        "h": 768,
+        "id": "text-self-training",
+        "out": [],
+        "overflow": [],
+        "w": 1366
+      },
+      {
+        "bottom": 694.28125,
+        "h": 768,
+        "id": "text-ensemble",
+        "out": [],
+        "overflow": [],
+        "w": 1366
+      },
+      {
+        "bottom": 694.28125,
+        "h": 768,
+        "id": "text-offline-service",
+        "out": [],
+        "overflow": [],
+        "w": 1366
+      },
+      {
+        "bottom": 698.8854179382324,
+        "h": 768,
+        "id": "results-and-reliability",
+        "out": [],
+        "overflow": [],
+        "w": 1366
+      },
+      {
+        "bottom": 698.8854217529297,
+        "h": 768,
+        "id": "robustness-coverage",
+        "out": [],
+        "overflow": [],
+        "w": 1366
+      },
+      {
+        "bottom": 534.4375,
+        "h": 768,
+        "id": "efficiency-deployment",
+        "out": [],
+        "overflow": [],
+        "w": 1366
+      },
+      {
+        "bottom": 680.9375228881836,
+        "h": 768,
+        "id": "innovation-application",
+        "out": [],
+        "overflow": [],
+        "w": 1366
+      },
+      {
+        "bottom": 706.5625419616699,
+        "h": 768,
+        "id": "closing",
+        "out": [],
+        "overflow": [],
+        "w": 1366
+      }
+    ]
+  },
+  "checks": [
+    {
+      "name": "1920×1080：14页截图与文字边界",
+      "ok": true
+    },
+    {
+      "name": "1366×768：14页截图与文字边界",
+      "ok": true
+    },
+    {
+      "name": "导航选页",
+      "ok": true
+    },
+    {
+      "name": "总览打开与选页返回",
+      "ok": true
+    },
+    {
+      "name": "演讲者宫格选页返回",
+      "ok": true
+    },
+    {
+      "name": "当前／下一页预览与备注",
+      "ok": true
+    },
+    {
+      "name": "计时开始、暂停、重置",
+      "ok": true
+    },
+    {
+      "name": "观众软件同步状态随4→5→7页变化",
+      "ok": true
+    },
+    {
+      "name": "重新打开观众屏恢复当前页",
+      "ok": true
+    },
+    {
+      "name": "演前检查显示字体loaded及16:9",
+      "ok": true
+    },
+    {
+      "name": "进入全屏后演前检查显示已进入全屏",
+      "ok": true
+    },
+    {
+      "name": "静态／动态切换与静态核心图显示",
+      "ok": true
+    },
+    {
+      "name": "退出演讲者回到主演示",
+      "ok": true
+    }
+  ],
+  "console_errors": [],
+  "static_offline_assets": true,
+  "not_retested": [
+    "独立关闭原生观众窗口后的失联提示：本轮只复测重新打开与软件已同步状态",
+    "file://双击断网完整流程：本轮静态检查内联资源，历史完整流程保留原记录",
+    "激光、圈选、屏幕黑白与冻结的全套运行用例"
+  ],
+  "screenshots": {
+    "3": "图表/总体架构预览.png",
+    "4": "图表/图像训练结构.png",
+    "5": "图表/图像融合计算.png",
+    "7": "图表/文本训练算法.png",
+    "8": "图表/文本集成架构.png",
+    "9": "图表/文本推理计算.png"
+  },
+  "historical_record": "验收记录.json"
+}

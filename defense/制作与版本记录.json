@@ -1,5 +1,5 @@
 {
-  "version_date": "2026-10-09",
+  "version_date": "2026-10-11",
   "style": "学术答辩：白底、深蓝强调、技术结构与数据图表、简洁留白",
   "skill": {
     "repository": "https://github.com/op7418/guizang-ppt-skill",
@@ -65,10 +65,10 @@
     ],
     "total_seconds": 800,
     "speech_effective_characters": 2974,
-    "speech_chinese_characters": 2759,
-    "speech_count_method": "14 slide bodies before evidence hints; Chinese characters, Latin letters and digits; punctuation and backstage notes excluded",
-    "html_bytes": 1026821,
-    "html_sha256": "874cfe80516f28c61b2573c8d83ed1fb0b7ceb86d660603394bd13d2787c0273",
+    "speech_chinese_characters": 2749,
+    "speech_count_method": "14 slide bodies before the final annotation summary; Chinese characters, Latin letters and digits; punctuation and backstage notes excluded",
+    "html_bytes": 1063100,
+    "html_sha256": "5dd1fe6d45f5a4b3cdd392f0523dcf570334f6312f8d8f11a7854b6c95f413e8",
     "chart_exports": [
       {
         "path": "图表/图像候选AUC.png",
@@ -91,6 +91,16 @@
         "sha256": "c9fb36f0b64b39391d72fc833fbd2f08634b170607793223369f93c513f4459c"
       },
       {
+        "path": "图表/图像融合计算.png",
+        "bytes": 647780,
+        "sha256": "fc3e3c2004828e5ff3a8c08350e8eec4a545f2d49003cbe06defce0a423cc944"
+      },
+      {
+        "path": "图表/图像训练结构.png",
+        "bytes": 552905,
+        "sha256": "81d82ea60bc429f029318156075216d2bda2d4ecae372b92f85680a88c3023f9"
+      },
+      {
         "path": "图表/尺寸先验OOF.png",
         "bytes": 73921,
         "sha256": "23ce94a935dfed45928eadf0869cad4002e08c9ab9d9ce3c92abe224d701a7ed"
@@ -99,6 +109,11 @@
         "path": "图表/尺寸先验OOF.svg",
         "bytes": 55931,
         "sha256": "e80c86e34ba86432e1312bbe319fdbb70d8c8413d768f815a8c3b70c5771c551"
+      },
+      {
+        "path": "图表/总体架构预览.png",
+        "bytes": 596878,
+        "sha256": "215e3d2cdfda4f966cc53bddf29a15e411b92a197eacafd6855fb3ec9b00d8ce"
       },
       {
         "path": "图表/教师融合权重.png",
@@ -119,6 +134,21 @@
         "path": "图表/文本候选AUC.svg",
         "bytes": 62384,
         "sha256": "2cc2d7eb70cab4e2c290473031359022c0a61e9f2cac4ba07467c60c2a9cb110"
+      },
+      {
+        "path": "图表/文本推理计算.png",
+        "bytes": 494461,
+        "sha256": "a124400f3e5e1c3ae6ee011f6bec972ceff6e51dae91aa061e7b52b1d752bf1b"
+      },
+      {
+        "path": "图表/文本训练算法.png",
+        "bytes": 571167,
+        "sha256": "59d8243c945a8a8f8c28bdf48ee4653146f5d2c5d4ef616b998326d09c09261d"
+      },
+      {
+        "path": "图表/文本集成架构.png",
+        "bytes": 555558,
+        "sha256": "571a956f1904b1befd9a157d4b26ead83c1acb2820e29e5f69256730908d6ff6"
       },
       {
         "path": "图表/软标签函数.png",
@@ -239,18 +269,18 @@
     "resource_record_scope": "Historical source download/provenance metadata used for the 2026-10-09 production; full-font records describe the inputs to subsetting, not the files currently tracked in the repository. Repository assets contain the offline runtime and current character subsets."
   },
   "font_coverage": {
-    "draft_sha256": "997916063b9e1a25abdc4eddd1e4e799a202ec194b49abda73b70d5d592bed19",
+    "draft_sha256": "0d43edbbb4a6f95e9a169564250a9d0990b78c8757d9edf6c51c23f0b0104950",
     "coverage_success": true,
-    "required_characters": 621,
+    "required_characters": 624,
     "missing": [],
     "fonts": [
       {
         "family": "Noto Sans SC",
         "source": "NotoSansSC-variable-full.ttf",
         "output": "NotoSansSC-subset.woff2",
-        "bytes": 227544,
-        "sha256": "51694683c24414b47ac110c70160b6d576594fca5500a65644bd15af5a923beb",
-        "unicode_count": 909,
+        "bytes": 232304,
+        "sha256": "ddbf75e2443d9cdc3e972f6b646335c3482b4a06b1c4c7de62690df2a35a5a61",
+        "unicode_count": 929,
         "axes": [
           {
             "tag": "wght",
@@ -264,8 +294,8 @@
         "family": "Inter",
         "source": "Inter-variable.ttf",
         "output": "Inter-subset.woff2",
-        "bytes": 46668,
-        "sha256": "08b257934658eace6ce81f04081a0cccbe1744901c8331e47b8f01152821137a",
+        "bytes": 46608,
+        "sha256": "bb58ecca19140cc17a888830479038d9bffe1b1ee148547226c5727551693b10",
         "unicode_count": 118,
         "axes": [
           {
@@ -285,18 +315,18 @@
     ]
   },
   "font_subset_report": {
-    "draft_sha256": "997916063b9e1a25abdc4eddd1e4e799a202ec194b49abda73b70d5d592bed19",
+    "draft_sha256": "0d43edbbb4a6f95e9a169564250a9d0990b78c8757d9edf6c51c23f0b0104950",
     "coverage_success": true,
-    "required_characters": 621,
+    "required_characters": 624,
     "missing": [],
     "fonts": [
       {
         "family": "Noto Sans SC",
         "source": "NotoSansSC-variable-full.ttf",
         "output": "NotoSansSC-subset.woff2",
-        "bytes": 227544,
-        "sha256": "51694683c24414b47ac110c70160b6d576594fca5500a65644bd15af5a923beb",
-        "unicode_count": 909,
+        "bytes": 232304,
+        "sha256": "ddbf75e2443d9cdc3e972f6b646335c3482b4a06b1c4c7de62690df2a35a5a61",
+        "unicode_count": 929,
         "axes": [
           {
             "tag": "wght",
@@ -310,8 +340,8 @@
         "family": "Inter",
         "source": "Inter-variable.ttf",
         "output": "Inter-subset.woff2",
-        "bytes": 46668,
-        "sha256": "08b257934658eace6ce81f04081a0cccbe1744901c8331e47b8f01152821137a",
+        "bytes": 46608,
+        "sha256": "bb58ecca19140cc17a888830479038d9bffe1b1ee148547226c5727551693b10",
         "unicode_count": 118,
         "axes": [
           {
@@ -371,11 +401,13 @@
     }
   },
   "browser_verification": {
-    "inputSha256": "874cfe80516f28c61b2573c8d83ed1fb0b7ceb86d660603394bd13d2787c0273",
-    "testedAt": "2026-10-09T05:36:16.898Z",
-    "checks": 28,
+    "inputSha256": "5dd1fe6d45f5a4b3cdd392f0523dcf570334f6312f8d8f11a7854b6c95f413e8",
+    "testedAt": "2026-10-11T06:30:54.027233+00:00",
+    "checks": 13,
     "passed": true,
-    "matches_current_html": true
+    "matches_current_html": true,
+    "record": "可视化检查_20261011.json",
+    "scope": "HTML可视化与下列交互复测；非全量重跑2026-10-09原始runtime测试"
   },
   "source_preservation": "入库增加答辩材料与项目skill，不改写原技术报告、模型或冻结实验文件；后续材料版本由Git提交历史保存，本地制作缓存与旧备份不入库。",
   "html_runtime_changes": [
@@ -405,11 +437,45 @@
     "historical_records": "Browser measurements, skill-validator logs and font validation/subset measurements retain their original production scope and timestamps; repository path migration does not represent rerunning those checks."
   },
   "speech_revision": {
-    "date": "2026-10-09",
+    "date": "2026-10-11",
     "path": "defense/逐字讲稿.md",
     "style": "口语化现场讲述；分段换气、指图解释、候选数值取约值，最终两项AUC完整口播",
     "planned_seconds": 800,
-    "html_changed": false,
+    "html_changed": true,
     "verification": "逐页标题及时长对应，技术顺序、数值、指图方位与当前演示一致；实际演讲用时以排练为准"
+  },
+  "visual_revision": {
+    "date": "2026-10-11",
+    "pages": [
+      1,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      12
+    ],
+    "source_files": [
+      "src/framework_visual.py",
+      "src/image_visual.py",
+      "src/text_visual.py"
+    ],
+    "features": [
+      "双泳道全景架构",
+      "冻结W与LoRA旁路",
+      "8个分量的ECDF与三槽融合",
+      "软标签函数、加权BCE与梯度更新",
+      "共享基座与15个适配器的完整输出连接",
+      "候选AUC点线图",
+      "离线rank与在线logit计算图"
+    ],
+    "fact_corrections": [
+      "p2AD/v2与六路教师配置分代际",
+      "删除两个完整集成耗时外推",
+      "区分CLIP-H全1000硬标签与监督800/200",
+      "水平翻转属于监督支路"
+    ],
+    "scope": "仅HTML及其讲稿、问答、索引、预览；现存PPTX保留此前导出版本"
   }
 }

@@ -1,16 +1,16 @@
 {
-  "draft_sha256": "997916063b9e1a25abdc4eddd1e4e799a202ec194b49abda73b70d5d592bed19",
+  "draft_sha256": "0d43edbbb4a6f95e9a169564250a9d0990b78c8757d9edf6c51c23f0b0104950",
   "coverage_success": true,
-  "required_characters": 621,
+  "required_characters": 624,
   "missing": [],
   "fonts": [
     {
       "family": "Noto Sans SC",
       "source": "NotoSansSC-variable-full.ttf",
       "output": "NotoSansSC-subset.woff2",
-      "bytes": 227544,
-      "sha256": "51694683c24414b47ac110c70160b6d576594fca5500a65644bd15af5a923beb",
-      "unicode_count": 909,
+      "bytes": 232304,
+      "sha256": "ddbf75e2443d9cdc3e972f6b646335c3482b4a06b1c4c7de62690df2a35a5a61",
+      "unicode_count": 929,
       "axes": [
         {
           "tag": "wght",
@@ -24,8 +24,8 @@
       "family": "Inter",
       "source": "Inter-variable.ttf",
       "output": "Inter-subset.woff2",
-      "bytes": 46668,
-      "sha256": "08b257934658eace6ce81f04081a0cccbe1744901c8331e47b8f01152821137a",
+      "bytes": 46608,
+      "sha256": "bb58ecca19140cc17a888830479038d9bffe1b1ee148547226c5727551693b10",
       "unicode_count": 118,
       "axes": [
         {

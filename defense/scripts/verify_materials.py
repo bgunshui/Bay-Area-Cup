@@ -76,9 +76,20 @@ def main():
     if matches:
         assert browser['passed'] and all(c['ok'] for c in browser['checks'])
         assert not browser['errors'] and not browser['network']
+    visual_path=ROOT/'可视化检查_20261011.json'
+    visual_matches=False
+    if visual_path.is_file():
+        visual=json.loads(visual_path.read_text(encoding='utf-8'))
+        visual_matches=visual['inputSha256']==digest(ROOT/'index.html')
+        if visual_matches:
+            assert visual['passed'] and all(c['ok'] for c in visual['checks'])
+            for viewport,rows in visual['layout'].items():
+                assert [row['id'] for row in rows]==ids,'Visual record is missing a slide'
+                assert all(not row['out'] and not row['overflow'] for row in rows)
+            assert not visual['console_errors']
     print(json.dumps(dict(slides=14,seconds=800,layouts=len(layouts),speech_characters=chars,questions=len(re.findall(r'^### Q(?:\d+)(?:\.|｜)',read('评委问答.md'),re.M)),
-        checksummed_files=len(files),offline_assets=True,current_html_matches_recorded_browser_test=matches),ensure_ascii=False))
-    if not matches:
+        checksummed_files=len(files),offline_assets=True,current_html_matches_recorded_browser_test=matches,current_html_matches_visual_check=visual_matches),ensure_ascii=False))
+    if not matches and not visual_matches:
         print('NOTICE: HTML changed; the historical browser test is not validation of this revision. Recheck layout and interactions before presenting.')
 
 if __name__=='__main__':
