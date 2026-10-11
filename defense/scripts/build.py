@@ -91,9 +91,9 @@ def finalize():
     assert 'OFFLINE_' not in doc and '[必填]' not in doc and '[选填]' not in doc
     assert not re.search(r'<(?:script|link)[^>]+(?:src|href)="https?://',doc)
     assert 'await import(' not in doc
-    (OUT/'index.html').write_text(doc,encoding='utf-8',newline='\r\n')
+    (OUT/'湾区杯决赛-南枝大学.html').write_text(doc,encoding='utf-8',newline='\r\n')
     print(json.dumps(dict(slides=len(PAGES),seconds=sum(TIMES),layouts=len(set(re.findall('data-layout="([^"]+)"',''.join(PAGES)))),
-        html_bytes=len(doc.encode()),sha256=hashlib.sha256((OUT/'index.html').read_bytes()).hexdigest()),ensure_ascii=False))
+        html_bytes=len(doc.encode()),sha256=hashlib.sha256((OUT/'湾区杯决赛-南枝大学.html').read_bytes()).hexdigest()),ensure_ascii=False))
 
 if '--final' in sys.argv:
     finalize()

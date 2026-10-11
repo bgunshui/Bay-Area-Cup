@@ -22,7 +22,7 @@ class Deck(HTMLParser):
         if self.active:self.text.append(data)
 
 def main():
-    html=read('index.html')
+    html=read('湾区杯决赛-南枝大学.html')
     deck=Deck();deck.feed(html)
     assert len(deck.slides)==14,'Expected 14 audience slides'
     ids=[s['data-slide-id'] for s in deck.slides]
@@ -72,7 +72,7 @@ def main():
     assert not list(ROOT.rglob('*.zip')),'Archives do not belong in defense/'
 
     browser=json.loads(read('验收记录.json'))
-    matches=browser.get('inputSha256')==digest(ROOT/'index.html')
+    matches=browser.get('inputSha256')==digest(ROOT/'湾区杯决赛-南枝大学.html')
     if matches:
         assert browser['passed'] and all(c['ok'] for c in browser['checks'])
         assert not browser['errors'] and not browser['network']
@@ -80,7 +80,7 @@ def main():
     visual_matches=False
     if visual_path.is_file():
         visual=json.loads(visual_path.read_text(encoding='utf-8'))
-        visual_matches=visual['inputSha256']==digest(ROOT/'index.html')
+        visual_matches=visual['inputSha256']==digest(ROOT/'湾区杯决赛-南枝大学.html')
         if visual_matches:
             assert visual['passed'] and all(c['ok'] for c in visual['checks'])
             for viewport,rows in visual['layout'].items():
