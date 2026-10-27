@@ -1,8 +1,0 @@
-official 1000 replay 20000
-struct feats (21000, 16)
-public tags: ['aigczh_full', 'anx_w128', 'anx_w254', 'mokawa_full', 'paperpass_full', 'yuc_full', 'yuc_w256', 'yuc_w384', 'yuc_w510', 'zhv2_full', 'zhv3short_full']
-pub feats (1000, 88)
-tfidf (21000, 100000)
-Xo (1000, 104)
-fus_lgb OOF AUC 0.994648
-FUS_LGB DONE

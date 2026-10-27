@@ -1,9 +1,0 @@
-public members [('anx_w254', 0.25), ('pseudo15', 0.75)]
-llm members [('qwen_pair', 0.25), ('q7b_all', 0.25), ('q7b_hidden_last', 0.25), ('q7b_hidden_mean', 0.25)]
-ft members [('lora_Qwen2.5-1.5B-Instruct_official', 0.75), ('lora_Qwen2.5-1.5B-Instruct_official_adv', 0.25)]
-robust members [('robust', 1.0)]
-wrote probe_llm unique 19789
-wrote probe_ft unique 19226
-wrote probe_robust unique 19411
-wrote probe_equal unique 18570
-P8 DONE

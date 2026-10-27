@@ -19,8 +19,9 @@ import tarfile
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
-ARCH = Path(r"C:\Users\38232\Desktop\湾区杯_提交资料\图像附件资料.tar.gz")
-DEST = Path(r"D:\湾区杯\图像赛道\_verify_extract")
+ARCH = Path(os.environ.get("BAYCUP_ARCHIVE",
+                            Path.cwd() / "湾区杯_提交资料" / "图像附件资料.tar.gz"))
+DEST = Path(os.environ.get("BAYCUP_VERIFY_DIR", Path.cwd() / "_verify_extract"))
 TOP = "图像附件资料"
 
 REQUIRED = [

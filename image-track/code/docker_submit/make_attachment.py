@@ -33,9 +33,10 @@ from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
-DESK = Path(r"C:\Users\38232\Desktop\湾区杯_提交资料")
-DIST = Path(r"D:\湾区杯\图像赛道\docker_submit\dist")
-SRC = Path(r"D:\湾区杯\图像赛道\docker_submit")
+# 路径可用环境变量覆盖；默认从本文件所在目录定位源码，输出到当前目录
+SRC = Path(os.environ.get("BAYCUP_SRC_DIR", Path(__file__).resolve().parent))
+DIST = Path(os.environ.get("BAYCUP_DIST_DIR", SRC / "dist"))
+DESK = Path(os.environ.get("BAYCUP_SUBMIT_DIR", Path.cwd() / "湾区杯_提交资料"))
 LB = "0.918887"
 TOP = "图像附件资料"
 OUT = DESK / f"{TOP}.tar.gz"
